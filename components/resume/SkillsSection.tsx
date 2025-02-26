@@ -1,11 +1,11 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
-import { Chip } from "@heroui/chip"; // Asegúrate de que esta importación sea correcta
+import { Chip } from "@heroui/chip";
 
 import { subtitle } from "@/components/primitives";
 import { siteConfig } from "@/config/site";
 
-export default function SkillsSection() {
+const SkillsSection = ({ skills }: { skills: string[] }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [chipRefs, setChipRefs] = useState<React.RefObject<HTMLDivElement>[]>(
     [],
@@ -78,7 +78,7 @@ export default function SkillsSection() {
           ref={containerRef}
           className="flex flex-wrap gap-3 py-8 justify-center relative"
         >
-          {siteConfig.resume.skills.map((skill, index) => (
+          {skills.map((skill, index) => (
             <div
               key={index}
               ref={chipRefs[index]}
@@ -104,4 +104,6 @@ export default function SkillsSection() {
       </span>
     </section>
   );
-}
+};
+
+export default SkillsSection;

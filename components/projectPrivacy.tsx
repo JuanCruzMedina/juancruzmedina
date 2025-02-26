@@ -19,7 +19,7 @@ export const ProjectPrivacy = (project: Project) => {
           as={Link}
           className="bg-transparent"
           href={project.sourceLink}
-          startContent={<GithubOutline strokeHoverColor="#FF1CF7" />}
+          startContent={<GithubOutline />}
         />
       </div>
     );
