@@ -3,7 +3,7 @@ import { Link } from "@heroui/link";
 import { subtitle, subtitleLink, title } from "@/components/primitives";
 import { siteConfig } from "@/config/site";
 
-export const Contact = () => {
+export const ContactSection = () => {
   return (
     <div className="inline-block max-w-lg text-center justify-center">
       <span className={title({ size: "md" })}>Let’s&nbsp;</span>

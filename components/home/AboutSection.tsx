@@ -1,11 +1,11 @@
 import { Image } from "@heroui/image";
 import { Link } from "@heroui/link";
 
-import { textLink, title } from "./primitives";
+import { textLink, title } from "../primitives";
 
 import { siteConfig } from "@/config/site";
 
-export const About = () => {
+export const AboutSection = () => {
   return (
     <>
       <span className={title({ size: "md" })}>About me &#x1F4AC;</span>

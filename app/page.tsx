@@ -1,6 +1,6 @@
-import { About } from "@/components/about";
-import { Contact } from "@/components/contact";
-import { Hero } from "@/components/hero";
+import { AboutSection } from "@/components/home/AboutSection";
+import { ContactSection } from "@/components/home/ContactSection";
+import { Hero } from "@/components/home/Hero";
 import { LastProjects } from "@/components/projects/LastProjects";
 import { siteConfig } from "@/config/site";
 
@@ -12,7 +12,7 @@ export default function Home() {
       </section>
 
       <section className="py-8 mt-4">
-        <About />
+        <AboutSection />
       </section>
 
       <section>
@@ -20,7 +20,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col items-center mt-36 mb-14 ">
-        <Contact />
+        <ContactSection />
       </section>
     </>
   );
