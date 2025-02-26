@@ -1,53 +1,112 @@
-# Next.js & HeroUI Template
+![](https://imgur.com/ggylUmd.png)
+---
+![GitHub license](https://img.shields.io/github/license/JuanCruzMedina/juancruzmedina)
+![GitHub Repo stars](https://img.shields.io/github/stars/JuanCruzMedina/juancruzmedina?style=social) 
+---
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
+# Juan Cruz Medina's Portfolio
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+This is the source code for Juan Cruz Medina's personal portfolio website, built with Next.js and HeroUI.
 
-## Technologies Used
+Refer to [Next.js](https://nextjs.org/docs/) and [HeroUI](https://www.heroui.com/docs) documentation to learn more.
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [HeroUI v2](https://heroui.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+Feel free to fork this repository to make your own portfolio, and if you liked the repo, kindly support it by giving it a star ⭐!
 
-## How to Use
+## Roadmap
+- [ ] Add blog section 📝
+- [ ] Add project detail page 📄
+- [ ] Implement contact form 📧
 
-### Use the template with create-next-app
+## Table of Contents
 
-To create a new project based on this template using `create-next-app`, run the following command:
+- [Built With](#built-with)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Project Structure (Overview)](#project-structure-overview)
+- [SEO](#seo)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
 
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
-```
+## Built With
+- [Next.js](https://nextjs.org/) – React framework
+- [HeroUI](https://www.heroui.com/) – UI components
+- [TypeScript](https://www.typescriptlang.org/) – Static typing
+- [TailwindCSS](https://tailwindcss.com/) – Utility-first CSS framework
 
-### Install dependencies
+## Installation
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+1. Clone the repository:
 
-```bash
-npm install
-```
+    ```bash
+    git clone https://github.com/JuanCruzMedina/juancruzmedina.git
+    ```
 
-### Run the development server
+2. Navigate to the project directory:
+
+    ```bash
+    cd juancruzmedina
+    ```
+
+3. Install the dependencies:
+
+    ```bash
+    npm install
+    ```
+
+## Usage
+
+To start the development server, run:
 
 ```bash
 npm run dev
 ```
 
-### Setup pnpm (optional)
+Open http://localhost:3000 with your browser to see the result.
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+### Configuration
 
-```bash
-public-hoist-pattern[]=*@heroui/*
+Add your site information in `app/config/site.ts` and update the `public/favicon.ico` with your own favicon your images.
+
+## Project Structure (Overview)
+
+- `app/layout.tsx`: Main layout file where global metadata and layout components are defined.
+- `app/page.tsx`: Homepage of the site.
+- `app/projects/`: Contains project page and layout.
+- `app/resume/`: Contains resume page and layout.
+- `components/`: Contains reusable UI components.
+- `app/config/site`: Configuration file for the site.
+- `styles/`: Global CSS files.
+- `public/`: Images, icons, and other static files.
+- `types/`: TypeScript type definitions.
+
+## SEO
+SEO is implemented using the `Head` component from Next.js. Metadata is defined in `app/layout.tsx` and can be customized for individual pages.
+
+Example metadata in `app/layout.tsx`:
+
+```js
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 ```
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+## Deployment
+You can deploy easily by using [Vercel](https://vercel.com/) 🎉
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2JuanCruzMedina%2juancruzmedina)
+
+## Contributing
+Pull requests are welcome! If you find any issue or have suggestions, feel free to open an issue.
+
 
 ## License
-
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
+This project is licensed under the MIT License.

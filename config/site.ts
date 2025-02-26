@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Juan Cruz Medina - Portfolio",
+  name: "Juan Cruz Medina :)",
   email: "mail@juanmedina.com.ar",
   sendEmail: "mailto:mail@juanmedina.com.ar",
   description: "Juan Cruz Medina Software Developer Portfolio",
