@@ -1,13 +1,15 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@heroui/link";
 import clsx from "clsx";
+import React from "react";
+import { Link } from "@heroui/link";
 
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+import { textLink } from "@/components/primitives";
 
 export const metadata: Metadata = {
   title: {
@@ -34,29 +36,76 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head>
+        <title>Juan Cruz Medina - Software Engineer</title>
+        <meta
+          content="juancruzmedina, juan cruz medina website"
+          name="keywords"
+        />
+        <meta
+          content="Software Engineer based in Argentina, an undergraduate student at UTN-FRC."
+          name="description"
+        />
+
+        <meta content="website" property="og:type" />
+        <meta content="https://juanmedina.com.ar" property="og:url" />
+        <meta
+          content="Juan Cruz Medina - Software Engineer"
+          property="og:title"
+        />
+        <meta
+          content="Software Engineer based in Argentina, an undergraduate student at UTN-FRC."
+          property="og:description"
+        />
+
+        {/*TODO: add imagizer image*/}
+
+        <meta content="summary_large_image" property="twitter:card" />
+        <meta content="https://juanmedina.com.ar/" property="twitter:url" />
+        <meta
+          content="Juan Cruz Medina - Software Engineer"
+          property="twitter:title"
+        />
+        <meta
+          content="Software Engineer based in Argentina, an undergraduate student at UTN-FRC."
+          property="twitter:description"
+        />
+        {/*  TODO: add imagizer for twitter image*/}
+      </head>
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background flex flex-col font-sans antialiased",
           fontSans.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            <main className="flex-1 container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://heroui.com?utm_source=next-app-template"
-                title="heroui.com homepage"
-              >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">HeroUI</p>
-              </Link>
+            <footer className="w-full flex flex-col items-center justify-center py-3">
+              <span className="text-default-600">
+                Designed and developed by Juan Cruz Medina.
+              </span>
+              <span className="text-default-600">
+                Built with{" "}
+                <Link
+                  isExternal
+                  className={textLink()}
+                  href="https://heroui.dev"
+                >
+                  HeroUI
+                </Link>{" "}
+                &{" "}
+                <Link
+                  isExternal
+                  className={textLink()}
+                  href="https://nextjs.org"
+                >
+                  Next.js
+                </Link>
+              </span>
             </footer>
           </div>
         </Providers>
