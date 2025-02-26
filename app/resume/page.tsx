@@ -113,11 +113,13 @@ export default function ResumePage() {
                 </div>
               }
             >
-              {experience.descriptionItems.map((description, index) => (
-                <div key={index} className="py-2 text-medium">
-                  {description}
-                </div>
-              ))}
+              <div className="mb-2">
+                {experience.descriptionItems.map((description, index) => (
+                  <div key={index} className="py-1 text-medium">
+                    {description}
+                  </div>
+                ))}
+              </div>
             </AccordionItem>
           ))}
         </Accordion>
