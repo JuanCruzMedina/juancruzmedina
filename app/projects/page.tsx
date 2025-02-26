@@ -7,6 +7,18 @@ import { subtitle, textLink, title } from "@/components/primitives";
 import { siteConfig } from "@/config/site";
 
 export default function ProjectsPage() {
+  const privacyLabel = (privacy: string) => {
+    if (privacy === "closed") {
+      return "Closed Source";
+    }
+    if (privacy === "open") {
+      return "Open Source";
+    }
+    if (privacy === "internal") {
+      return "Internal Project";
+    }
+  };
+
   return (
     <>
       <section className="flex flex-col items-start justify-center gap-4 py-8 md:py-10">
@@ -25,18 +37,6 @@ export default function ProjectsPage() {
         <div className="py-10 px-5">
           <div className="grid md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-6">
             {siteConfig.projects.items.map((project, index) => {
-              const privacyLabel = (privacy: string) => {
-                if (privacy === "closed") {
-                  return "Closed Source";
-                }
-                if (privacy === "open") {
-                  return "Open Source";
-                }
-                if (privacy === "internal") {
-                  return "Internal Project";
-                }
-              };
-
               return (
                 <Card
                   key={index}
