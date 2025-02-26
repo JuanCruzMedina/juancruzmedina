@@ -33,7 +33,6 @@ const EducationSection = ({ education }: { education: Education[] }) => {
                   radius="sm"
                   src={education.image}
                   width={80}
-                  // todo: add fallback image
                 />
                 <div className="flex flex-col">
                   <p className="text-large">{education.title}</p>

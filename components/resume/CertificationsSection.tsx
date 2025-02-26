@@ -34,14 +34,11 @@ const CertificationsSection = ({
               <CardHeader className="flex gap-3">
                 <Image
                   alt="heroui logo"
-                  // as={NextImage}
                   className="bg-black object-contain p-1.5"
                   height={64}
-                  // priority={index < 2}
                   radius="sm"
                   src={certification.image}
                   width={80}
-                  // todo: add fallback image
                 />
                 <div className="flex flex-col">
                   <p className="text-large">{certification.title}</p>
