@@ -13,7 +13,7 @@ export default function ResumePage() {
     siteConfig.resume;
 
   return (
-    <section className="flex flex-col items-start justify-center gap-4 py-8 md:py-10">
+    <section className="flex flex-col items-start justify-center gap-4 md:py-10">
       <div className="inline-block max-w-lg text-start justify-center">
         <span className={title({ size: "xl" })}>My&nbsp;</span>
         <span className={title({ color: "violet", size: "xl" })}>Resume</span>
@@ -26,9 +26,9 @@ export default function ResumePage() {
       </section>
       <WorkExperience workExperience={workExperience} />
       <CertificationsSection certifications={certifications} />
-      <SkillsSection skills={skills} />
       <LanguagesSection languages={languages} />
       <EducationSection education={education} />
+      <SkillsSection skills={skills} />
     </section>
   );
 }

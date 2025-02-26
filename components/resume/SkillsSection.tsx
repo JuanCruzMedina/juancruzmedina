@@ -3,22 +3,17 @@ import React, { useRef, useEffect, useState } from "react";
 import { Chip } from "@heroui/chip";
 
 import { subtitle } from "@/components/primitives";
-import { siteConfig } from "@/config/site";
 
 const SkillsSection = ({ skills }: { skills: string[] }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [chipRefs, setChipRefs] = useState<React.RefObject<HTMLDivElement>[]>(
-    [],
+    []
   );
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   useEffect(() => {
-    const refs = siteConfig.resume.skills.map(() =>
-      React.createRef<HTMLDivElement>(),
-    );
-
-    setChipRefs(refs);
-  }, []);
+    setChipRefs(skills.map(() => React.createRef<HTMLDivElement>()));
+  }, [skills]);
 
   const handleMouseEnter = (index: number): void => {
     setActiveIndex(index);
@@ -32,37 +27,22 @@ const SkillsSection = ({ skills }: { skills: string[] }) => {
     if (activeIndex === null) return false;
     if (index === activeIndex) return true;
 
-    if (
-      !chipRefs.length ||
-      !chipRefs[index] ||
-      !chipRefs[index].current ||
-      !chipRefs[activeIndex] ||
-      !chipRefs[activeIndex].current
-    ) {
-      return false;
-    }
+    const activeChip = chipRefs[activeIndex]?.current;
+    const currentChip = chipRefs[index]?.current;
 
-    const activeRect = chipRefs[activeIndex].current.getBoundingClientRect();
-    const currentRect = chipRefs[index].current.getBoundingClientRect();
+    if (!activeChip || !currentChip) return false;
 
-    const activeCenter = {
-      x: activeRect.left + activeRect.width / 2,
-      y: activeRect.top + activeRect.height / 2,
-    };
+    const activeRect = activeChip.getBoundingClientRect();
+    const currentRect = currentChip.getBoundingClientRect();
 
-    const currentCenter = {
-      x: currentRect.left + currentRect.width / 2,
-      y: currentRect.top + currentRect.height / 2,
-    };
-
-    const distance = Math.sqrt(
-      Math.pow(activeCenter.x - currentCenter.x, 2) +
-        Math.pow(activeCenter.y - currentCenter.y, 2),
+    const distance = Math.hypot(
+      activeRect.left - currentRect.left,
+      activeRect.top - currentRect.top
     );
 
-    const proximityThreshold = (activeRect.width + currentRect.width) / 2 + 30;
+    const threshold = (activeRect.width + currentRect.width) / 2 + 25;
 
-    return distance < proximityThreshold;
+    return distance < threshold;
   };
 
   return (
@@ -74,34 +54,33 @@ const SkillsSection = ({ skills }: { skills: string[] }) => {
         })}
       >
         Skills
-        <div
-          ref={containerRef}
-          className="flex flex-wrap gap-3 py-8 justify-center relative"
-        >
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              ref={chipRefs[index]}
-              className={`
-                transition-all duration-300 
-                ${isActiveOrAdjacent(index) ? "transform scale-110 z-10" : "z-0"}
-              `}
-              style={{ margin: "4px" }}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <Chip
-                className={`transition-all duration-300 ${isActiveOrAdjacent(index) ? "p-2" : ""}`}
-                color="secondary"
-                size="lg"
-                variant="flat"
-              >
-                {skill}
-              </Chip>
-            </div>
-          ))}
-        </div>
       </span>
+      <div
+        ref={containerRef}
+        className="flex flex-wrap gap-3 py-8 justify-center relative max-w-5xl mx-auto"
+      >
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            ref={chipRefs[index]}
+            className={`
+              transition-all duration-300 
+              ${isActiveOrAdjacent(index) ? "scale-110 z-10" : "z-0"}
+            `}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <Chip
+              className={`transition-all duration-300 px-3 py-2 text-sm sm:text-base`}
+              color="secondary"
+              size="lg"
+              variant="flat"
+            >
+              {skill}
+            </Chip>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

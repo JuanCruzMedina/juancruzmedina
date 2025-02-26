@@ -6,11 +6,11 @@ export default function ProjectsPage() {
   const { projects } = siteConfig;
 
   return (
-    <section className="flex flex-col items-start justify-center gap-4 py-8 md:py-10">
+    <section className="flex flex-col items-start justify-center gap-4 md:py-10">
       <div className="inline-block max-w-lg text-start justify-center">
         <span className={title({ size: "lg" })}>{projects.title}</span>
         <br />
-        <span className={title({ color: "violet", size: "xxl" })}>
+        <span className={title({ color: "violet", size: "auto" })}>
           {projects.titleMark}&nbsp;
         </span>
       </div>

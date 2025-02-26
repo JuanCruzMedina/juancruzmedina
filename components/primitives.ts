@@ -20,7 +20,8 @@ export const name = tv({
       lg: "text-4xl lg:text-6xl",
       xl: "text-5xl lg:text-6xl",
       xxl: "text-6xl lg:text-7xl",
-      auto: "text-[clamp(6rem,30vw,8rem)] leading-none",
+      auto: "text-5xl sm:text-8xl lg:text-[clamp(6rem,30vw,8rem)] leading-none",
+      // auto: "text-[clamp(6rem,30vw,8rem)] leading-none",
     },
     fullWidth: {
       true: "w-full block",
@@ -65,7 +66,7 @@ export const title = tv({
       lg: "text-4xl lg:text-6xl",
       xl: "text-5xl lg:text-6xl",
       xxl: "text-6xl lg:text-7xl",
-      xxxl: "text-7xl lg:text-8xl",
+      auto: "text-5xl sm:text-7xl xl:text-[clamp(6rem,30vw,8rem)] leading-none",
     },
     fullWidth: {
       true: "w-full block",
@@ -125,7 +126,7 @@ export const subtitleMarked = tv({
     size: {
       sm: "text-sm lg:text-base",
       md: "text-medium lg:text-lg",
-      lg: "text-lg lg:text-xl",
+      lg: "text-md md:text-lg lg:text-xl",
     },
   },
   defaultVariants: {

@@ -7,7 +7,7 @@ export default function PricingLayout({
 }) {
   return (
     <section className="relative flex flex-col min-h-screen">
-      <div className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
+      <div className="container mx-auto max-w-7xl px-6 flex-grow">
         {children}
       </div>
     </section>

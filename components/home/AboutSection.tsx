@@ -9,13 +9,9 @@ export const AboutSection = () => {
   return (
     <>
       <span className={title({ size: "md" })}>About me &#x1F4AC;</span>
-      <div className="grid grid-cols-3 gap-3 py-8 overflow-visible">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 py-8 overflow-visible">
         <div className="col-span-1 flex relative overflow-visible">
-          <div
-            className="flex flex-col w-[350px] h-[350px]
-    dark:bg-gradient-to-b from-gray-100 to-gray-300
-    justify-center items-center overflow-visible relative rounded-full"
-          >
+          <div className="flex flex-col w-[350px] h-[350px] justify-center items-center overflow-visible relative">
             <div className="overflow-visible relative">
               <Image
                 alt="Juan Cruz Photo"
@@ -25,9 +21,9 @@ export const AboutSection = () => {
           object-contain
           relative
         "
-                height={250}
+                height={340}
                 src="foto-con-indio.png"
-                width={250}
+                width={340}
               />
             </div>
           </div>

@@ -83,9 +83,9 @@ export const NavBar = () => {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link>
+        {/*<Link isExternal aria-label="Github" href={siteConfig.links.github}>*/}
+        {/*  <GithubIcon className="text-default-500" />*/}
+        {/*</Link>*/}
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
@@ -94,14 +94,36 @@ export const NavBar = () => {
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <NextLink color="foreground" href={item.href}>
+              <Link color="foreground" href={item.href}>
                 {item.label}
-              </NextLink>
+              </Link>
             </NavbarMenuItem>
           ))}
           <NavbarMenuItem>
-            <Link color="primary" href={siteConfig.sendEmail} size="lg">
-              Contact me
+            <Link color="secondary" href={siteConfig.sendEmail} size="lg">
+              Send me an email
+            </Link>
+          </NavbarMenuItem>
+          <NavbarMenuItem>
+            <Link
+              aria-label="Linkedin"
+              color="foreground"
+              href={siteConfig.links.linkedin}
+              size="md"
+            >
+              <LinkedinIcon className="mr-1" />
+              Check my Linkedin
+            </Link>
+          </NavbarMenuItem>
+          <NavbarMenuItem>
+            <Link
+              aria-label="Github"
+              color="foreground"
+              href={siteConfig.links.linkedin}
+              size="md"
+            >
+              <GithubIcon className="mr-1" />
+              or my Github
             </Link>
           </NavbarMenuItem>
         </div>

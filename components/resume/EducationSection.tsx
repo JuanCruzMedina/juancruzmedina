@@ -22,48 +22,44 @@ const EducationSection = ({ education }: { education: Education[] }) => {
         })}
       >
         Education
-        <div className="gap-2 grid grid-cols-1 sm:grid-cols-2 py-8">
-          {education.map((education, index) => (
-            <Card key={index} className="w-[450px]">
-              <CardHeader className="flex gap-3">
-                <Image
-                  alt="heroui logo"
-                  className="bg-white object-contain p-1.5"
-                  height={64}
-                  radius="sm"
-                  src={education.image}
-                  width={80}
-                />
-                <div className="flex flex-col">
-                  <p className="text-large">{education.title}</p>
-                  <p className="text-medium text-default-500">
-                    {education.institution}
-                  </p>
-                </div>
-              </CardHeader>
-              <Divider />
-              <CardBody>
-                <div className="flex gap-1">
-                  <p className="text-default-400 text-small">Location:</p>
-                  <p className="font-semibold text-default-400 text-small">
-                    {education.description}
-                  </p>
-                </div>
-                <span className="py-0 text-small text-default-400 pt-2">
-                  <span
-                    aria-label="calendar-emoji"
-                    className="py-2 mr-2"
-                    role="img"
-                  >
-                    🗓️
-                  </span>
-                  &nbsp;{education.subtitle}
-                </span>
-              </CardBody>
-            </Card>
-          ))}
-        </div>
       </span>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-8">
+        {education.map((edu, index) => (
+          <Card key={index} className="w-full max-w-sm mx-auto">
+            <CardHeader className="flex gap-3">
+              <Image
+                alt={edu.title}
+                className="bg-white object-contain p-1.5"
+                height={64}
+                radius="sm"
+                src={edu.image}
+                width={80}
+              />
+              <div className="flex flex-col">
+                <p className="text-large font-semibold">{edu.title}</p>
+                <p className="text-medium text-default-500">
+                  {edu.institution}
+                </p>
+              </div>
+            </CardHeader>
+            <Divider />
+            <CardBody>
+              <div className="flex gap-1">
+                <p className="text-default-400 text-small">Location:</p>
+                <p className="font-semibold text-default-400 text-small">
+                  {edu.description}
+                </p>
+              </div>
+              <span className="text-small text-default-400 pt-2 flex items-center">
+                <span role="img" aria-label="calendar" className="mr-2">
+                  🗓️
+                </span>
+                {edu.subtitle}
+              </span>
+            </CardBody>
+          </Card>
+        ))}
+      </div>
     </section>
   );
 };

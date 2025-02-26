@@ -16,8 +16,8 @@ interface WorkExperienceItem {
 }
 
 const WorkExperience = ({
-  workExperience,
-}: {
+                          workExperience,
+                        }: {
   workExperience: WorkExperienceItem[];
 }) => {
   return (
@@ -37,7 +37,7 @@ const WorkExperience = ({
             aria-label={experience.company}
             className="w-full text-large"
             startContent={
-              <div className="flex items-center justify-center w-16 h-16 overflow-hidden rounded-md bg-white mr-2">
+              <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 overflow-hidden rounded-md bg-white mr-2">
                 <Image
                   alt={experience.company}
                   as={NextImage}
@@ -50,30 +50,32 @@ const WorkExperience = ({
               </div>
             }
             subtitle={
-              <span
-                className={subtitleMarked({
-                  size: "lg",
-                  class: "text-default-700 dark:text-violet-300",
-                })}
-              >
+              <div className="flex items-center gap-2 flex-nowrap min-w-0">
                 <Chip
-                  className="m-2 dark:text-white"
+                  className="dark:text-white shrink-0"
                   color="secondary"
-                  size="md"
+                  size="sm"
                   variant="bordered"
                 >
                   {experience.type}
                 </Chip>
-                {experience.charge}
-              </span>
+                <span
+                  className={subtitleMarked({
+                    size: "lg",
+                    class: "text-default-700 dark:text-violet-300 truncate",
+                  })}
+                >
+                  {experience.charge}
+                </span>
+              </div>
             }
             title={
-              <div className="flex justify-between">
-                <div>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full">
+                <div className="min-w-0">
                   <span
                     className={subtitle({
                       size: "lg",
-                      class: "font-medium text-default-800 inline",
+                      class: "font-medium text-default-800 inline truncate",
                     })}
                   >
                     {experience.company}
@@ -83,9 +85,9 @@ const WorkExperience = ({
                   </span>
                 </div>
                 <Chip
-                  className="ml-2"
+                  className="mt-2 sm:mt-0 shrink-0"
                   color="default"
-                  size="lg"
+                  size="sm"
                   variant="light"
                 >
                   {experience.date}
