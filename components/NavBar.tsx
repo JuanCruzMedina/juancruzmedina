@@ -14,7 +14,7 @@ import NextLink from "next/link";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
+import { ThemeSwitch } from "@/components/ThemeSwitch";
 import {
   GithubIcon,
   LinkedinIcon,
@@ -24,7 +24,7 @@ import {
 } from "@/components/icons";
 import { buttonGradient } from "@/components/primitives";
 
-export const Navbar = () => {
+export const NavBar = () => {
   return (
     <HeroUINavbar isBordered maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">

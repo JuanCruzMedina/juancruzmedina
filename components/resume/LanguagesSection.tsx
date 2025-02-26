@@ -1,5 +1,5 @@
 import { subtitle } from "@/components/primitives";
-import { ArgentinaFlag, UnitedStatesFlag } from "@/components/flags";
+import { ArgentinaFlag, UnitedStatesFlag } from "@/components/LanguagesFlags";
 
 interface Language {
   name: string;

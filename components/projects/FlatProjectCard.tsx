@@ -2,7 +2,7 @@ import { Card, CardBody } from "@heroui/card";
 import { Image } from "@heroui/image";
 import { Link } from "@heroui/link";
 
-import { ProjectPrivacy } from "@/components/projects/projectPrivacy";
+import { ProjectPrivacy } from "@/components/projects/ProjectPrivacy";
 import { textLink } from "@/components/primitives";
 import { Project } from "@/types";
 import ProjectTags from "@/components/projects/ProjectTags";
