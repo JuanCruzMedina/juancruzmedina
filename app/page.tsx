@@ -1,7 +1,8 @@
 import { About } from "@/components/about";
 import { Contact } from "@/components/contact";
 import { Hero } from "@/components/hero";
-import { LastProjects } from "@/components/lastProjects";
+import { LastProjects } from "@/components/projects/LastProjects";
+import { siteConfig } from "@/config/site";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       </section>
 
       <section>
-        <LastProjects quantity={3} />
+        <LastProjects projects={siteConfig.projects} quantity={3} />
       </section>
 
       <section className="flex flex-col items-center mt-36 mb-14 ">
