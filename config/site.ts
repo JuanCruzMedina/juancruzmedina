@@ -42,7 +42,7 @@ export const siteConfig = {
   },
   resume: {
     description:
-      "I’m a backend developer with experience in designing and building applications with .NET and Python, taking full advantage of best practices, techniques and development principles. My main focus is to work with a team to achieve this in the best possible way. I have developed great skills to work with large, not so large and very small teams. I am very interested in use my technological knowledge such as refactoring techniques, best practices, ways of working with legacy code and software architecture.",
+      "I am a backend developer with experience in designing and building applications using .NET and Python, leveraging best practices, modern development techniques, and software design principles. My primary focus is collaborating with teams to create high-quality solutions in the most effective way possible. I have gained valuable experience working with teams of all sizes, from large to small. I am particularly passionate about applying my technical expertise in areas such as refactoring techniques, best practices, legacy code management, and software architecture to improve and optimize applications.",
 
     workExperience: [
       {
@@ -53,18 +53,17 @@ export const siteConfig = {
         descriptionItems: [
           "Design, develop, and maintain .NET applications within the Compliance team.",
           "Create new applications from scratch, emphasizing reliability and scalability.",
-          "Document systems and processes comprehensively.",
+          "Perform code reviews for team members to ensure code quality and best practices.",
+          "Manage technical debt for one of the most demanding projects, ensuring long-term maintainability.",
+          "Successfully proposed and implemented an improvement in the certificate update process, reducing manual tasks as an intermediate step before a full migration to a new application.",
+          "Work with .NET Core 3.1 and .NET Framework 4.8, utilizing Dapper for data access.",
+          "Use Redis, PostgreSQL, and Oracle databases for different application needs.",
           "Define metrics and implement observability improvements for better performance monitoring.",
           "Collaborate with the team, applying best practices and agile methodologies.",
           "Use Python for scripting and automation tasks.",
         ],
         type: "Full-time",
         companyLogo: "/resume/voxel.png",
-        suggestions: [
-          "Highlight specific .NET frameworks or tools used (e.g., .NET Core, Entity Framework).",
-          "Add details about any significant performance gains or key achievements.",
-          "Mention code review responsibilities or leadership roles if applicable.",
-        ],
       },
       {
         charge: "Team Leader",
@@ -72,34 +71,31 @@ export const siteConfig = {
         location: "Córdoba, Argentina",
         date: "Jan 2024 - Mar 2024",
         descriptionItems: [
-          "Led the IT services consulting team, focusing on email bonding.",
+          "Led a three-person IT consulting team, handling email migration and infrastructure updates.",
+          "Managed requirement gathering, task planning, and direct client interactions.",
+          "Acted as the intermediary between the team and the client, ensuring smooth communication and project alignment.",
+          "Successfully migrated email services from Claro to Google, improving communication efficiency.",
           "Upgraded the organization’s software infrastructure.",
           "Documented processes thoroughly.",
         ],
         type: "Freelance",
         companyLogo: "/resume/corace.jpeg",
-        suggestions: [
-          "Clarify what 'email bonding' entails and the impact on organizational communication.",
-          "Include any quantifiable improvements (e.g., reduced downtime, faster response times).",
-          "Add information about team size or specific leadership responsibilities.",
-        ],
       },
       {
         charge: "Full Stack Developer",
         company: "Fulltrace S.A.",
         location: "Córdoba, Argentina",
-        date: "Dec 2023 - Abr 2024",
+        date: "Dec 2023 - Apr 2024",
         descriptionItems: [
-          "Design and develop a .NET application from scratch to manage livestock data from the company’s proprietary devices.",
-          "Implement data analysis features, allowing users to download or modify information.",
+          "Designed and developed a .NET application from scratch to manage livestock data from the company’s proprietary devices.",
+          "Used the latest version of .NET Framework with Windows Forms for UI development.",
+          "Implemented data analysis functionality without relying on external libraries.",
+          "Regularly met with the product creator to align development efforts with the product vision.",
+          "The application had active users from its first version, and no bugs or issues have been reported since deployment.",
+          "Implemented data handling features, allowing users to download and modify information.",
         ],
         type: "Freelance",
         companyLogo: "/resume/fulltrace.jpeg",
-        suggestions: [
-          "Specify the .NET technologies or libraries used for data analysis.",
-          "Mention any performance metrics or testing methodologies.",
-          "Include details on how user feedback or iteration cycles were handled.",
-        ],
       },
       {
         charge: "Software Engineer",
@@ -108,15 +104,12 @@ export const siteConfig = {
         date: "Oct 2022 - Jul 2023",
         descriptionItems: [
           "Developed a Python-based application on AWS Lambda.",
+          "Integrated AWS logging services for monitoring and debugging.",
           "Enabled remote control of recreational devices (spa, chiller, sauna) via Amazon Alexa.",
+          "The application has been actively used since deployment, with no reported bugs or technical issues.",
         ],
         type: "Freelance",
         companyLogo: "/resume/agi.jpeg",
-        suggestions: [
-          "Highlight how you integrated AWS services (e.g., AWS Lambda, API Gateway).",
-          "Mention any security measures for remote device control.",
-          "Include details on how you tested or validated the system.",
-        ],
       },
       {
         charge: "Backend Developer",
@@ -127,16 +120,12 @@ export const siteConfig = {
           "Developed and maintained .NET APIs for booking tourism services (hotels, flights, activities), with a focus on performance and reliability.",
           "Created reusable modules for multiple tourism applications, accelerating the release of new features.",
           "Developed a natural language processing module in Python (using SpaCy and NLTK) to normalize hotel room names from various providers.",
+          "Led the integration of external service providers, working directly with their development teams to ensure seamless connectivity.",
           "Managed SQL & NoSQL databases (SQL Server, MySQL, MongoDB).",
           "Migrated services from Flask to FastAPI.",
         ],
         type: "Full-time",
         companyLogo: "/resume/toselli.jpeg",
-        suggestions: [
-          "Include any specific results (e.g., reduced API response times, improved booking success rates).",
-          "Mention the approach to version control or CI/CD if relevant.",
-          "Explain any collaboration with cross-functional teams (QA, DevOps).",
-        ],
       },
       {
         charge: "Fullstack Developer",
@@ -151,11 +140,6 @@ export const siteConfig = {
         ],
         type: "Full-time",
         companyLogo: "/resume/procoop.jpeg",
-        suggestions: [
-          "Indicate any particular design patterns used (e.g., MVC, Repository Pattern).",
-          "Highlight improvements in application stability or user experience.",
-          "Mention how you collaborated with stakeholders to define requirements.",
-        ],
       },
       {
         charge: "Full Stack Developer",
@@ -168,11 +152,6 @@ export const siteConfig = {
         ],
         type: "Freelance",
         companyLogo: "/resume/pentamedia.jpeg",
-        suggestions: [
-          "Provide details on specific improvements or bug fixes in the e-commerce modules.",
-          "List any performance or SEO enhancements implemented.",
-          "Mention collaborative efforts with designers or marketers if relevant.",
-        ],
       },
     ],
     skills: [
