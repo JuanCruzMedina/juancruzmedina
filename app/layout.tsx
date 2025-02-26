@@ -37,16 +37,12 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head>
-        <title>Juan Cruz Medina - Software Engineer</title>
+        <title>{siteConfig.name}</title>
+        <meta content={siteConfig.description} name="description" />
         <meta
-          content="juancruzmedina, juan cruz medina website"
+          content="juancruzmedina, software engineer, argentina, UTN-FRC"
           name="keywords"
         />
-        <meta
-          content="Software Engineer based in Argentina, an undergraduate student at UTN-FRC."
-          name="description"
-        />
-
         <meta content="website" property="og:type" />
         <meta content="https://juanmedina.com.ar" property="og:url" />
         <meta
@@ -57,20 +53,18 @@ export default function RootLayout({
           content="Software Engineer based in Argentina, an undergraduate student at UTN-FRC."
           property="og:description"
         />
-
-        {/*TODO: add imagizer image*/}
-
-        <meta content="summary_large_image" property="twitter:card" />
-        <meta content="https://juanmedina.com.ar/" property="twitter:url" />
+        <meta content="/foto-con-indio.png" property="og:image" />
+        <meta content="summary_large_image" name="twitter:card" />
+        <meta content="https://juanmedina.com.ar" name="twitter:url" />
         <meta
           content="Juan Cruz Medina - Software Engineer"
-          property="twitter:title"
+          name="twitter:title"
         />
         <meta
           content="Software Engineer based in Argentina, an undergraduate student at UTN-FRC."
-          property="twitter:description"
+          name="twitter:description"
         />
-        {/*  TODO: add imagizer for twitter image*/}
+        <meta content="/foto-con-indio.png" name="twitter:image" />
       </head>
       <body
         className={clsx(
