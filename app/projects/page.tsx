@@ -15,7 +15,7 @@ export default function ProjectsPage() {
         </span>
       </div>
       <div className={subtitle({ class: "mt-4" })}>{projects.subtitle}</div>
-      <div className="py-10 px-5">
+      <div className="py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {projects.items.map((project, index) => {
             return <LargeProjectCard key={index} project={project} />;
