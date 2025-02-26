@@ -1,4 +1,5 @@
 import { Card, CardBody, CardHeader } from "@heroui/card";
+import { Image } from "@heroui/image";
 import { Divider } from "@heroui/divider";
 import { Link } from "@heroui/link";
 
@@ -21,13 +22,12 @@ const LargeProjectCard = ({ project }: { project: Project }) => {
 
   return (
     <Card className="shadow-lg hover:scale-105 transition-transform">
-      <CardHeader className="p-0">
-        <img
+      <CardHeader className="p-0 w-full h-auto overflow-hidden rounded-t-xl">
+        <Image
           alt={project.title}
-          className="w-full max-h-72 object-cover rounded-t-xl"
+          className="w-full h-full object-cover aspect-[16/9]"
           src={project.image}
         />
-        {/*todo: use Image component*/}
       </CardHeader>
       <CardBody className="p-4 bg-background-100">
         <div>
@@ -37,14 +37,11 @@ const LargeProjectCard = ({ project }: { project: Project }) => {
               &nbsp; ({privacyLabel(project.privacy)})
             </p>
           )}
-          <div
-            className="flex flex-wrap gap-1.5 mt-1 py-2"
-            hidden={!!project.tags}
-          >
+          <div className="flex flex-wrap gap-1.5 mt-1 py-2">
             {project.tags && <ProjectTags tags={project.tags} />}
           </div>
         </div>
-        <p className=" text-default-600 dark:text-gray-300 text-sm mt-4">
+        <p className="text-default-600 dark:text-gray-300 text-sm mt-4">
           {project.description}
         </p>
         {project.sourceLink && (
