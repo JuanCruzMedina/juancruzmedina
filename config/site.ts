@@ -47,7 +47,7 @@ export const siteConfig = {
     workExperience: [
       {
         charge: "Software Engineer",
-        company: "Voxel Group an Amadeus Company",
+        company: "Voxel an Amadeus Company",
         location: "Barcelona, Spain",
         date: "Apr 2022 - Present",
         descriptionItems: [
