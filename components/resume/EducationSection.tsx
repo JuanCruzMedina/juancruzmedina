@@ -51,7 +51,7 @@ const EducationSection = ({ education }: { education: Education[] }) => {
                 </p>
               </div>
               <span className="text-small text-default-400 pt-2 flex items-center">
-                <span role="img" aria-label="calendar" className="mr-2">
+                <span aria-label="calendar" className="mr-2" role="img">
                   🗓️
                 </span>
                 {edu.subtitle}
