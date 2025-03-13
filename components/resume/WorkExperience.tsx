@@ -3,7 +3,7 @@ import { Image } from "@heroui/image";
 import NextImage from "next/image";
 import { Chip } from "@heroui/chip";
 
-import { subtitle, subtitleMarked } from "@/components/primitives";
+import { sectionTitle, workExperienceCard } from "@/components/primitives";
 
 interface WorkExperienceItem {
   company: string;
@@ -16,21 +16,20 @@ interface WorkExperienceItem {
 }
 
 const WorkExperience = ({
-                          workExperience,
-                        }: {
+  workExperience,
+}: {
   workExperience: WorkExperienceItem[];
 }) => {
   return (
-    <section className="w-full">
+    <section className="w-full mt-2 md:mt-6">
       <span
-        className={subtitle({
-          size: "xxl",
-          class: "py-8 text-default-800 font-semibold",
+        className={sectionTitle({
+          size: "sm",
         })}
       >
         Work Experience
       </span>
-      <Accordion className="w-full" selectionMode="multiple">
+      <Accordion className="w-full mt-4 mb-5" selectionMode="multiple" variant="light">
         {workExperience.map((experience, index) => (
           <AccordionItem
             key={index}
@@ -52,7 +51,7 @@ const WorkExperience = ({
             subtitle={
               <div className="flex items-center gap-2 flex-nowrap min-w-0">
                 <Chip
-                  className="dark:text-white shrink-0"
+                  className={workExperienceCard({ class: "dark:text-white shrink-0"})}
                   color="secondary"
                   size="sm"
                   variant="bordered"
@@ -60,9 +59,8 @@ const WorkExperience = ({
                   {experience.type}
                 </Chip>
                 <span
-                  className={subtitleMarked({
-                    size: "lg",
-                    class: "text-default-700 dark:text-violet-300 truncate",
+                  className={workExperienceCard({
+                    type: "charge"
                   })}
                 >
                   {experience.charge}
@@ -73,31 +71,28 @@ const WorkExperience = ({
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full">
                 <div className="min-w-0">
                   <span
-                    className={subtitle({
-                      size: "lg",
-                      class: "font-medium text-default-800 inline truncate",
-                    })}
+                    className={workExperienceCard({ type: "company" })}
                   >
                     {experience.company}
                   </span>
-                  <span className={subtitleMarked({ size: "sm" })}>
+                  <span className={workExperienceCard({ type: "location" })}>
                     , {experience.location}
                   </span>
                 </div>
-                <Chip
-                  className="mt-2 sm:mt-0 shrink-0"
-                  color="default"
-                  size="sm"
-                  variant="light"
+
+                <span
+                  className={workExperienceCard({
+                    type: "date", class: "mb-1 sm:mb-0"
+                  })}
                 >
                   {experience.date}
-                </Chip>
+                </span>
               </div>
             }
           >
             <div className="mb-2">
               {experience.descriptionItems.map((description, index) => (
-                <div key={index} className="py-1 text-medium">
+                <div key={index} className={workExperienceCard({ type: "description", class: "py-1" })}>
                   {description}
                 </div>
               ))}

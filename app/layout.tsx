@@ -9,7 +9,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { NavBar } from "@/components/NavBar";
-import { textLink } from "@/components/primitives";
+import { textLink, textParagraph } from "@/components/primitives";
 
 export const metadata: Metadata = {
   title: {
@@ -79,10 +79,10 @@ export default function RootLayout({
               {children}
             </main>
             <footer className="w-full flex flex-col items-center justify-center py-3">
-              <span className="text-default-600">
+              <span className={textParagraph()}>
                 Designed and developed by Juan Cruz Medina.
               </span>
-              <span className="text-default-600">
+              <span className={textParagraph()}>
                 Built with{" "}
                 <Link
                   isExternal

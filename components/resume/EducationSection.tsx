@@ -2,31 +2,27 @@ import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Image } from "@heroui/image";
 import { Divider } from "@heroui/divider";
 
-import { subtitle } from "@/components/primitives";
+import { educationCard, sectionTitle, subtitle } from "@/components/primitives";
+import { tv } from "tailwind-variants";
 
 interface Education {
   title: string;
   institution: string;
   image: string;
   description: string;
-  subtitle: string;
+  date: string;
 }
 
 const EducationSection = ({ education }: { education: Education[] }) => {
   return (
     <section className="w-full">
-      <span
-        className={subtitle({
-          size: "xxl",
-          class: "mt-4 text-default-800 font-semibold",
-        })}
-      >
+      <span className={sectionTitle({size:"sm", class: "mt-4"})}>
         Education
       </span>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 py-8">
         {education.map((edu, index) => (
-          <Card key={index} className="w-full max-w-sm mx-auto">
-            <CardHeader className="flex gap-3">
+          <Card key={index} className="w-full mx-auto md:col-span-2 col-start-0">
+            <CardHeader className="flex gap-1 md:gap-3">
               <Image
                 alt={edu.title}
                 className="bg-white object-contain p-1.5"
@@ -36,8 +32,8 @@ const EducationSection = ({ education }: { education: Education[] }) => {
                 width={80}
               />
               <div className="flex flex-col">
-                <p className="text-large font-semibold">{edu.title}</p>
-                <p className="text-medium text-default-500">
+                <p className={educationCard({type:"title"})}>{edu.title}</p>
+                <p className={educationCard({type:"subtitle"})}>
                   {edu.institution}
                 </p>
               </div>
@@ -45,16 +41,22 @@ const EducationSection = ({ education }: { education: Education[] }) => {
             <Divider />
             <CardBody>
               <div className="flex gap-1">
-                <p className="text-default-400 text-small">Location:</p>
-                <p className="font-semibold text-default-400 text-small">
+                <p className={
+                  educationCard({type:"description"})
+                }>Location:</p>
+                <p className={
+                  educationCard({type:"description", class:"font-semibold"})
+                }>
                   {edu.description}
                 </p>
               </div>
-              <span className="text-small text-default-400 pt-2 flex items-center">
+              <span className={educationCard({
+                type: "date", class: "pt-1 sm:pt-2 flex items-center"
+              })}>
                 <span aria-label="calendar" className="mr-2" role="img">
                   🗓️
                 </span>
-                {edu.subtitle}
+                {edu.date}
               </span>
             </CardBody>
           </Card>

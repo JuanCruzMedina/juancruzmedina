@@ -1,8 +1,9 @@
-import { Button } from "@heroui/button";
+"use client";
+
 import { Link } from "@heroui/link";
 import { Chip } from "@heroui/chip";
-
-import { GithubOutline } from "@/components/icons";
+import { textLink, textWithColor } from "../primitives";
+import { useHeroUISize } from "@/hooks/useHeroUISize";
 
 interface Project {
   privacy: string;
@@ -10,31 +11,34 @@ interface Project {
 }
 
 export const ProjectPrivacy = (project: Project) => {
+  const size = useHeroUISize();
+  
   if (project.privacy === "open" && project.sourceLink !== null) {
     return (
       <div className="flex justify-between mr-3.5">
-        <Button
+        <Link 
           isExternal
-          isIconOnly
-          as={Link}
-          className="bg-transparent"
+          showAnchorIcon
+          className={textLink({})}
           href={project.sourceLink}
-          startContent={<GithubOutline />}
-        />
+          size={size}
+        >
+          Source
+        </Link>
       </div>
     );
   }
 
   if (project.privacy === "internal") {
     return (
-      <Chip color={"secondary"} variant="light">
+      <Chip className={textWithColor()} variant="light" size={size}>
         Internal
       </Chip>
     );
   }
 
   return (
-    <Chip color={"secondary"} variant="light">
+    <Chip className={textWithColor()} variant="light" size={size}>
       Closed source
     </Chip>
   );

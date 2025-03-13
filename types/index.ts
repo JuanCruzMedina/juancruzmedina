@@ -6,7 +6,9 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
 
 export interface Project {
   title: string;
-  description: string;
+  subtitle: string;
+  shortDescription: string;
+  fullDescription: string;
   tags: string[];
   privacy: string;
   link?: string;
