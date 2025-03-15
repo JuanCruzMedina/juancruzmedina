@@ -11,15 +11,15 @@ export default function Home() {
         <Hero />
       </section>
 
-      <section className="py-8 mt-4">
+      <section className="mt-8">
         <AboutSection />
       </section>
 
-      <section>
+      <section className="sm:mt-16">
         <LastProjects projects={siteConfig.projects} quantity={3} />
       </section>
 
-      <section className="flex flex-col items-center mt-36 mb-14 ">
+      <section className="flex flex-col items-center mt-20 mb-14 ">
         <ContactSection />
       </section>
     </>

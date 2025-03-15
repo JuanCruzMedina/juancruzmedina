@@ -3,7 +3,11 @@ import { Image } from "@heroui/image";
 import { Divider } from "@heroui/divider";
 import { Link } from "@heroui/link";
 
-import { subtitle, textLink } from "@/components/primitives";
+import {
+  certificationCard,
+  sectionTitle,
+  textLink,
+} from "@/components/primitives";
 
 interface Certification {
   title: string;
@@ -22,9 +26,9 @@ const CertificationsSection = ({
   return (
     <section className="w-full">
       <span
-        className={subtitle({
-          size: "xxl",
-          class: "mt-4 text-default-800 font-semibold",
+        className={sectionTitle({
+          size: "sm",
+          class: "mt-4",
         })}
       >
         Certifications
@@ -32,20 +36,20 @@ const CertificationsSection = ({
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-8">
         {certifications.map((certification, index) => (
           <Card key={index} className="w-full max-w-sm mx-auto">
-            <CardHeader className="flex gap-3">
+            <CardHeader className="flex gap-2 lg:gap-3 grid grid-cols-4">
               <Image
                 alt={certification.title}
-                className="bg-black object-contain p-1.5"
+                className="bg-black object-contain p-1.5 col-span-1"
                 height={64}
                 radius="sm"
                 src={certification.image}
                 width={80}
               />
-              <div className="flex flex-col">
-                <p className="text-large font-semibold">
+              <div className="flex flex-col col-span-3">
+                <p className={certificationCard({ type: "title" })}>
                   {certification.title}
                 </p>
-                <p className="text-medium text-default-500">
+                <p className={certificationCard({ type: "company" })}>
                   {certification.company}
                 </p>
               </div>
@@ -53,12 +57,24 @@ const CertificationsSection = ({
             <Divider />
             <CardBody>
               <div className="flex gap-1">
-                <p className="text-default-400 text-small">Instructor:</p>
-                <p className="font-semibold text-default-400 text-small">
+                <p className={certificationCard({ type: "description" })}>
+                  Instructor:
+                </p>
+                <p
+                  className={certificationCard({
+                    type: "description",
+                    semibold: true,
+                  })}
+                >
                   {certification.instructor}
                 </p>
               </div>
-              <span className="text-small text-default-400 pt-2 flex items-center">
+              <span
+                className={certificationCard({
+                  type: "description",
+                  class: "pt-1 md:pt-2 flex items-center",
+                })}
+              >
                 <span aria-label="calendar" className="mr-2" role="img">
                   🗓️
                 </span>
@@ -70,7 +86,7 @@ const CertificationsSection = ({
               <Link
                 isExternal
                 showAnchorIcon
-                className={textLink()}
+                className={textLink({ size: "xs" })}
                 href={certification.link}
               >
                 Check certificate

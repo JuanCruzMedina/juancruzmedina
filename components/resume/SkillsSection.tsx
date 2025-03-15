@@ -2,12 +2,15 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Chip } from "@heroui/chip";
 
-import { subtitle } from "@/components/primitives";
+import { sectionTitle } from "@/components/primitives";
+import { useHeroUISize } from "@/hooks/useHeroUISize";
 
 const SkillsSection = ({ skills }: { skills: string[] }) => {
+  const size = useHeroUISize();
+
   const containerRef = useRef<HTMLDivElement>(null);
   const [chipRefs, setChipRefs] = useState<React.RefObject<HTMLDivElement>[]>(
-    []
+    [],
   );
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -37,7 +40,7 @@ const SkillsSection = ({ skills }: { skills: string[] }) => {
 
     const distance = Math.hypot(
       activeRect.left - currentRect.left,
-      activeRect.top - currentRect.top
+      activeRect.top - currentRect.top,
     );
 
     const threshold = (activeRect.width + currentRect.width) / 2 + 25;
@@ -47,12 +50,7 @@ const SkillsSection = ({ skills }: { skills: string[] }) => {
 
   return (
     <section className="w-full">
-      <span
-        className={subtitle({
-          size: "xxl",
-          class: "mt-4 text-default-800 font-semibold",
-        })}
-      >
+      <span className={sectionTitle({ size: "sm", class: "mt-4" })}>
         Skills
       </span>
       <div
@@ -64,7 +62,7 @@ const SkillsSection = ({ skills }: { skills: string[] }) => {
             key={index}
             ref={chipRefs[index]}
             className={`
-              transition-all duration-300 
+              transition-all duration-300 scale-100
               ${isActiveOrAdjacent(index) ? "scale-110 z-10" : "z-0"}
             `}
             onMouseEnter={() => handleMouseEnter(index)}
@@ -73,7 +71,7 @@ const SkillsSection = ({ skills }: { skills: string[] }) => {
             <Chip
               className={`transition-all duration-300 px-3 py-2 text-sm sm:text-base`}
               color="secondary"
-              size="lg"
+              size={size}
               variant="flat"
             >
               {skill}

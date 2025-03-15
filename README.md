@@ -1,7 +1,8 @@
 ![](https://imgur.com/ggylUmd.png)
 ---
 ![GitHub license](https://img.shields.io/github/license/JuanCruzMedina/juancruzmedina)
-![GitHub Repo stars](https://img.shields.io/github/stars/JuanCruzMedina/juancruzmedina?style=social) 
+![GitHub Repo stars](https://img.shields.io/github/stars/JuanCruzMedina/juancruzmedina?style=social)
+
 ---
 
 # Juan Cruz Medina's Portfolio

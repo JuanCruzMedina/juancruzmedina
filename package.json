@@ -16,6 +16,7 @@
   "@heroui/chip": "^2.2.10",
   "@heroui/code": "2.2.6",
   "@heroui/divider": "^2.2.9",
+  "@heroui/dropdown": "^2.3.15",
   "@heroui/image": "^2.2.9",
   "@heroui/input": "2.4.9",
   "@heroui/kbd": "2.2.6",
