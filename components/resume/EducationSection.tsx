@@ -24,7 +24,7 @@ const EducationSection = ({ education }: { education: Education[] }) => {
             key={index}
             className="w-full mx-auto md:col-span-2 col-start-0"
           >
-            <CardHeader className="flex gap-1 md:gap-3">
+            <CardHeader className="flex gap-3">
               <Image
                 alt={edu.title}
                 className="bg-white object-contain p-1.5"
