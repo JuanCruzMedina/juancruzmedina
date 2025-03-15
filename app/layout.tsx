@@ -10,6 +10,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { NavBar } from "@/components/NavBar";
 import { textLink, textParagraph } from "@/components/primitives";
+import ThemeToggle from '@/components/ThemeToggle'
 
 export const metadata: Metadata = {
   title: {
@@ -77,6 +78,7 @@ export default function RootLayout({
             <NavBar />
             <main className="flex-1 container mx-auto sm:max-w-full lg:max-w-7xl pt-16 px-6 flex-grow">
               {children}
+              <ThemeToggle />
             </main>
             <footer className="w-full flex flex-col items-center justify-center py-3">
               <span className={textParagraph()}>

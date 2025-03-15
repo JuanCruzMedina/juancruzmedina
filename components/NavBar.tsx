@@ -11,7 +11,6 @@ import NextLink from "next/link";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/ThemeSwitch";
 import {
   GithubIcon,
   LinkedinIcon,
@@ -63,7 +62,6 @@ export const NavBar = () => {
           <Link isExternal href={siteConfig.links.github} title="GitHub">
             <GithubIcon className="text-default-500" />
           </Link>
-          <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden md:flex">
           <Button
@@ -113,9 +111,6 @@ export const NavBar = () => {
           >
             Projects
           </NextLink>
-        </NavbarItem>
-        <NavbarItem>
-          <ThemeSwitch />
         </NavbarItem>
       </NavbarContent>
     </HeroUINavbar>
