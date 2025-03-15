@@ -10,7 +10,7 @@ type ButtonSize = "sm" | "md" | "lg";
  */
 export function useButtonSize(): ButtonSize {
   const size = useHeroUISize();
-  
+
   if (size === "sm") {
     return "sm";
   }
@@ -20,7 +20,7 @@ export function useButtonSize(): ButtonSize {
   if (size === "lg" || size === "xl") {
     return "lg";
   }
-  
+
   // Default fallback
   return "md";
 }

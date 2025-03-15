@@ -1,20 +1,29 @@
-'use client';
+"use client";
 
 import NextLink from "next/link";
 import { Link } from "@heroui/link";
-
-import { buttonGradient, sectionTitle, textLink, textParagraph } from "@/components/primitives";
-import { siteConfig } from "@/config/site";
 import { Button } from "@heroui/button";
+
 import { MailIcon } from "../icons";
+
+import {
+  buttonGradient,
+  sectionTitle,
+  textLink,
+  textParagraph,
+} from "@/components/primitives";
+import { siteConfig } from "@/config/site";
 import { useButtonSize } from "@/hooks/useButtonSize";
 
 export const ContactSection = () => {
   const buttonSize = useButtonSize();
+
   return (
     <div className="inline-block max-w-lg text-center justify-center">
       <span className={sectionTitle({ size: "md" })}>Let’s&nbsp;</span>
-      <span className={sectionTitle({ color: "violet", size: "md" })}>Connect</span>
+      <span className={sectionTitle({ color: "violet", size: "md" })}>
+        Connect
+      </span>
       <span className={sectionTitle({ size: "md" })}>!</span>
       <br />
       <div className="inline-block text-center justify-center py-8">
@@ -36,10 +45,10 @@ export const ContactSection = () => {
         </div>
         <Button
           as={NextLink}
-          className={buttonGradient({ class: "mt-4 md:mt-8"})}
+          className={buttonGradient({ class: "mt-4 md:mt-8" })}
           href={siteConfig.sendEmail}
-          size={buttonSize}
           radius="sm"
+          size={buttonSize}
           startContent={<MailIcon />}
         >
           Send me an email

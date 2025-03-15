@@ -1,42 +1,44 @@
-'use client'
+"use client";
 
 import { Card, CardBody, CardFooter } from "@heroui/card";
 import { Image } from "@heroui/image";
+import { Divider } from "@heroui/divider";
+import { Link } from "@heroui/link";
 
 import {
   flatProjectCardText,
   flatProjectCardSpacing,
   textLink,
-  ProjectCardTitle
+  ProjectCardTitle,
 } from "@/components/primitives";
 import { Project } from "@/types";
 import ProjectTags from "@/components/projects/ProjectTags";
 import { useHeroUISize } from "@/hooks/useHeroUISize";
-import { Divider } from "@heroui/divider";
-import { Link } from "@heroui/link";
 
 const FlatProjectCard = ({ project }: { project: Project }) => {
   const size = useHeroUISize();
   const imageSize = () => {
-    if (size === 'sm') {
+    if (size === "sm") {
       return 220;
     }
-    if (size === 'md') {
+    if (size === "md") {
       return 240;
     }
-    if (size === 'lg') {
+    if (size === "lg") {
       return 300;
     }
-    if (size === 'xl') {
+    if (size === "xl") {
       return 280;
     }
+
     return 220;
-  }
+  };
+
   return (
     <Card
       isBlurred
-      shadow="sm"
       className="bg-background/60 dark:bg-default-100/50 scale-95 hover:scale-100"
+      shadow="sm"
     >
       <CardBody className="overflow-visible p-0">
         <Image
@@ -55,21 +57,24 @@ const FlatProjectCard = ({ project }: { project: Project }) => {
             <div className="flex h-5 items-center space-x-0.1 md:space-x-2">
               <div hidden={!project.link}>
                 <Link
-                  href={project.link}
-                  size="sm"
                   showAnchorIcon
                   className={textLink({ size: "onlyIcon" })}
+                  href={project.link}
+                  size="sm"
                 >
                   View
                 </Link>
               </div>
-              <Divider orientation="vertical" hidden={!!(!project.link || !project.sourceLink)}></Divider>
+              <Divider
+                hidden={!!(!project.link || !project.sourceLink)}
+                orientation="vertical"
+              />
               <div hidden={!project.sourceLink}>
                 <Link
-                  href={project.sourceLink}
-                  size="sm"
                   showAnchorIcon
                   className={textLink({ size: "onlyIcon" })}
+                  href={project.sourceLink}
+                  size="sm"
                 >
                   Source
                 </Link>
@@ -83,7 +88,14 @@ const FlatProjectCard = ({ project }: { project: Project }) => {
             {project.tags && <ProjectTags tags={project.tags} />}
           </div>
           <Divider className="mt-1" />
-          <p className={flatProjectCardText({ type: "description", class: "mt-2.5 md:mt-3" })}>{project.shortDescription}</p>
+          <p
+            className={flatProjectCardText({
+              type: "description",
+              class: "mt-2.5 md:mt-3",
+            })}
+          >
+            {project.shortDescription}
+          </p>
         </div>
       </CardFooter>
     </Card>

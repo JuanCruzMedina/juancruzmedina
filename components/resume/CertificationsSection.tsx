@@ -3,7 +3,11 @@ import { Image } from "@heroui/image";
 import { Divider } from "@heroui/divider";
 import { Link } from "@heroui/link";
 
-import { certificationCard, sectionTitle, subtitle, textLink } from "@/components/primitives";
+import {
+  certificationCard,
+  sectionTitle,
+  textLink,
+} from "@/components/primitives";
 
 interface Certification {
   title: string;
@@ -53,12 +57,24 @@ const CertificationsSection = ({
             <Divider />
             <CardBody>
               <div className="flex gap-1">
-                <p className={certificationCard({ type: "description" })}>Instructor:</p>
-                <p className={certificationCard({ type: "description", semibold: true })}>
+                <p className={certificationCard({ type: "description" })}>
+                  Instructor:
+                </p>
+                <p
+                  className={certificationCard({
+                    type: "description",
+                    semibold: true,
+                  })}
+                >
                   {certification.instructor}
                 </p>
               </div>
-              <span className={certificationCard({ type: "description", class: "pt-1 md:pt-2 flex items-center" })}>
+              <span
+                className={certificationCard({
+                  type: "description",
+                  class: "pt-1 md:pt-2 flex items-center",
+                })}
+              >
                 <span aria-label="calendar" className="mr-2" role="img">
                   🗓️
                 </span>

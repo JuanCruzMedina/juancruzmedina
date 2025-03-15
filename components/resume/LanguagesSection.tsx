@@ -1,7 +1,5 @@
-import { educationCard, languageCard, sectionTitle, subtitle } from "@/components/primitives";
+import { languageCard, sectionTitle } from "@/components/primitives";
 import { ArgentinaFlag, UnitedStatesFlag } from "@/components/LanguagesFlags";
-import { Card, CardHeader, CardBody } from "@heroui/card";
-import { Divider } from "@heroui/divider";
 
 interface Language {
   name: string;
@@ -16,9 +14,7 @@ const flagMap: Record<string, JSX.Element> = {
 const LanguagesSection = ({ languages }: { languages: Language[] }) => {
   return (
     <section className="w-full">
-      <span
-        className={sectionTitle({ size: "sm", class: "mt-4" })}
-      >
+      <span className={sectionTitle({ size: "sm", class: "mt-4" })}>
         Languages
       </span>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 py-8">
@@ -27,12 +23,14 @@ const LanguagesSection = ({ languages }: { languages: Language[] }) => {
             key={index}
             className="flex items-start gap-4 p-4 rounded-lg shadow-md md:col-span-2"
           >
-            <div className="flex-shrink-0">{flagMap[language.name] || <div />}</div>
+            <div className="flex-shrink-0">
+              {flagMap[language.name] || <div />}
+            </div>
             <div className="flex flex-col">
-              <p className={languageCard({ type: "name" })}>
-                {language.name}
+              <p className={languageCard({ type: "name" })}>{language.name}</p>
+              <p className={languageCard({ type: "level" })}>
+                {language.level}
               </p>
-              <p className={languageCard({ type: "level" })}>{language.level}</p>
             </div>
           </div>
         ))}

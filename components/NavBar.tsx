@@ -16,7 +16,7 @@ import {
   LinkedinIcon,
   MailIcon,
   NavBarLogoIcon,
-  TwitterIcon
+  TwitterIcon,
 } from "@/components/icons";
 import { buttonGradient } from "@/components/primitives";
 
@@ -78,36 +78,39 @@ export const NavBar = () => {
       </NavbarContent>
 
       {/* Mobile navigation (visible only on small screens) */}
-      <NavbarContent className="sm:hidden basis-1/5 sm:basis-full" justify="start">
-      <NavbarItem>
-          <NextLink 
-            href="/home"
+      <NavbarContent
+        className="sm:hidden basis-1/5 sm:basis-full"
+        justify="start"
+      >
+        <NavbarItem>
+          <NextLink
             className={clsx(
               linkStyles({ color: "foreground" }),
               "data-[active=true]:text-primary data-[active=true]:font-medium text-sm",
             )}
+            href="/home"
           >
             Home
           </NextLink>
         </NavbarItem>
         <NavbarItem>
-          <NextLink 
-            href="/resume"
+          <NextLink
             className={clsx(
               linkStyles({ color: "foreground" }),
               "data-[active=true]:text-primary data-[active=true]:font-medium text-sm",
             )}
+            href="/resume"
           >
             Resume
           </NextLink>
         </NavbarItem>
         <NavbarItem>
-          <NextLink 
-            href="/projects"
+          <NextLink
             className={clsx(
               linkStyles({ color: "foreground" }),
               "data-[active=true]:text-primary data-[active=true]:font-medium text-sm",
             )}
+            href="/projects"
           >
             Projects
           </NextLink>

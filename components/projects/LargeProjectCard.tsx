@@ -2,7 +2,7 @@ import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Image } from "@heroui/image";
 import { Divider } from "@heroui/divider";
 
-import { ProjectCardTitle, textWithColor } from "@/components/primitives";
+import { ProjectCardTitle } from "@/components/primitives";
 import { Project } from "@/types";
 import ProjectTags from "@/components/projects/ProjectTags";
 import ProjectLinks from "@/components/projects/ProjectLinks";
@@ -18,16 +18,18 @@ const LargeProjectCard = ({ project }: { project: Project }) => {
         />
       </CardHeader>
       <CardBody className="p-4 bg-background-100">
-
         <div className="flex justify-between">
           <h3 className={ProjectCardTitle()}>{project.title}</h3>
-          <ProjectLinks 
-            link={project.link} 
-            sourceLink={project.sourceLink} 
-            privacy={project.privacy} 
+          <ProjectLinks
+            link={project.link}
+            privacy={project.privacy}
+            sourceLink={project.sourceLink}
           />
         </div>
-        <div className="flex flex-wrap gap-1.5 mt-1 py-2" hidden={!!project.tags}>
+        <div
+          className="flex flex-wrap gap-1.5 mt-1 py-2"
+          hidden={!!project.tags}
+        >
           {project.tags && <ProjectTags tags={project.tags} />}
         </div>
 

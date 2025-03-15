@@ -1,6 +1,7 @@
 import { Link } from "@heroui/link";
 
 import { sectionTitle, textParagraph } from "../primitives";
+
 import { ProfileImage } from "./ProfileImage";
 
 import { siteConfig } from "@/config/site";

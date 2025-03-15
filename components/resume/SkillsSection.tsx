@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Chip } from "@heroui/chip";
 
-import { sectionTitle, subtitle } from "@/components/primitives";
+import { sectionTitle } from "@/components/primitives";
 import { useHeroUISize } from "@/hooks/useHeroUISize";
 
 const SkillsSection = ({ skills }: { skills: string[] }) => {
@@ -10,7 +10,7 @@ const SkillsSection = ({ skills }: { skills: string[] }) => {
 
   const containerRef = useRef<HTMLDivElement>(null);
   const [chipRefs, setChipRefs] = useState<React.RefObject<HTMLDivElement>[]>(
-    []
+    [],
   );
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -40,7 +40,7 @@ const SkillsSection = ({ skills }: { skills: string[] }) => {
 
     const distance = Math.hypot(
       activeRect.left - currentRect.left,
-      activeRect.top - currentRect.top
+      activeRect.top - currentRect.top,
     );
 
     const threshold = (activeRect.width + currentRect.width) / 2 + 25;
@@ -50,7 +50,7 @@ const SkillsSection = ({ skills }: { skills: string[] }) => {
 
   return (
     <section className="w-full">
-      <span className={sectionTitle({size:"sm",class: "mt-4"})}>
+      <span className={sectionTitle({ size: "sm", class: "mt-4" })}>
         Skills
       </span>
       <div

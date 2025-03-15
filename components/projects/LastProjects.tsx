@@ -1,13 +1,17 @@
-'use client';
+"use client";
 
 import { Link } from "@heroui/link";
 import { Button } from "@heroui/button";
 import NextLink from "next/link";
 
-import { buttonGradient, sectionTitle, textLink, textParagraph } from "@/components/primitives";
+import {
+  buttonGradient,
+  sectionTitle,
+  textLink,
+  textParagraph,
+} from "@/components/primitives";
 import FlatProjectCard from "@/components/projects/FlatProjectCard";
 import { Project } from "@/types";
-
 import { useButtonSize } from "@/hooks/useButtonSize";
 
 interface LastProjectsProps {
@@ -30,19 +34,24 @@ export const LastProjects = ({ quantity, projects }: LastProjectsProps) => {
           <div className="flex flex-col space-y-4">
             <div className="flex flex-row flex-wrap">
               <h2 className={sectionTitle({ class: "flex-grow" })}>
-                Latests <p className={sectionTitle({color:"violet",class: "inline"})}>projects</p>
+                Latests{" "}
+                <p
+                  className={sectionTitle({ color: "violet", class: "inline" })}
+                >
+                  projects
+                </p>
               </h2>
               <Link
-                href="/projects"
-                className={textLink({ class: "flex items-center grow-3" })}
                 showAnchorIcon
+                className={textLink({ class: "flex items-center grow-3" })}
+                href="/projects"
                 size="sm"
               >
                 Explore more
               </Link>
             </div>
             <p className={textParagraph()}>
-              Here's a selection of my latest projects.
+              Here&#39;s a selection of my latest projects.
             </p>
           </div>
         </div>

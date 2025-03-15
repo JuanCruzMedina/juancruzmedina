@@ -29,7 +29,11 @@ const WorkExperience = ({
       >
         Work Experience
       </span>
-      <Accordion className="w-full mt-4 mb-5" selectionMode="multiple" variant="light">
+      <Accordion
+        className="w-full mt-4 mb-5"
+        selectionMode="multiple"
+        variant="light"
+      >
         {workExperience.map((experience, index) => (
           <AccordionItem
             key={index}
@@ -51,7 +55,9 @@ const WorkExperience = ({
             subtitle={
               <div className="flex items-center gap-2 flex-nowrap min-w-0">
                 <Chip
-                  className={workExperienceCard({ class: "dark:text-white shrink-0"})}
+                  className={workExperienceCard({
+                    class: "dark:text-white shrink-0",
+                  })}
                   color="secondary"
                   size="sm"
                   variant="bordered"
@@ -60,7 +66,7 @@ const WorkExperience = ({
                 </Chip>
                 <span
                   className={workExperienceCard({
-                    type: "charge"
+                    type: "charge",
                   })}
                 >
                   {experience.charge}
@@ -70,9 +76,7 @@ const WorkExperience = ({
             title={
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full">
                 <div className="min-w-0">
-                  <span
-                    className={workExperienceCard({ type: "company" })}
-                  >
+                  <span className={workExperienceCard({ type: "company" })}>
                     {experience.company}
                   </span>
                   <span className={workExperienceCard({ type: "location" })}>
@@ -82,7 +86,8 @@ const WorkExperience = ({
 
                 <span
                   className={workExperienceCard({
-                    type: "date", class: "mb-1 sm:mb-0"
+                    type: "date",
+                    class: "mb-1 sm:mb-0",
                   })}
                 >
                   {experience.date}
@@ -92,7 +97,13 @@ const WorkExperience = ({
           >
             <div className="mb-2">
               {experience.descriptionItems.map((description, index) => (
-                <div key={index} className={workExperienceCard({ type: "description", class: "py-1" })}>
+                <div
+                  key={index}
+                  className={workExperienceCard({
+                    type: "description",
+                    class: "py-1",
+                  })}
+                >
                   {description}
                 </div>
               ))}

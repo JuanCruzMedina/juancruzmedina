@@ -13,5 +13,6 @@ export const getPrivacyLabel = (privacy: string): string => {
   if (privacy === "internal") {
     return "Internal Project";
   }
+
   return "";
 };

@@ -1,7 +1,7 @@
 "use client";
 
 import { Chip } from "@heroui/chip";
-import { useHeroUISize } from "@/hooks/useHeroUISize";
+
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 interface ProjectTagsProps {
@@ -13,22 +13,22 @@ const ProjectTags = ({ tags = [] }: ProjectTagsProps) => {
 
   const getChipSize = () => {
     switch (breakpoint) {
-      case 'xs':
-        return 'sm';
-      case 'sm':
-        return 'sm';
+      case "xs":
+        return "sm";
+      case "sm":
+        return "sm";
       default:
-        return 'md';
+        return "md";
     }
   };
 
   return tags.map((tag: string) => (
-    <Chip 
-      key={tag} 
-      color="secondary" 
-      radius="sm" 
-      variant="flat"
+    <Chip
+      key={tag}
+      color="secondary"
+      radius="sm"
       size={getChipSize()}
+      variant="flat"
     >
       {tag}
     </Chip>

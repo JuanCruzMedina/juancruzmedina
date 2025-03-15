@@ -10,7 +10,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { NavBar } from "@/components/NavBar";
 import { textLink, textParagraph } from "@/components/primitives";
-import ThemeToggle from '@/components/ThemeToggle'
+import ThemeToggle from "@/components/ThemeToggle";
 
 export const metadata: Metadata = {
   title: {

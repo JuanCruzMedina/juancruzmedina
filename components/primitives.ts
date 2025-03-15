@@ -81,7 +81,6 @@ export const buttonGradient = tv({
   base: "bg-gradient-to-tr from-[#FF1CF7] to-violet-600 text-white shadow-lg",
 });
 
-
 export const name = tv({
   base: "tracking-tight inline font-semibold",
   variants: {
@@ -102,10 +101,7 @@ export const name = tv({
   },
   compoundVariants: [
     {
-      color: [
-        "violet",
-        "foreground",
-      ],
+      color: ["violet", "foreground"],
       class: "bg-clip-text text-transparent bg-gradient-to-b",
     },
   ],
@@ -119,8 +115,7 @@ export const simpleTitleResponsive = tv({
       bold: "font-bold",
       semi: "font-semibold",
     },
-    color:
-    {
+    color: {
       light: "text-gray-500 dark:text-gray-400",
       violet: "text-violet-600 dark:text-violet-400",
       gradientViolet: "from-[#FF1CF7] to-[#b249f8]",
@@ -142,11 +137,7 @@ export const simpleTitleResponsive = tv({
   },
   compoundVariants: [
     {
-      color: [
-        "light",
-        "violet",
-        "gradientViolet",
-      ],
+      color: ["light", "violet", "gradientViolet"],
       class: "bg-clip-text text-transparent bg-gradient-to-b",
     },
   ],
@@ -193,11 +184,7 @@ export const sectionTitle = tv({
   },
   compoundVariants: [
     {
-      color: [
-        "violet",
-        "yellow",
-        "foreground",
-      ],
+      color: ["violet", "yellow", "foreground"],
       class: "bg-clip-text text-transparent bg-gradient-to-b",
     },
   ],
@@ -228,16 +215,19 @@ export const textParagraph = tv({
   defaultVariants: {
     font: "normal",
     color: "light",
-    size: "md"
+    size: "md",
   },
 });
 
 export const flatProjectCardText = tv({
   variants: {
     type: {
-      title: "text-sm sm:text-lg md:text-md lg:text-lg xl:text-lg font-bold mb-1 sm:mb-0",
-      subtitle: "text-xs sm:text-base md:text-md lg:text-lg xl:text-lg font-semibold text-default-600 dark:text-gray-300",
-      description: "text-xs sm:text-base md:text-md lg:text-lg xl:text-lg text-default-600 dark:text-gray-300 mt-2 sm:mt-0",
+      title:
+        "text-sm sm:text-lg md:text-md lg:text-lg xl:text-lg font-bold mb-1 sm:mb-0",
+      subtitle:
+        "text-xs sm:text-base md:text-md lg:text-lg xl:text-lg font-semibold text-default-600 dark:text-gray-300",
+      description:
+        "text-xs sm:text-base md:text-md lg:text-lg xl:text-lg text-default-600 dark:text-gray-300 mt-2 sm:mt-0",
     },
   },
 });
@@ -246,21 +236,24 @@ export const flatProjectCardSpacing = tv({
   variants: {
     type: {
       tagsContainer: "flex flex-wrap gap-1 sm:gap-1.5 py-1 sm:py-2",
-      headerContainer: "flex flex-col sm:flex-row sm:justify-between sm:items-start",
+      headerContainer:
+        "flex flex-col sm:flex-row sm:justify-between sm:items-start",
     },
   },
 });
 
 export const ProjectCardTitle = tv({
-  base: "font-bold text-sm md:text-lg lg:text-xl"
+  base: "font-bold text-sm md:text-lg lg:text-xl",
 });
 
 export const educationCard = tv({
   variants: {
     type: {
       title: "text-sm sm:text-large font-semibold mb-1 sm:mb-0",
-      subtitle: "text-xs sm:text-base md:text-medium lg:text-md xl:text-md  text-default-600 dark:text-gray-300",
-      description: "text-xs sm:text-base md:text-sm lg:text-md xl:text-medium mt-2 sm:mt-0 text-default-400",
+      subtitle:
+        "text-xs sm:text-base md:text-medium lg:text-md xl:text-md  text-default-600 dark:text-gray-300",
+      description:
+        "text-xs sm:text-base md:text-sm lg:text-md xl:text-medium mt-2 sm:mt-0 text-default-400",
       date: "text-xs sm:text-base md:text-sm lg:text-md xl:text-medium text-default-400",
     },
   },
@@ -270,33 +263,37 @@ export const languageCard = tv({
   variants: {
     type: {
       name: "text-sm sm:text-large font-semibold mb-1 sm:mb-0",
-      level: "text-xs sm:text-base md:text-medium lg:text-md xl:text-md  text-default-600 dark:text-gray-300"
+      level:
+        "text-xs sm:text-base md:text-medium lg:text-md xl:text-md  text-default-600 dark:text-gray-300",
     },
   },
-})
+});
 
 export const certificationCard = tv({
   variants: {
     type: {
       title: "text-sm sm:text-large font-semibold mb-1 sm:mb-0",
-      company: "text-xs sm:text-base md:text-medium lg:text-md xl:text-md  text-default-600 dark:text-gray-300",
-      description: "text-xs sm:text-base md:text-sm lg:text-md xl:text-lg text-default-400 dark:text-gray-300",
+      company:
+        "text-xs sm:text-base md:text-medium lg:text-md xl:text-md  text-default-600 dark:text-gray-300",
+      description:
+        "text-xs sm:text-base md:text-sm lg:text-md xl:text-lg text-default-400 dark:text-gray-300",
     },
     semibold: {
       true: "font-semibold",
-    }
+    },
   },
-})
+});
 
 export const workExperienceCard = tv({
   variants: {
     type: {
-      company: "text-sm sm:text-large font-medium text-default-800 inline truncate",
+      company:
+        "text-sm sm:text-large font-medium text-default-800 inline truncate",
       location: "text-xs sm:text-base md:text-sm lg:text-base text-default-600",
       date: "text-xs sm:text-sm lg:text-md text-default-600",
       description: "text-xs sm:text-base md:text-sm lg:text-md xl:text-lg",
-      charge: "text-sm sm:text-base md:text-md lg:text-lg text-default-700 dark:text-violet-300 truncate font-medium",
-
+      charge:
+        "text-sm sm:text-base md:text-md lg:text-lg text-default-700 dark:text-violet-300 truncate font-medium",
     },
   },
-})
+});
