@@ -38,7 +38,6 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/medinajuancruz/",
     twitter: "https://x.com/juanmedinadev",
     voxel: "https://www.voxelgroup.net/es/",
-    university: "https://www.frc.utn.edu.ar/",
   },
   resume: {
     description:

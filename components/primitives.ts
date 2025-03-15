@@ -1,50 +1,5 @@
 import { tv } from "tailwind-variants";
 
-export const subtitle = tv({
-  base: "w-full md:w-1/2 my-2 text-lg lg:text-xl text-default-600 block max-w-full",
-  variants: {
-    fullWidth: {
-      true: "!w-full",
-    },
-    size: {
-      sm: "text-sm lg:text-base",
-      md: "text-medium lg:text-lg",
-      lg: "text-lg lg:text-xl",
-      xl: "text-xl lg:text-2xl",
-      xxl: "text-2xl lg:text-3xl",
-    },
-  },
-  defaultVariants: {
-    fullWidth: true,
-    size: "lg",
-  },
-});
-
-export const subtitleMarked = tv({
-  base: "inline max-w-full",
-  variants: {
-    fullWidth: {
-      true: "!w-full",
-    },
-    color: {
-      default: "text-default-600",
-      violet:
-        "text-violet-600 hover:text-violet-800 dark:text-violet-400 dark:hover:text-violet-200",
-      foreground: "text-foreground-600 hover:text-foreground-800",
-    },
-    size: {
-      sm: "text-sm lg:text-base",
-      md: "text-medium lg:text-lg",
-      lg: "text-md md:text-lg lg:text-xl",
-    },
-  },
-  defaultVariants: {
-    color: "default",
-    fullWidth: true,
-    size: "lg",
-  },
-});
-
 export const textLink = tv({
   base: "text-violet-600 hover:text-violet-800 dark:text-violet-400 dark:hover:text-violet-200",
   variants: {
@@ -204,6 +159,7 @@ export const textParagraph = tv({
     color: {
       light: "text-gray-500 dark:text-gray-300",
       violet: "text-violet-600 dark:text-violet-400",
+      violetDark: "text-gray-700 dark:text-violet-400",
     },
     fullWidth: {
       true: "w-full block",
