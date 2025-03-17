@@ -66,7 +66,7 @@ const FlatProjectCard = ({ project }: { project: Project }) => {
                 </Link>
               </div>
               <Divider
-                hidden={!!(!project.link || !project.sourceLink)}
+                hidden={!project.link || !project.sourceLink}
                 orientation="vertical"
               />
               <div hidden={!project.sourceLink}>

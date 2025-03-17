@@ -88,7 +88,7 @@ export const NavBar = () => {
               linkStyles({ color: "foreground" }),
               "data-[active=true]:text-primary data-[active=true]:font-medium text-sm",
             )}
-            href="/home"
+            href="/"
           >
             Home
           </NextLink>

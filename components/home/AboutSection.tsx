@@ -70,7 +70,9 @@ export const AboutSection = () => {
           </p>
           <br />
           <p>
-            <span className={textParagraph({ color:"violetDark", font: "bold" })}>
+            <span
+              className={textParagraph({ color: "violetDark", font: "bold" })}
+            >
               💡 Meet Indio, my debugging partner!
             </span>
             <br />

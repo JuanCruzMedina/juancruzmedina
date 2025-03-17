@@ -1,3 +1,5 @@
+import React from "react";
+
 import { languageCard, sectionTitle } from "@/components/primitives";
 import { ArgentinaFlag, UnitedStatesFlag } from "@/components/LanguagesFlags";
 
@@ -6,7 +8,7 @@ interface Language {
   level: string;
 }
 
-const flagMap: Record<string, JSX.Element> = {
+const flagMap: Record<string, React.ReactNode> = {
   Spanish: <ArgentinaFlag size={50} />,
   English: <UnitedStatesFlag size={50} />,
 };

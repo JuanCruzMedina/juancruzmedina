@@ -34,7 +34,7 @@ export const LastProjects = ({ quantity, projects }: LastProjectsProps) => {
           <div className="flex flex-col space-y-4">
             <div className="flex flex-row flex-wrap">
               <h2 className={sectionTitle({ class: "flex-grow" })}>
-                Latests{" "}
+                Latest&#39;s{" "}
                 <p
                   className={sectionTitle({ color: "violet", class: "inline" })}
                 >

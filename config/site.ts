@@ -56,7 +56,7 @@ export const siteConfig = {
           "Manage technical debt for one of the most demanding projects, ensuring long-term maintainability.",
           "Successfully proposed and implemented an improvement in the certificate update process, reducing manual tasks as an intermediate step before a full migration to a new application.",
           "Work with .NET Core 3.1 and .NET Framework 4.8, utilizing Dapper for data access.",
-          "Use Redis, PostgreSQL, and Oracle databases for different application needs.",
+          "Use Redis, Postgres, and Oracle databases for different application needs.",
           "Define metrics and implement observability improvements for better performance monitoring.",
           "Collaborate with the team, applying best practices and agile methodologies.",
           "Use Python for scripting and automation tasks.",
