@@ -3,12 +3,12 @@
 import { Card, CardBody, CardFooter } from "@heroui/card";
 import { Image } from "@heroui/image";
 import { Divider } from "@heroui/divider";
-import { Link } from "@heroui/link";
+
+import ProjectLinks from "./ProjectLinks";
 
 import {
   flatProjectCardText,
   flatProjectCardSpacing,
-  textLink,
   ProjectCardTitle,
 } from "@/components/primitives";
 import { Project } from "@/types";
@@ -54,32 +54,11 @@ const FlatProjectCard = ({ project }: { project: Project }) => {
         <div className="flex flex-col">
           <div className="flex justify-between">
             <h3 className={ProjectCardTitle()}>{project.title}</h3>
-            <div className="flex h-5 items-center space-x-0.1 md:space-x-2">
-              <div hidden={!project.link}>
-                <Link
-                  showAnchorIcon
-                  className={textLink({ size: "onlyIcon" })}
-                  href={project.link}
-                  size="sm"
-                >
-                  View
-                </Link>
-              </div>
-              <Divider
-                hidden={!project.link || !project.sourceLink}
-                orientation="vertical"
-              />
-              <div hidden={!project.sourceLink}>
-                <Link
-                  showAnchorIcon
-                  className={textLink({ size: "onlyIcon" })}
-                  href={project.sourceLink}
-                  size="sm"
-                >
-                  Source
-                </Link>
-              </div>
-            </div>
+            <ProjectLinks
+              link={project.link}
+              privacy={project.privacy}
+              sourceLink={project.sourceLink}
+            />
           </div>
           <div
             className={flatProjectCardSpacing({ type: "tagsContainer" })}

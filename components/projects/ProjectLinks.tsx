@@ -24,7 +24,9 @@ const ProjectLinks = ({ link, sourceLink, privacy }: ProjectLinksProps) => {
         </Link>
       </div>
 
-      {link && sourceLink && <Divider orientation="vertical" />}
+      {link && sourceLink && (
+        <Divider className="ml-1 mr-2" orientation="vertical" />
+      )}
 
       <div hidden={!sourceLink}>
         <Link
@@ -38,7 +40,7 @@ const ProjectLinks = ({ link, sourceLink, privacy }: ProjectLinksProps) => {
       </div>
 
       {(link || sourceLink) && privacy !== "open" && (
-        <Divider orientation="vertical" />
+        <Divider className="ml-1 mr-2" orientation="vertical" />
       )}
 
       <div hidden={privacy === "open"}>
