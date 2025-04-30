@@ -15,6 +15,7 @@ const ProjectLinks = ({ link, sourceLink, privacy }: ProjectLinksProps) => {
     <div className="flex h-5 items-center space-x-0.1 md:space-x-2">
       <div hidden={!link}>
         <Link
+          isExternal
           showAnchorIcon
           className={textLink({ size: "onlyIcon" })}
           href={link || ""}
@@ -30,6 +31,7 @@ const ProjectLinks = ({ link, sourceLink, privacy }: ProjectLinksProps) => {
 
       <div hidden={!sourceLink}>
         <Link
+          isExternal
           showAnchorIcon
           className={textLink({ size: "onlyIcon" })}
           href={sourceLink || ""}
@@ -44,7 +46,7 @@ const ProjectLinks = ({ link, sourceLink, privacy }: ProjectLinksProps) => {
       )}
 
       <div hidden={privacy === "open"}>
-        <p className={textWithColor({ size: "xs" })}>
+        <p className={textWithColor({ size: "xxs" })}>
           {getPrivacyLabel(privacy)}
         </p>
       </div>

@@ -19,6 +19,7 @@ export const textWithColor = tv({
   base: "text-default-600 dark:text-gray-300",
   variants: {
     size: {
+      xxs: "text-xs xl:text-medium",
       xs: "text-xs lg:text-base",
       md: "text-xs sm:text-base md:text-md lg:text-lg xl:text-lg",
     },
