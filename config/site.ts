@@ -45,6 +45,17 @@ export const siteConfig = {
 
     workExperience: [
       {
+        charge: "Senior Full-Stack Developer (Tech Screening Specialist)",
+        company: "Wizippo",
+        location: "Denver, Colorado",
+        date: "Apr 2025 - current",
+        descriptionItems: [
+          "Designed and conducted technical screenings for senior back-end and full-stack engineering roles, assessing candidates on system architecture, cloud services, algorithms, and code quality.",
+        ],
+        type: "Part-time",
+        companyLogo: "/resume/wizippo.png",
+      },
+      {
         charge: "Software Engineer",
         company: "Voxel Group",
         location: "Barcelona, Spain",
@@ -264,13 +275,40 @@ export const siteConfig = {
     ],
     certifications: [
       {
+        title: "Code Smells",
+        date: "april 2025",
+        instructor: "Raúl Villares Sánchez",
+        company: "Exeal",
+        image:
+          "https://import.cdn.thinkific.com/cdn-cgi/image/width=384,dpr=1,onerror=redirect/486459/custom_site_themes/358479/eGwqY7m6Tfa66CZOaxri_Logo-Exeal.png",
+        link: "https://academia.exeal.com/certificates/pvfhfnltww",
+      },
+      {
+        title: "Docker",
+        date: "april 2025",
+        instructor: "Amin Espinoza",
+        company: "Platzi",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/9/95/LOGO-PLATZI-2023.svg",
+        link: "https://platzi.com/p/juancruzfaq/curso/8781-docker-fundamentos/diploma/detalle/",
+      },
+      {
+        title: "FastAPI",
+        date: "april 2025",
+        instructor: "Luis Martinez",
+        company: "Platzi",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/9/95/LOGO-PLATZI-2023.svg",
+        link: "https://platzi.com/p/juancruzfaq/curso/11190-fastapi/diploma/detalle/",
+      },
+      {
         title: "React",
         date: "january 2025",
         instructor: "Fernando Herrera",
         company: "Udemy",
         image:
           "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg",
-        link: "https://www.udemy.com/certificate/UC-40b17d83-9fa1-436c-b4a3-256d219fb09b/",
+        link: "https://platzi.com/p/juancruzfaq/curso/8781-docker-fundamentos/diploma/detalle/",
       },
       {
         title: "Cloud Patterns in Azure",
@@ -342,6 +380,7 @@ export const siteConfig = {
           "Development of a Python application that enables remote control and monitoring of various IoT devices, including spas, chillers, and saunas. Hosted on AWS Lambda, the application ensures reliable and secure communication using a custom-built protocol designed by the client. This system enhances automation, allowing users to interact with their devices from anywhere via cloud infrastructure.",
         tags: ["Python", "Alexa", "AWSLambda", "IoT"],
         privacy: "closed",
+        link: "https://www.amazon.com/Applied-Computer-Controls-SmarTouch-Spa/dp/B0CJ9GTYXF/ref=sr_1_1?s=digital-skills&sr=1-1",
         image: "alexa-device-manager-project.jpg",
         date: "2023",
       },
