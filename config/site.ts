@@ -1,37 +1,24 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Juan Cruz Medina :)",
+  name: "Juan Cruz Medina",
+  displayName: "Juan Cruz Medina",
   email: "mail@juanmedina.com.ar",
   sendEmail: "mailto:mail@juanmedina.com.ar",
   description: "Juan Cruz Medina Software Developer Portfolio",
+  tagline: "Backend engineer building reliable systems with .NET & Python",
+  location: "Based in Córdoba, Argentina",
   navItems: [
-    {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Resume",
-      href: "/resume",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
+    { label: "Home", href: "/" },
+    { label: "Experience", href: "/experience" },
+    { label: "Blog", href: "/blog" },
+    { label: "Projects", href: "/projects" },
   ],
   navMenuItems: [
-    {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Resume",
-      href: "/resume",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
+    { label: "Home", href: "/" },
+    { label: "Experience", href: "/experience" },
+    { label: "Blog", href: "/blog" },
+    { label: "Projects", href: "/projects" },
   ],
   links: {
     github: "https://github.com/JuanCruzMedina",
@@ -40,6 +27,8 @@ export const siteConfig = {
     voxel: "https://www.voxelgroup.net/es/",
   },
   resume: {
+    descriptionShort:
+      "Backend developer focused on .NET and Python. I collaborate with teams to build reliable systems, applying best practices, refactoring, and software architecture.",
     description:
       "I am a backend developer with experience in designing and building applications using .NET and Python, leveraging best practices, modern development techniques, and software design principles. My primary focus is collaborating with teams to create high-quality solutions in the most effective way possible. I have gained valuable experience working with teams of all sizes, from large to small. I am particularly passionate about applying my technical expertise in areas such as refactoring techniques, best practices, legacy code management, and software architecture to improve and optimize applications.",
 
@@ -183,23 +172,16 @@ export const siteConfig = {
       },
     ],
     skills: [
-      // Backend Frameworks & Languages
       ".NET",
       "Python",
       "Node.js",
       "Express",
-
-      // .NET Ecosystem
       "Windows forms",
       "Entity Framework",
       "Dapper",
       "LINQ",
-
-      // Python Frameworks
       "Flask",
       "FastAPI",
-
-      // Frontend & Web
       "HTML",
       "CSS",
       "JavaScript",
@@ -208,13 +190,9 @@ export const siteConfig = {
       "Redux",
       "Next.js",
       "MERN",
-
-      // UI Libraries & Frameworks
       "TailwindCSS",
       "Bootstrap",
       "Material-UI",
-
-      // Software Design & Architecture
       "SOLID",
       "DDD",
       "Design Patterns",
@@ -222,20 +200,12 @@ export const siteConfig = {
       "Refactoring",
       "Ports & Adapters",
       "TDD",
-
-      // Project Management & Methodologies
       "Agile",
-
-      // Databases
       "SQL",
       "MongoDB",
       "Oracle",
       "MySQL",
-
-      // APIs & Communication
       "REST",
-
-      // DevOps & Cloud
       "Git",
       "Github",
       "Jenkins",
@@ -243,16 +213,30 @@ export const siteConfig = {
       "Lambda",
       "S3",
       "Firebase",
-
-      // Monitoring & Logging
       "Graylog",
       "Grafana",
       "Canonical",
       "Logging",
-
-      // Miscellaneous
       "Alexa",
       "Figma",
+    ],
+    skillsByCategory: [
+      {
+        label: "Backend",
+        skills: [".NET", "Python", "Node.js", "Express", "Flask", "FastAPI", "Windows forms", "Entity Framework", "Dapper", "LINQ"],
+      },
+      {
+        label: "Frontend",
+        skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Redux", "Next.js", "MERN", "TailwindCSS", "Bootstrap", "Material-UI"],
+      },
+      {
+        label: "Architecture & Design",
+        skills: ["SOLID", "DDD", "Design Patterns", "Clean Code", "Refactoring", "Ports & Adapters", "TDD", "Agile"],
+      },
+      {
+        label: "Data & Cloud",
+        skills: ["SQL", "MongoDB", "Oracle", "MySQL", "REST", "Git", "Github", "Jenkins", "AWS", "Lambda", "S3", "Firebase", "Graylog", "Grafana"],
+      },
     ],
     education: [
       {
