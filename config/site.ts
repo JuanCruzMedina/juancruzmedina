@@ -340,7 +340,7 @@ export const siteConfig = {
         privacy: "open",
         link: "https://afipxer-seven.vercel.app/",
         sourceLink: "https://github.com/JuanCruzMedina/afipxer",
-        image: "afipxer-project.jpg",
+        image: "arca.png",
         date: "2025",
       },
       {
@@ -352,7 +352,7 @@ export const siteConfig = {
           "A desktop application developed with Windows Forms that streamlines livestock data management. It connects to a Digital Caravan Reader Stick, enabling users to download, normalize, and update animal records seamlessly. The system automates data collection and transfer, reducing manual input errors and enhancing traceability in livestock operations.",
         tags: ["C#", ".NET", "Windows Forms"],
         privacy: "closed",
-        image: "fulltrace-project.jpg",
+        image: "livestock.png",
         date: "2023",
       },
       {
@@ -365,7 +365,7 @@ export const siteConfig = {
         tags: ["Python", "Alexa", "AWSLambda", "IoT"],
         privacy: "closed",
         link: "https://www.amazon.com/Applied-Computer-Controls-SmarTouch-Spa/dp/B0CJ9GTYXF/ref=sr_1_1?s=digital-skills&sr=1-1",
-        image: "alexa-device-manager-project.jpg",
+        image: "alexa-spa.png",
         date: "2023",
       },
       {
@@ -385,7 +385,7 @@ export const siteConfig = {
           "RESTfulAPI",
         ],
         privacy: "internal",
-        image: "room-mapper-project.jpg",
+        image: "nlp.png",
         date: "2021",
       },
     ],

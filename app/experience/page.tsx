@@ -138,7 +138,7 @@ export default function ExperiencePage() {
             Certifications
           </p>
           <div className="mt-6 space-y-4">
-            {certifications.slice(0, 4).map((cert) => (
+            {certifications.map((cert) => (
               <a
                 key={cert.title}
                 href={cert.link}

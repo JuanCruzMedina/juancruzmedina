@@ -1,5 +1,5 @@
-import { siteConfig } from "@/config/site";
 import { FadeInSection } from "@/components/FadeInSection";
+import { siteConfig } from "@/config/site";
 import Link from "next/link";
 
 export function AboutSection() {
@@ -12,7 +12,7 @@ export function AboutSection() {
               About
             </p>
             <h2 className="mt-4 font-display text-4xl tracking-[0.04em] text-[var(--color-accent)] md:text-6xl">
-              THE ENGINEER
+              THE DEVELOPER
             </h2>
           </FadeInSection>
 
