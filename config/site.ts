@@ -292,7 +292,8 @@ export const siteConfig = {
         company: "Udemy",
         image:
           "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg",
-        link: "https://platzi.com/p/juancruzfaq/curso/8781-docker-fundamentos/diploma/detalle/",
+        // Replace with your Udemy certificate URL (Profile > Certificates)
+        link: "https://www.udemy.com/certificate/UC-XXXXX/",
       },
       {
         title: "Cloud Patterns in Azure",
@@ -390,4 +391,8 @@ export const siteConfig = {
       },
     ],
   },
+  testimonials: [
+    // Add testimonials from clients/colleagues when available
+    // { quote: "...", author: "Name", role: "Role", company: "Company" },
+  ],
 };

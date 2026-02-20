@@ -3,6 +3,8 @@ import { DM_Sans, JetBrains_Mono, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { PersonJsonLd } from "@/components/JsonLd";
+import { Analytics } from "@vercel/analytics/react";
 import { siteConfig } from "@/config/site";
 
 const dmSans = DM_Sans({
@@ -66,6 +68,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title={`${siteConfig.name} - Blog`}
+          href={`${baseUrl}/feed.xml`}
+        />
+        <PersonJsonLd />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){var t=localStorage.getItem("theme");var d=window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.setAttribute("data-theme",t||(d?"dark":"light"));})();`,
@@ -76,6 +85,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

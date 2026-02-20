@@ -142,6 +142,10 @@ body {
   will-change: transform;
 }
 
+.animate-marquee-paused {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {
     animation: none;
