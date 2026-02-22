@@ -60,6 +60,12 @@ export function Footer() {
               >
                 Email
               </a>
+              <a
+                href="/feed.xml"
+                className="link-underline w-fit text-sm text-[var(--color-accent-muted)] transition-colors hover:text-[var(--color-accent)]"
+              >
+                RSS
+              </a>
             </div>
           </div>
         </div>

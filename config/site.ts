@@ -34,10 +34,33 @@ export const siteConfig = {
 
     workExperience: [
       {
+        charge: "Software Developer",
+        company: "Mercado Libre",
+        location: "Remote",
+        date: "Aug 2025 - Current",
+        descriptionItems: [
+          "Developing and maintaining software solutions for one of Latin America's largest e-commerce platforms.",
+        ],
+        type: "Full-time",
+        companyLogo: "/resume/mercado-libre.png",
+      },
+      {
+        charge: "CTO & Partner",
+        company: "Prestige Rewards",
+        location: "Remote",
+        date: "Feb 2024 - Current",
+        descriptionItems: [
+          "Leading development initiatives as both developer and business partner.",
+          "Building and maintaining software solutions for the company's reward and loyalty programs.",
+        ],
+        type: "Freelance",
+        companyLogo: "/resume/prestige-rewards.jpeg",
+      },
+      {
         charge: "Senior Full-Stack Developer (Tech Screening Specialist)",
         company: "Wizippo",
         location: "Denver, Colorado",
-        date: "Apr 2025 - current",
+        date: "Apr 2025 - Aug 2025",
         descriptionItems: [
           "Designed and conducted technical screenings for senior back-end and full-stack engineering roles, assessing candidates on system architecture, cloud services, algorithms, and code quality.",
         ],
@@ -148,7 +171,7 @@ export const siteConfig = {
         charge: "Fullstack Developer",
         company: "Procoop SRL",
         location: "Córdoba, Argentina",
-        date: "Feb 2021 - Sept 2021",
+        date: "Feb 2021 - Sep 2021",
         descriptionItems: [
           "Maintained a .NET desktop application for managing cooperatives and utilities (electricity, gas, water, internet).",
           "Implemented web services from scratch, applying design patterns and best practices.",
