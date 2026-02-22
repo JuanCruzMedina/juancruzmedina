@@ -8,6 +8,7 @@ export const siteConfig = {
   description: "Juan Cruz Medina Software Developer Portfolio",
   tagline: "Backend engineer building reliable systems with .NET & Python",
   location: "Based in C\u00f3rdoba, Argentina",
+  copyrightYear: 2026,
   navItems: [
     { label: "Home", href: "/" },
     { label: "Experience", href: "/experience" },
