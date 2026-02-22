@@ -4,7 +4,14 @@ import path from "node:path";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   async redirects() {
-    return [{ source: "/resume", destination: "/experience", permanent: true }];
+    return [
+      { source: "/resume", destination: "/experience", permanent: true },
+      {
+        source: "/blog/:slug((?!en|es).*)",
+        destination: "/blog/en/:slug",
+        permanent: true,
+      },
+    ];
   },
   outputFileTracingRoot: path.join(__dirname),
   images: {

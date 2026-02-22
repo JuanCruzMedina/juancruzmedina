@@ -81,7 +81,7 @@ export default function RootLayout({
         <link
           rel="alternate"
           type="application/rss+xml"
-          title={`${siteConfig.name} - Blog`}
+          title={`${siteConfig.name} - Learnings`}
           href={`${baseUrl}/feed.xml`}
         />
         <PersonJsonLd />

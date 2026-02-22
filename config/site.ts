@@ -12,13 +12,13 @@ export const siteConfig = {
   navItems: [
     { label: "Home", href: "/" },
     { label: "Experience", href: "/experience" },
-    { label: "Blog", href: "/blog" },
+    { label: "Learnings", href: "/blog/en" },
     { label: "Projects", href: "/projects" },
   ],
   navMenuItems: [
     { label: "Home", href: "/" },
     { label: "Experience", href: "/experience" },
-    { label: "Blog", href: "/blog" },
+    { label: "Learnings", href: "/blog/en" },
     { label: "Projects", href: "/projects" },
   ],
   links: {

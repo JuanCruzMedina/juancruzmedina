@@ -2,7 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const POSTS_DIR = path.join(process.cwd(), "content/blog");
+const BLOG_ROOT = path.join(process.cwd(), "content/blog");
+
+export type BlogLocale = "en" | "es";
 
 export interface PostMeta {
   slug: string;
@@ -19,14 +21,19 @@ function getSlug(filename: string): string {
   return filename.replace(/\.md$/, "");
 }
 
-export function getPosts(): PostMeta[] {
-  if (!fs.existsSync(POSTS_DIR)) return [];
+function getPostsDir(locale: BlogLocale): string {
+  return path.join(BLOG_ROOT, locale);
+}
 
-  const files = fs.readdirSync(POSTS_DIR);
-  const posts = files
+export function getPosts(locale: BlogLocale): PostMeta[] {
+  const postsDir = getPostsDir(locale);
+  if (!fs.existsSync(postsDir)) return [];
+
+  const files = fs.readdirSync(postsDir);
+  return files
     .filter((f) => f.endsWith(".md"))
     .map((filename) => {
-      const filePath = path.join(POSTS_DIR, filename);
+      const filePath = path.join(postsDir, filename);
       const { data } = matter(fs.readFileSync(filePath, "utf-8"));
       return {
         slug: getSlug(filename),
@@ -36,12 +43,10 @@ export function getPosts(): PostMeta[] {
       };
     })
     .sort((a, b) => (b.date > a.date ? 1 : -1));
-
-  return posts;
 }
 
-export function getPostBySlug(slug: string): Post | null {
-  const filePath = path.join(POSTS_DIR, `${slug}.md`);
+export function getPostBySlug(slug: string, locale: BlogLocale): Post | null {
+  const filePath = path.join(getPostsDir(locale), `${slug}.md`);
   if (!fs.existsSync(filePath)) return null;
 
   const raw = fs.readFileSync(filePath, "utf-8");
