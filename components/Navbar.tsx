@@ -33,7 +33,9 @@ export function Navbar() {
 
   const navBg =
     scrolled || open
-      ? "bg-[var(--color-surface)]/95 backdrop-blur-md"
+      ? open
+        ? "bg-[var(--color-surface)]"
+        : "bg-[var(--color-surface)]/95 backdrop-blur-md"
       : "bg-transparent";
 
   return (
