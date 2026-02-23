@@ -10,17 +10,17 @@ _A practical guide to writing code anyone can read_
 
 ---
 
-There's a tension every developer knows: code has to be clear, but we also want to write fast. And in that balance, the temptation to abbreviate is always there.
+Every developer lives with the same tension. Code has to be clear, but we also want to write fast. And in that balance, the temptation to abbreviate is always there.
 
 Do I write `usr` or `user`? `btn` or `button`? `calc` or `calculate`? They look like small decisions, but they have a real impact on code quality in the long run.
 
-This article doesn't have an absolute answer — because there isn't one — but it does have concrete criteria to make better decisions.
+This article doesn't pretend to give an absolute answer (there isn't one), but it does offer concrete criteria to make better decisions.
 
 ---
 
 ## The problem with abbreviating without a rule
 
-Code is written once but read many times. When we abbreviate, we're taking a shortcut that helps us in the moment, but can hurt anyone reading it later — including our future selves.
+Code is written once but read many times. When we abbreviate, we're taking a shortcut that helps us in the moment, but can hurt anyone reading it later, including our future selves.
 
 Look at this example:
 
@@ -50,7 +50,7 @@ Not every abbreviation is bad. There are contexts where it's perfectly valid, an
 
 ### 1. Widely known conventions
 
-Some abbreviations are so standard in the ecosystem that writing them out would be the weird thing:
+Some abbreviations are so standard in the ecosystem that writing them out would be the weird thing.
 
 - `i`, `j`, `k` → iteration variables in short loops
 - `e` → error in callbacks (JavaScript, Node.js)
@@ -80,7 +80,7 @@ If your application has a specific domain and the team uses certain abbreviation
 
 ## When NOT to abbreviate
 
-This is where most mistakes happen. These are the cases where the full name isn't negotiable.
+This is where most mistakes happen, and where the full name isn't negotiable.
 
 ### 1. Functions and methods
 
@@ -98,11 +98,11 @@ A long, clear function name is almost always better than a short, ambiguous one.
 
 ### 2. Long-lived variables
 
-The longer a variable lives in the code — and the farther it is from where it's defined — the more descriptive its name should be. A variable defined on line 10 and used on line 80 needs to carry its meaning on its own.
+The longer a variable lives in the code, and the farther it is from where it's defined, the more descriptive its name needs to be. If it's defined on line 10 and used on line 80, it has to carry its meaning on its own.
 
 ### 3. Public function or API parameters
 
-Parameters are the interface of your function. If someone is going to call your code from another module or service, parameter names must be self-explanatory:
+Parameters are the interface of your function. If someone is going to call your code from another module or service, the names need to speak for themselves.
 
 ```js
 // ❌
@@ -114,7 +114,7 @@ function sendEmail(recipient, subject, body) { ... }
 
 ### 4. Booleans
 
-Abbreviated booleans are a classic source of silent bugs. The name has to make it clear what `true` means and what `false` means:
+Abbreviated booleans are a classic source of silent bugs. The name has to make it clear what `true` means and what `false` means.
 
 ```js
 // ❌ What does 'true' mean here?
@@ -128,7 +128,7 @@ bool isAccountActive = false;
 
 ### 5. Classes and types
 
-Types define structures that will be used in many places. Abbreviating them creates confusion as the project grows:
+Types define structures that will be used in many places. Abbreviating them creates confusion as the project grows.
 
 ```js
 // ❌
@@ -146,7 +146,7 @@ class UserManager { ... }
 
 If the answer is yes, the name is fine. If you hesitate, change it.
 
-You can also use the pull request test: if during a code review you need to explain what a variable or function means, it's a sign the name isn't clear enough.
+You can also use the pull request test. If during a code review you need to explain what a variable or function means, it's a sign the name isn't clear enough.
 
 ---
 
@@ -166,7 +166,7 @@ You can also use the pull request test: if during a code review you need to expl
 
 Abbreviating in code isn't good or bad by default. It's a tool with its place, and knowing when to use it is part of writing high-quality code.
 
-The golden rule isn't "never abbreviate" or "abbreviating saves time". It's simpler: the code you write today will be read by you, your team, or someone you haven't met yet. Write it for them.
+The golden rule isn't "never abbreviate" or "abbreviating saves time". It's simpler than that. The code you write today will be read by you, your team, or someone you haven't met yet. Write it for them.
 
 > “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
 >

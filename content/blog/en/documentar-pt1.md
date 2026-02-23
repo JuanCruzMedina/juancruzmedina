@@ -10,7 +10,7 @@ _How to turn the work you're already doing into documentation people actually us
 
 ---
 
-Every time I join a new company, I run into the same situation: the documentation exists, but it's outdated, scattered across three different tools, and nobody knows for sure which version is the right one. Or worse — it doesn't exist at all, and the knowledge lives in the heads of the people who've been on the team the longest.
+Every time I join a new company, I run into the same situation. The documentation exists, but it's outdated, scattered across three different tools, and nobody knows for sure which version is the right one. Or worse, it doesn't exist at all, and the knowledge lives in the heads of the people who've been on the team the longest.
 
 Some time ago I started experimenting with a different way of documenting. It's not a complex system and it doesn't require heroic discipline. In fact, its biggest strength is that it almost builds itself, as a byproduct of the work you're already doing.
 
@@ -18,9 +18,9 @@ Some time ago I started experimenting with a different way of documenting. It's 
 
 ## The problem with traditional documentation
 
-The promise of a wiki or Confluence is attractive: a centralized place where all team knowledge lives, organized, searchable, always available. In theory, perfect.
+The promise of a wiki or Confluence is attractive. A centralized place where all team knowledge lives, organized, searchable, always available. In theory, perfect.
 
-In practice, the problem is maintenance. Writing documentation outside the work stream is an activity that competes with everything else. You have to remember to do it, decide where it belongs, write it in an acceptable format, and then — the hardest part — keep it up to date every time something changes.
+In practice, the problem is maintenance. Writing documentation outside the work stream is an activity that competes with everything else. You have to remember to do it, decide where it belongs, write it in an acceptable format, and then keep it up to date every time something changes. That last part is, by far, the hardest.
 
 What ends up happening is predictable: documentation is written enthusiastically at the beginning and then gradually abandoned. The most valuable articles are the oldest ones. And nobody knows whether what they're reading reflects how the system works today or how it worked eighteen months ago.
 
@@ -30,17 +30,17 @@ The issue isn't that teams are careless. It's that the format demands effort sep
 
 ## The idea: use the task tracker as the first layer of documentation
 
-What I propose is simpler: document inside the same tasks, user stories, or issues you're already using to work.
+What I propose is simpler. Document inside the same tasks, user stories, or issues you're already using to work.
 
-When I start solving a task that involves non-trivial steps — interacting with different systems, collecting information from multiple sources, following a specific procedure — I leave comments inside that same task. Not in a separate doc, not in a new wiki. Right there: Jira, Linear, GitHub Issues — wherever the work lives.
+When I start solving a task that involves non-trivial steps (interacting with different systems, collecting information from multiple sources, following a specific procedure) I leave comments inside that same task. Not in a separate doc, not in a new wiki. Right there, in Jira, Linear, GitHub Issues, wherever the work lives.
 
-Those comments form a natural timeline: what I did first, what I found, what decision I made and why, what happened next. No special format, no mandatory structure. Just a record of what happened.
+Those comments form a natural timeline. What I did first, what I found, what decision I made and why, what happened next. No special format, no mandatory structure. Just a record of what happened.
 
 ---
 
 ## Why it works
 
-The main reason is that it removes the friction of deciding _where_ documentation should go. That question — does this belong in Confluence, Notion, the README, a Slack channel? — seems small, but it consumes real energy and creates inconsistency in medium and large teams.
+The main reason is that it removes the friction of deciding _where_ documentation should go. That question (does this belong in Confluence, Notion, the README, a Slack channel?) seems small, but it consumes real energy and creates inconsistency in medium and large teams.
 
 When the answer is always "in the task", the problem disappears.
 
@@ -70,21 +70,21 @@ Some patterns worth avoiding, regardless of the system you use:
 
 **Documenting too late.** When you finish the task and try to write everything from memory, you lose the details that matter. The value is in documenting as you go, not after.
 
-**Trying to make it "well written" from the start.** Comments in a task don't need perfect prose. A bullet, a URL, a decision written in one line — that's enough. Perfectionism is the main enemy of documentation.
+**Trying to make it perfect from the start.** Comments in a task don't need polished prose. A bullet, a URL, a decision written in one line. That's enough. Perfectionism is the main enemy of documentation.
 
-**Documenting in the wrong place.** The classic big-team mistake: the same info in Confluence, Notion, a README, and a Slack channel. When something changes, it's updated in one place and the rest falls out of sync. Having one source of truth — even if imperfect — is better than four perfect sources that drift apart.
+**Putting the information in the wrong place.** The classic big-team mistake. The same info in Confluence, Notion, a README, and a Slack channel. When something changes, it's updated in one place and the rest falls out of sync. Having one source of truth, even if imperfect, is better than four perfect sources that drift apart.
 
-**Assuming others will find it on their own.** Documenting is half the work. The other half is making it discoverable: linking from code, mentioning the task in discussions, building the habit of searching before asking.
+**Assuming others will find it on their own.** Documenting is half the work. The other half is making it discoverable. Link from code, mention the task in discussions, build the habit of searching before asking.
 
 ---
 
 ## What this solves for the team
 
-I've seen the situation many times where a teammate — sometimes someone who's been at the company longer than me — comes with a question about a process and the answer is sitting in a task from months ago. Being able to point to that place, with full context, the timeline, the intermediate decisions, has value beyond solving the immediate question.
+I've seen the situation many times where a teammate, sometimes someone who's been at the company longer than me, comes with a question about a process and the answer is sitting in a task from months ago. Being able to point to that place, with full context, the timeline, the intermediate decisions, has value beyond solving the immediate question.
 
 It builds trust. It tells the team that knowledge is captured, that it doesn't depend on a specific person being available, and that it's possible to operate more autonomously.
 
-For leaders, there's also a visibility benefit: well-documented tasks make it easier to understand what happened in a sprint, why something took longer than expected, or how a complex technical problem was solved.
+For leaders, there's also a visibility benefit. Well-documented tasks make it easier to understand what happened in a sprint, why something took longer than expected, or how a complex technical problem was solved.
 
 ---
 
@@ -92,7 +92,7 @@ For leaders, there's also a visibility benefit: well-documented tasks make it ea
 
 You don't need to change anything in the team to try this. Next time you're working on something that involves more than two non-obvious steps, leave a comment in the task. That's it.
 
-Over time, the habit installs itself — because when you need that information again and you find it there, the value is immediate and concrete.
+Over time, the habit installs itself. When you need that information again and you find it there, the value is immediate and concrete.
 
 It's one of the practices I'm most proud of, because it didn't come from an imposed process; it came from observing a real problem and finding the simplest possible solution. And the best signal that something works is when others adopt it without being asked.
 
