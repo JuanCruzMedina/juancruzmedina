@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {
   DM_Sans,
-  Inter,
   JetBrains_Mono,
   Bebas_Neue,
 } from "next/font/google";
@@ -26,11 +25,6 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-bebas",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
 });
 
 const baseUrl =
@@ -74,7 +68,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${inter.variable} ${jetbrainsMono.variable} ${bebasNeue.variable}`}
+      className={`${dmSans.variable} ${jetbrainsMono.variable} ${bebasNeue.variable}`}
       suppressHydrationWarning
     >
       <head>

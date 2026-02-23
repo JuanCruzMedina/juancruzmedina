@@ -72,7 +72,7 @@ export function Footer() {
 
         <div className="mt-16 flex items-center justify-between border-t border-[var(--color-border)] pt-8">
           <p className="text-[10px] tracking-[0.2em] text-[var(--color-muted)]">
-            &copy; {siteConfig.copyrightYear} {siteConfig.name}
+            &copy; {new Date().getFullYear()} {siteConfig.name}
           </p>
           <p className="text-[10px] tracking-[0.2em] text-[var(--color-muted)]">
             {siteConfig.location}

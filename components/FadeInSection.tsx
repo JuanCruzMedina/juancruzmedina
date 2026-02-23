@@ -31,7 +31,10 @@ export function FadeInSection({
     if (!el) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setVisible(true);
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(entry.target);
+        }
       },
       { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
     );

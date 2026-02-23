@@ -133,6 +133,8 @@ button:focus-visible {
 .stagger-4 { animation-delay: 0.5s; }
 .stagger-5 { animation-delay: 0.65s; }
 .stagger-6 { animation-delay: 0.8s; }
+.stagger-7 { animation-delay: 0.95s; }
+.stagger-8 { animation-delay: 1.1s; }
 
 /* Marquee */
 @keyframes marquee {

@@ -3,10 +3,27 @@
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
 
+const FEATURED_SKILLS = [
+  "Java",
+  "Go",
+  ".NET",
+  "Python",
+  "AWS",
+  "React",
+  "Next.js",
+  "PostgreSQL",
+  "Grafana",
+  "Datadog",
+  "Kubernetes",
+  "Microservices",
+  "DDD",
+  "TDD",
+  "FastAPI",
+];
+
 export function SkillsMarquee() {
   const [paused, setPaused] = useState(false);
-  const skills = siteConfig.resume.skills;
-  const track = [...skills, ...skills];
+  const track = [...FEATURED_SKILLS, ...FEATURED_SKILLS];
 
   return (
     <div
@@ -26,6 +43,7 @@ export function SkillsMarquee() {
       />
       <div
         className={`flex animate-marquee gap-12 whitespace-nowrap md:gap-16 ${paused ? "animate-marquee-paused" : ""}`}
+        aria-hidden="true"
       >
         {track.map((skill, i) => (
           <span
@@ -36,6 +54,9 @@ export function SkillsMarquee() {
           </span>
         ))}
       </div>
+      <span className="sr-only">
+        Skills: {FEATURED_SKILLS.join(", ")}
+      </span>
     </div>
   );
 }

@@ -18,7 +18,7 @@ export function AboutSection() {
 
           <FadeInSection delay={150}>
             <p className="text-base leading-[1.8] text-[var(--color-accent-muted)] md:text-lg md:leading-[1.9]">
-              {siteConfig.resume.description}
+              {siteConfig.resume.descriptionShort}
             </p>
             <div className="mt-8">
               <Link

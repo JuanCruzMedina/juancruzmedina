@@ -8,7 +8,6 @@ export const siteConfig = {
   description: "Juan Cruz Medina — Backend engineer at Mercado Libre building distributed systems at scale.",
   tagline: "Backend engineer crafting distributed systems that scale across Latin America",
   location: "Based in C\u00f3rdoba, Argentina",
-  copyrightYear: 2026,
   navItems: [
     { label: "Home", href: "/" },
     { label: "Experience", href: "/experience" },
@@ -374,8 +373,10 @@ export const siteConfig = {
     titleMark: "Achievements",
     subtitle:
       "I love building projects and practicing my engineering skills. Here's an archive of things that I've worked on.",
+    featuredIds: ["tire-shop", "livestock-data-manager", "iot-remote-manager"],
     items: [
       {
+        id: "tire-shop",
         title: "Tire Shop Management Platform",
         subtitle: "Full Business Digitalization for a Long-Term Client",
         shortDescription:
@@ -388,6 +389,7 @@ export const siteConfig = {
         date: "2025",
       },
       {
+        id: "employee-loyalty",
         title: "Employee Loyalty Platform",
         subtitle: "Reward System with Integrated E-commerce",
         shortDescription:
@@ -400,6 +402,7 @@ export const siteConfig = {
         date: "2025",
       },
       {
+        id: "cooperative-file-manager",
         title: "Cooperative File Manager",
         subtitle: "S3-Based Document Management for Distributed Cooperatives",
         shortDescription:
@@ -412,6 +415,7 @@ export const siteConfig = {
         date: "2021",
       },
       {
+        id: "arca-tax-normalizer",
         title: "ARCA Tax Normalizer",
         subtitle: "Automated Tax File Processing for ARCA",
         shortDescription:
@@ -426,6 +430,7 @@ export const siteConfig = {
         date: "2025",
       },
       {
+        id: "livestock-data-manager",
         title: "Livestock Data Manager",
         subtitle: "Digital Tracking for Livestock Operations",
         shortDescription:
@@ -438,6 +443,7 @@ export const siteConfig = {
         date: "2023",
       },
       {
+        id: "iot-remote-manager",
         title: "IoT Remote Manager",
         subtitle: "Cloud-based Control for Smart Devices",
         shortDescription:
@@ -451,6 +457,7 @@ export const siteConfig = {
         date: "2023",
       },
       {
+        id: "tourism-room-mapper",
         title: "Tourism Room Mapper",
         subtitle: "NLP-Powered Room Standardization API",
         shortDescription:
@@ -464,5 +471,4 @@ export const siteConfig = {
       },
     ],
   },
-  testimonials: [],
 };

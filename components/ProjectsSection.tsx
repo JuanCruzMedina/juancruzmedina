@@ -4,8 +4,10 @@ import { siteConfig } from "@/config/site";
 import { FadeInSection } from "@/components/FadeInSection";
 
 export function ProjectsSection() {
-  const { items } = siteConfig.projects;
-  const featured = items.slice(0, 3);
+  const { items, featuredIds } = siteConfig.projects;
+  const featured = featuredIds
+    .map((id) => items.find((p) => p.id === id))
+    .filter((p): p is NonNullable<typeof p> => p != null);
 
   return (
     <section className="border-t border-[var(--color-border)]">
@@ -21,7 +23,7 @@ export function ProjectsSection() {
 
         <div className="mt-16 space-y-20 md:mt-24 md:space-y-32">
           {featured.map((project, i) => (
-            <FadeInSection key={project.title} delay={i * 100}>
+            <FadeInSection key={project.id ?? project.title} delay={i * 100}>
               <article className="group grid gap-8 md:grid-cols-2 md:gap-16">
                 <Link
                   href="/projects"
@@ -35,6 +37,7 @@ export function ProjectsSection() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    priority={i === 0}
                   />
                 </Link>
                 <div
