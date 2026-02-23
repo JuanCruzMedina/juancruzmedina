@@ -6,168 +6,111 @@ excerpt: "Abreviar nombres de variables, funciones o tipos ahorra tecleo pero pu
 
 # Abreviar en código: ¿cuándo ayuda y cuándo arruina todo?
 
-_Una guía práctica para escribir código que cualquiera pueda leer_
+Hay una abreviación que me hace cerrar el PR sin revisarlo: `fl` para un booleano.
 
----
+No porque sea la peor del mundo, sino porque es el síntoma más claro de un hábito que parece inocente y termina siendo caro: abreviar sin criterio, en el momento de escribir, sin pensar en quien lo va a leer después.
 
-Todo desarrollador vive con la misma tensión. El código tiene que ser claro, pero también queremos escribir rápido. Y en ese equilibrio, la tentación de abreviar siempre aparece.
+## El costo que no se ve
 
-¿Escribo `usr` o `user`? ¿`btn` o `button`? ¿`calc` o `calculate`? Parecen decisiones menores, pero tienen un impacto real en la calidad del código a largo plazo.
+El código se escribe una vez pero se lee muchas veces. Cuando abreviamos, tomamos un atajo que nos beneficia en el momento de escribir pero que puede perjudicar a cualquiera que lo lea después, incluyendo nuestro yo del futuro.
 
-Este artículo no pretende dar una respuesta absoluta (no existe), pero sí ofrece criterios concretos para tomar mejores decisiones.
-
----
-
-## El problema con abreviar sin criterio
-
-El código se escribe una vez pero se lee muchas veces. Cuando abreviamos, estamos tomando un atajo que nos beneficia a nosotros en el momento de escribir, pero que puede perjudicar a cualquiera que lo lea después, incluyendo nuestro yo del futuro.
-
-Miremos este ejemplo:
-
-```js
-int calc(int a, int b, bool fl) {
-    return fl ? a * b : a + b;
-}
+```python
+def calc(a: int, b: int, fl: bool) -> int:
+    return a * b if fl else a + b
 ```
 
 ¿Qué hace esta función? Hay que adivinar. Ahora comparalo con esto:
 
-```js
-int calculateTotal(int basePrice, int quantity, bool applyDiscount) {
-    return applyDiscount ? basePrice * quantity : basePrice + quantity;
-}
+```python
+def calculate_total(base_price: int, quantity: int, apply_discount: bool) -> int:
+    return base_price * quantity if apply_discount else base_price + quantity
 ```
 
-La segunda versión no necesita comentario. Se explica sola.
+La segunda versión no necesita comentario. Se explica sola. La legibilidad no es un lujo, es parte del trabajo.
 
-> **La legibilidad no es un lujo. Es parte del trabajo.**
-
----
-
-## Cuándo SÍ tiene sentido abreviar
+## Cuándo sí tiene sentido abreviar
 
 No toda abreviación es mala. Hay contextos donde es completamente válido, y forzar el nombre completo puede hacer el código artificialmente verboso.
 
-### 1. Convenciones ampliamente conocidas
+**Convenciones ampliamente conocidas.** Algunas abreviaciones son tan estándar en el ecosistema que escribirlas completas sería lo raro: `i`, `j`, `k` para iteradores de bucles cortos; `e` o `exc` para excepciones en bloques `except`; `cls` para el primer parámetro de métodos de clase; `args` y `kwargs` para argumentos variables; `id` para identifier. Si tu equipo usa Go, Rust o cualquier otro lenguaje con convenciones propias, respetarlas pesa más que cualquier regla general.
 
-Algunas abreviaciones son tan estándar en el ecosistema que escribirlas completas sería lo raro.
+**Scope muy acotado.** Cuando una variable vive solo unas pocas líneas y su propósito es obvio por el contexto, abreviar es razonable:
 
-- `i`, `j`, `k` → variables de iteración en bucles cortos
-- `e` → error en callbacks (JavaScript, Node.js)
-- `req`, `res` → request y response en frameworks web
-- `ctx` → context en middlewares
-- `dto` → Data Transfer Object en arquitecturas backend
-- `id` → identifier (esta ya es la forma estándar)
-
-Si tu equipo usa Go, Rust o cualquier lenguaje con convenciones propias, respetarlas es más importante que la regla general.
-
-### 2. Scope muy acotado
-
-Cuando una variable vive solo unas pocas líneas y su propósito es obvio por el contexto, abreviar es razonable:
-
-```js
-const nums = [1, 2, 3, 4, 5];
-const doubled = nums.map((n) => n * 2);
+```python
+nums: list[int] = [1, 2, 3, 4, 5]
+doubled: list[int] = [n * 2 for n in nums]
 ```
 
-Acá, `n` es perfectamente legible. El contexto lo explica todo. No necesitás `number` ni `currentNumber`.
+Acá, `n` es perfectamente legible. El contexto lo explica todo.
 
-### 3. Nombres de dominio consolidados
+**Nombres de dominio consolidados.** Si tu aplicación tiene terminología propia y el equipo la usa consistentemente en toda la codebase, romperla puede generar más confusión que mantenerla.
 
-Si tu aplicación tiene un dominio específico y el equipo usa ciertas abreviaciones consistentemente en toda la codebase, romperlas puede generar más confusión que mantenerlas. La consistencia dentro del proyecto pesa más que la regla general.
+## Cuándo no abreviar
 
----
+**Funciones y métodos.** El nombre de una función es su contrato. Si tenés que adivinar qué hace, el nombre está mal.
 
-## Cuándo NO abreviar
+```python
+# ❌
+def proc_usr(data: dict) -> None: ...
 
-Acá es donde más errores se cometen, y donde el nombre completo no es negociable.
-
-### 1. Funciones y métodos
-
-El nombre de una función es su contrato. Si tenés que adivinar qué hace, el nombre está mal.
-
-```js
-// ❌ Evitar
-function procUsr(data) { ... }
-
-// ✅ Preferir
-function processUserRegistration(data) { ... }
+# ✅
+def process_user_registration(data: dict) -> None: ...
 ```
 
 Un nombre de función largo y claro es casi siempre mejor que uno corto y ambiguo. El autocompletado existe, el costo de escribirlo es mínimo.
 
-### 2. Variables con vida larga
+**Variables con vida larga.** Cuanto más tiempo vive una variable en el código y más lejos de donde se define, más descriptivo tiene que ser su nombre. Si se define en la línea 10 y se usa en la 80, necesita cargarse sola.
 
-Cuanto más tiempo vive una variable en el código, y más lejos de donde se define, más descriptivo tiene que ser su nombre. Si se define en la línea 10 y se usa en la 80, necesita cargarse sola.
+**Parámetros de funciones públicas.** Los parámetros son la interfaz de tu función. Si alguien va a llamar a tu código desde otro módulo, los nombres tienen que hablar por sí solos.
 
-### 3. Parámetros de funciones públicas o de API
+```python
+# ❌
+def send(to: str, subj: str, bod: str) -> None: ...
 
-Los parámetros son la interfaz de tu función. Si alguien va a llamar a tu código desde otro módulo o servicio, los nombres tienen que hablar por sí solos.
-
-```js
-// ❌
-function send(to, subj, bod) { ... }
-
-// ✅
-function sendEmail(recipient, subject, body) { ... }
+# ✅
+def send_email(recipient: str, subject: str, body: str) -> None: ...
 ```
 
-### 4. Booleanos
+**Booleanos.** Los booleanos abreviados son una fuente clásica de bugs silenciosos. El nombre tiene que dejar en claro qué significa `True` y qué significa `False`.
 
-Los booleanos abreviados son una fuente clásica de bugs silenciosos. El nombre tiene que dejar en claro qué significa `true` y qué significa `false`.
+```python
+# ❌ ¿Qué es True acá?
+fl: bool = True
+actv: bool = False
 
-```js
-// ❌ ¿Qué es 'true' acá?
-bool fl = true;
-bool actv = false;
-
-// ✅ Se lee solo
-bool isDiscountApplied = true;
-bool isAccountActive = false;
+# ✅
+is_discount_applied: bool = True
+is_account_active: bool = False
 ```
 
-### 5. Clases y tipos
+**Clases y tipos.** Los tipos se usan en muchos lugares. Abreviarlos genera confusión a medida que el proyecto crece.
 
-Los tipos definen estructuras que van a usarse en muchos lugares. Abreviarlos genera confusión a medida que el proyecto crece.
+```python
+# ❌
+class UsrMgr: ...
 
-```js
-// ❌
-class UsrMgr { ... }
-
-// ✅
-class UserManager { ... }
+# ✅
+class UserManager: ...
 ```
 
----
+## La prueba que siempre funciona
 
-## La pregunta que siempre funciona
-
-> _"Si alguien que no conoce el dominio lee esta línea dentro de 6 meses, ¿va a entender qué hace sin buscar nada más?"_
+_"Si alguien que no conoce el dominio lee esta línea dentro de seis meses, ¿va a entender qué hace sin buscar nada más?"_
 
 Si la respuesta es sí, el nombre está bien. Si tenés que dudar, cambialo.
 
-También podés usar la prueba del pull request. Si en una revisión de código necesitás explicar qué significa una variable o función, es señal de que el nombre no es suficientemente claro.
+También podés usar la prueba del pull request: si en una revisión necesitás explicar qué significa una variable o función, es señal de que el nombre no es suficientemente claro.
 
----
+## De un vistazo
 
-## Resumen rápido
+| ✅ Abreviar está bien                                 | ❌ Mejor no abreviar             |
+| ----------------------------------------------------- | -------------------------------- |
+| Convenciones del lenguaje (`i`, `cls`, `exc`, `args`) | Nombres de funciones y métodos   |
+| Variables en scope muy acotado                        | Parámetros de funciones públicas |
+| Términos de dominio consolidados en el equipo         | Variables con vida larga         |
+| Iteradores de bucles y comprensiones                  | Booleanos                        |
+| Abreviaciones universales (`id`, `url`, `dto`)        | Clases y tipos personalizados    |
 
-| ✅ Abreviar está bien                              | ❌ Mejor no abreviar                  |
-| -------------------------------------------------- | ------------------------------------- |
-| Convenciones del lenguaje (`i`, `e`, `req`, `res`) | Nombres de funciones y métodos        |
-| Variables en scope muy acotado                     | Parámetros de funciones públicas      |
-| Términos de dominio consolidados en el equipo      | Variables con vida larga en el código |
-| Iteradores de bucles simples                       | Booleanos                             |
-| Abreviaciones universales (`id`, `url`, `dto`)     | Clases y tipos personalizados         |
+La regla de oro no es "nunca abrevies" ni "abreviar ahorra tiempo". Es algo más simple: el código que escribís hoy lo vas a leer vos, tu equipo, o alguien que todavía no conocés. Escribilo para ellos.
 
----
-
-## Conclusión
-
-Abreviar en código no es bueno ni malo por defecto. Es una herramienta que tiene su lugar, y saber cuándo usarla es parte de escribir código de calidad.
-
-La regla de oro no es "nunca abrevies" ni "abreviar ahorra tiempo". Es algo más simple. El código que escribís hoy lo vas a leer vos, tu equipo, o alguien que no conocés todavía. Escribilo para ellos.
-
-> “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
->
-> -- Martin Fowler
+_— Juan Cruz Medina_

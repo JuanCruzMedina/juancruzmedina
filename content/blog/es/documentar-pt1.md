@@ -6,19 +6,15 @@ excerpt: "Cómo convertir el trabajo que ya hacés en documentación que otros r
 
 # Documentar sin volverte loco en el intento
 
-_Cómo convertir el trabajo que ya hacés en documentación que otros realmente usan._
+Hace poco me incorporé en Mercado Libre. Vengo de experiencias donde el orden, la documentación y la evidencia del trabajo eran parte del proceso desde el principio, así que cuando resuelvo algo tiendo a ser bastante detallado en cómo lo registro. Al principio puede parecer excesivo, incluso una pérdida de tiempo.
 
----
+Pero no pasó mucho tiempo antes de que un compañero con más seniority me comentara algo que me confirmó que valía la pena. Otro de los nuevos le había escrito para preguntarle sobre un procedimiento, y él, en lugar de explicarlo de cero, le había pasado directamente una tarea mía donde estaba todo documentado. Eso es exactamente lo que este hábito produce cuando funciona: el conocimiento deja de depender de que la persona indicada esté disponible.
 
-Cada vez que entro a trabajar en una empresa nueva, me encuentro con la misma situación. La documentación existe, pero está desactualizada, repartida en tres herramientas distintas, y nadie sabe con certeza cuál versión es la correcta. O peor, directamente no existe, y el conocimiento vive en la cabeza de las personas que llevan más tiempo en el equipo.
+No es la primera vez que lo veo pasar. En Voxel Group, donde estuve casi tres años, documentar dentro de las tareas se volvió una práctica natural del equipo. Cuando alguien necesitaba entender cómo se había resuelto algo similar, la respuesta casi siempre era un enlace a una tarea anterior.
 
-Hace tiempo empecé a experimentar con una forma diferente de documentar. No es un sistema complejo ni requiere disciplina heroica. De hecho, su mayor virtud es que se construye casi sola, como subproducto del trabajo que ya estás haciendo.
+## Por qué la wiki no funciona
 
----
-
-## El problema con la documentación tradicional
-
-La promesa de una wiki o un Confluence es atractiva. Un lugar centralizado donde vive todo el conocimiento del equipo, organizado, buscable, siempre disponible. En teoría, perfecto.
+La promesa de Confluence o Notion es atractiva: un lugar centralizado donde vive todo el conocimiento del equipo, organizado, buscable, siempre disponible. En teoría, perfecto.
 
 En la práctica, el problema es el mantenimiento. Escribir documentación por fuera del flujo de trabajo es una actividad que compite con todo lo demás. Requiere recordar que hay que hacerlo, decidir dónde va, escribirla en un formato aceptable, y luego mantenerla actualizada cada vez que algo cambia. Esa última parte es, por lejos, la más difícil.
 
@@ -26,80 +22,42 @@ Lo que termina pasando es predecible: la documentación se escribe con entusiasm
 
 El problema no es que los equipos sean descuidados. Es que el formato exige un esfuerzo separado del trabajo, y ese esfuerzo rara vez sobrevive la presión del día a día.
 
----
+## Documentar adentro de la tarea
 
-## La idea: usar el gestor de tareas como primer nivel de documentación
+Lo que propongo es más simple: documentar dentro de las mismas tareas, historias de usuario o issues que ya usás para trabajar.
 
-Lo que propongo es más simple. Documentar dentro de las mismas tareas, historias de usuario o issues que ya estás usando para trabajar.
+Cuando empiezo a resolver algo que implica pasos no triviales, como interactuar con distintos sistemas, recolectar información de varias fuentes o seguir un procedimiento específico, voy dejando comentarios dentro de esa misma tarea. No en un doc aparte, no en una wiki nueva. Ahí, en Jira, en Linear, en GitHub Issues, donde viva el trabajo.
 
-Cuando empiezo a resolver una tarea que implica pasos no triviales (interactuar con diferentes sistemas, recolectar información de varias fuentes, seguir un procedimiento específico) voy dejando comentarios dentro de esa misma tarea. No en un doc aparte, no en una wiki nueva. Ahí, en Jira, en Linear, en GitHub Issues, donde viva el trabajo.
+Para que no quede abstracto, así se ve en la práctica. Supongamos una tarea de "configurar el pipeline de staging":
 
-Esos comentarios forman una línea del tiempo natural. Qué hice primero, qué encontré, qué decisión tomé y por qué, qué pasó después. Sin formato especial, sin estructura obligatoria. Solo el registro de lo que fue pasando.
+- **Comentario 1** (mientras trabajás): _"El paso 3 requiere permisos de IAM que no están en la doc oficial. Hay que pedirlos a DevOps antes de empezar."_
+- **Comentario 2** (cuando lo resolvés): _"El comando que funcionó fue `aws iam attach-role-policy --role-name staging-deployer --policy-arn arn:aws:iam::ACCOUNT_ID:policy/StagingDeploy`. El ARN de la policy está en el doc de onboarding."_
+- **Comentario 3** (al cerrar): _"Enlazada con [TASK-142] donde se hizo algo similar para producción, misma estructura, distintas variables de entorno."_
 
----
-
-## Por qué funciona
-
-La razón principal es que elimina la fricción de decidir _dónde_ va la documentación. Esa pregunta (¿esto va en Confluence, en Notion, en el README, en el canal de Slack?) parece menor pero consume energía real y genera inconsistencias en equipos medianos y grandes.
-
-Cuando la respuesta siempre es "en la tarea", el problema desaparece.
-
-Pero hay más:
-
-**La documentación queda anclada al contexto.** No es un artículo genérico sobre "cómo hacer X". Es el registro de cómo se hizo X en esta tarea específica, con los detalles que importaban en ese momento. Eso la hace más útil y más honesta.
-
-**Se actualiza naturalmente.** Si en el futuro aparece una tarea similar pero el proceso cambió en algún punto, se documenta sobre esa nueva tarea. Y si es una variación — una rama del árbol, no un reemplazo — se documenta ahí mismo y se enlaza con la tarea original. Las referencias se actualizan solas porque viven en el mismo sistema.
-
-**Documenta lo que vale la pena.** Solo terminan documentadas las cosas que realmente requirieron trabajo. No hay presión de documentar por documentar.
-
----
+Esos tres comentarios no tomaron más de diez minutos en total. Y forman algo que ninguna wiki genera naturalmente: una línea del tiempo de lo que fue pasando, con las decisiones intermedias y el contexto que las explica. No es un artículo genérico sobre "cómo hacer X", es el registro de cómo se hizo X en esta tarea específica. Y a diferencia de una wiki, no hay que decidir dónde va, no hay formato obligatorio, y solo termina documentado lo que realmente requirió trabajo.
 
 ## El árbol de referencias
 
-Una de las partes más útiles de este enfoque es cómo maneja los cambios.
+Una de las partes más útiles de este enfoque es cómo maneja los cambios a lo largo del tiempo.
 
-Supongamos que tenés una tarea donde documentaste el proceso para hacer un deploy. Seis meses después, el proceso cambió parcialmente — hay un paso nuevo, otro desapareció. En lugar de editar la documentación vieja y perder el historial, creás la nueva tarea, documentás el proceso actualizado, y enlazás desde ahí a la tarea anterior. La antigua queda como referencia histórica, la nueva como el procedimiento vigente.
+Supongamos que documentaste el proceso para hacer un deploy. Seis meses después, el proceso cambió parcialmente. En lugar de editar la documentación vieja y perder el historial, creás la nueva tarea, documentás el proceso actualizado, y enlazás desde ahí a la tarea anterior. La antigua queda como referencia histórica, la nueva como el procedimiento vigente.
 
-Con el tiempo, esto forma un árbol de referencias: podés rastrear cómo evolucionó un proceso, qué cambió y cuándo, y por qué se tomaron ciertas decisiones. Es algo que ninguna wiki tradicional da de forma natural.
-
----
+En Voxel esto fue una práctica sostenida durante los casi tres años que estuve, con equipos que fueron cambiando y creciendo. En la práctica, el árbol nunca superó los tres niveles de profundidad: cuando un proceso variaba tanto como para no reconocer la base original, tenía más sentido reemplazarla que seguir encadenando. Pero dentro de esos tres niveles, podías rastrear cómo había evolucionado algo, qué había cambiado y por qué, sin preguntarle a nadie. Eso es difícil de conseguir con una wiki tradicional, donde editar borra el historial y la versión anterior simplemente desaparece.
 
 ## Errores comunes al documentar
-
-Algunos patrones que vale la pena evitar, independientemente del sistema que uses:
 
 **Documentar demasiado tarde.** Cuando terminás la tarea y querés escribir todo de memoria, perdés los detalles que importan. El valor está en documentar mientras hacés, no después.
 
 **Querer que quede perfecto de entrada.** Los comentarios en una tarea no necesitan ser prosa pulida. Un bullet, una URL, una decisión anotada en una línea. Con eso alcanza. El perfeccionismo es el principal enemigo de la documentación.
 
-**Poner la información en el lugar equivocado.** El error clásico de los equipos grandes. La misma información en Confluence, en Notion, en un README y en un canal de Slack. Cuando algo cambia, se actualiza en un lugar y el resto queda desincronizado. Tener una fuente de verdad, aunque sea imperfecta, es mejor que tener cuatro fuentes perfectas que divergen.
+**Poner la información en demasiados lugares.** El error clásico de los equipos grandes: la misma información en Confluence, en Notion, en un README y en un canal de Slack. Cuando algo cambia, se actualiza en un lugar y el resto queda desincronizado. Tener una fuente de verdad, aunque sea imperfecta, es mejor que tener cuatro fuentes perfectas que divergen.
 
-**Asumir que otros van a encontrarla sola.** Documentar es la mitad del trabajo. La otra mitad es hacerla descubrible. Enlazar desde el código, mencionar la tarea en las discusiones, instalar el hábito de buscar antes de preguntar.
-
----
-
-## Lo que esto resuelve en el equipo
-
-Me ha pasado en varias ocasiones que un compañero, a veces alguien con más tiempo en la empresa que yo, llega con una pregunta sobre un proceso y la respuesta está en una tarea de hace meses. Poder señalar ese lugar, con el contexto completo, la línea del tiempo, las decisiones intermedias, tiene un valor que va más allá de resolver la duda puntual.
-
-Genera confianza. Le dice al equipo que el conocimiento está capturado, que no depende de que determinada persona esté disponible, que es posible operar de forma más autónoma.
-
-Para los líderes, el beneficio también pasa por la visibilidad. Las tareas bien documentadas hacen más fácil entender qué pasó en un sprint, por qué se tardó más de lo esperado en algo, o cómo se resolvió un problema técnico complejo.
-
----
+**Asumir que otros van a encontrarla sola.** Documentar es la mitad del trabajo. La otra mitad es hacerla descubrible. Enlazá desde el código, mencioná la tarea en las discusiones, instalá el hábito de buscar antes de preguntar.
 
 ## Para empezar
 
 No hace falta cambiar nada en el equipo para probar esto. La próxima vez que estés trabajando en algo que implique más de dos pasos no obvios, dejá un comentario en la tarea. Solo eso.
 
-Con el tiempo, el hábito se instala solo. Cuando volvés a necesitar esa información y la encontrás ahí, el valor es inmediato y concreto.
-
-Es una de las prácticas de las que más me enorgullece porque no nació de un proceso impuesto, sino de observar un problema real y encontrar la solución más simple posible. Y la mejor señal de que algo funciona es cuando otros la adoptan sin que nadie se los pida.
-
----
-
-> Documentar no debería ser una tarea aparte. Debería ser la huella natural de trabajar bien.
-
----
+El valor se hace evidente la primera vez que volvés a necesitar esa información y la encontrás ahí, con el contexto completo, sin tener que reconstruirla de cero. O mejor todavía, cuando alguien más la encuentra antes de preguntarte.
 
 _— Juan Cruz Medina_
