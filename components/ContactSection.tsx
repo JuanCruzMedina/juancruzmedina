@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { FadeInSection } from "@/components/FadeInSection";
 import { siteConfig } from "@/config/site";
+import { useState } from "react";
 
 export function ContactSection() {
   const [copied, setCopied] = useState(false);
@@ -21,30 +21,30 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="border-t border-[var(--color-border)]">
+    <section id="contact" className="border-t border-border">
       <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-32">
         <FadeInSection>
-          <p className="text-[10px] font-medium tracking-[0.4em] text-[var(--color-muted)] uppercase">
+          <p className="text-[10px] font-medium tracking-[0.4em] text-muted uppercase">
             Let&apos;s work together
           </p>
-          <h2 className="mt-4 font-display text-4xl tracking-[0.04em] text-[var(--color-accent)] md:text-6xl">
+          <h2 className="mt-4 font-display text-4xl tracking-[0.04em] text-accent md:text-6xl">
             GET IN TOUCH
           </h2>
-          <p className="mt-6 max-w-md text-sm leading-relaxed text-[var(--color-muted)] md:text-base">
+          <p className="mt-6 max-w-md text-sm leading-relaxed text-muted md:text-base">
             Open to new opportunities and collaborations. Reach out for
             consulting, freelance work, or just to say hi.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href={siteConfig.sendEmail}
-              className="font-mono text-sm text-[var(--color-accent-muted)] transition-colors hover:text-[var(--color-accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
+              className="font-mono text-sm text-accent-muted transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {siteConfig.email}
             </a>
             <button
               type="button"
               onClick={handleCopy}
-              className="link-underline text-[11px] font-medium tracking-[0.25em] text-[var(--color-muted)] uppercase transition-colors hover:text-[var(--color-accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
+              className="link-underline text-[11px] font-medium tracking-[0.25em] text-muted uppercase transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {copied ? "Copied!" : "Copy email"}
             </button>
@@ -54,7 +54,7 @@ export function ContactSection() {
               href={siteConfig.links.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="link-underline text-[10px] tracking-[0.25em] text-[var(--color-muted)] uppercase transition-colors hover:text-[var(--color-accent)]"
+              className="link-underline text-[10px] tracking-[0.25em] text-muted uppercase transition-colors hover:text-accent"
             >
               GitHub
             </a>
@@ -62,7 +62,7 @@ export function ContactSection() {
               href={siteConfig.links.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="link-underline text-[10px] tracking-[0.25em] text-[var(--color-muted)] uppercase transition-colors hover:text-[var(--color-accent)]"
+              className="link-underline text-[10px] tracking-[0.25em] text-muted uppercase transition-colors hover:text-accent"
             >
               LinkedIn
             </a>
@@ -70,7 +70,7 @@ export function ContactSection() {
               href={siteConfig.links.twitter}
               target="_blank"
               rel="noopener noreferrer"
-              className="link-underline text-[10px] tracking-[0.25em] text-[var(--color-muted)] uppercase transition-colors hover:text-[var(--color-accent)]"
+              className="link-underline text-[10px] tracking-[0.25em] text-muted uppercase transition-colors hover:text-accent"
             >
               X
             </a>

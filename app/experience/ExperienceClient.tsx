@@ -131,13 +131,13 @@ function TimelineEntry({
         className={`absolute left-0 top-[3px] h-[9px] w-[9px] -translate-x-1/2 rounded-full border-2 ${
           role.isCurrent
             ? "border-emerald-500 bg-emerald-500"
-            : "border-[var(--color-accent)] bg-[var(--color-surface)]"
+            : "border-accent bg-surface"
         }`}
         aria-hidden
       />
 
       {/* Year + duration */}
-      <p className="text-[11px] leading-none text-[var(--color-muted)]">
+      <p className="text-[11px] leading-none text-muted">
         {role.yearLabel}
         {role.durationLabel && (
           <span className="ml-1.5 uppercase tracking-[0.06em]">
@@ -152,25 +152,25 @@ function TimelineEntry({
       </p>
 
       {/* Title */}
-      <h3 className="mt-1.5 text-base font-bold uppercase tracking-[0.03em] text-[var(--color-accent)] md:text-lg">
+      <h3 className="mt-1.5 text-base font-bold uppercase tracking-[0.03em] text-accent md:text-lg">
         {role.charge}
       </h3>
 
       {/* Company · Location · Type */}
-      <p className="mt-0.5 text-sm text-[var(--color-muted)]">
+      <p className="mt-0.5 text-sm text-muted">
         {role.company} {MD} {role.location} {MD} {role.type}
       </p>
 
       {/* Achievement */}
       {role.achievement && (
-        <p className="mt-2 text-sm leading-relaxed text-[var(--color-accent-muted)]">
+        <p className="mt-2 text-sm leading-relaxed text-accent-muted">
           {role.achievement}
         </p>
       )}
 
       {/* Tech stack */}
       {role.techStack.length > 0 && (
-        <p className="mt-2 text-[11px] text-[var(--color-muted)]">
+        <p className="mt-2 text-[11px] text-muted">
           {role.techStack.join(` ${MD} `)}
         </p>
       )}
@@ -183,7 +183,7 @@ function TimelineEntry({
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-controls={`exp-detail-${role.index}`}
-            className="mt-2.5 flex cursor-pointer items-center gap-1 text-[11px] font-medium uppercase tracking-[0.1em] text-[var(--color-muted)] transition-colors hover:text-[var(--color-accent)]"
+            className="mt-2.5 flex cursor-pointer items-center gap-1 text-[11px] font-medium uppercase tracking-widest text-muted transition-colors hover:text-accent"
           >
             <svg
               width="14"
@@ -207,10 +207,10 @@ function TimelineEntry({
               open ? "mt-3 max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
             }`}
           >
-            <ul className="space-y-2 text-sm leading-relaxed text-[var(--color-accent-muted)]">
+            <ul className="space-y-2 text-sm leading-relaxed text-accent-muted">
               {role.descriptionItems.map((item, idx) => (
                 <li key={idx} className="flex gap-2.5">
-                  <span className="mt-[9px] h-px w-2 shrink-0 bg-[var(--color-border)]" />
+                  <span className="mt-[9px] h-px w-2 shrink-0 bg-border" />
                   {item}
                 </li>
               ))}
@@ -253,7 +253,7 @@ export function ExperienceClient() {
           href="https://drive.google.com/uc?export=download&id=1ZSRUiKi03RxlbEuYkUqfOmGlqcI9ngOV"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--color-muted)] transition-colors hover:text-[var(--color-accent)]"
+          className="text-[11px] font-medium uppercase tracking-[0.15em] text-muted transition-colors hover:text-accent"
         >
           Download CV &darr;
         </a>
@@ -263,7 +263,7 @@ export function ExperienceClient() {
       <div className="relative">
         {/* Vertical line */}
         <div
-          className="absolute left-0 top-0 bottom-0 w-px bg-[var(--color-border)]"
+          className="absolute left-0 top-0 bottom-0 w-px bg-border"
           aria-hidden
         />
 
