@@ -9,7 +9,7 @@ export function ProjectsPreview() {
     .filter((p): p is NonNullable<typeof p> => p != null);
 
   return (
-    <section className="border-t border-[var(--color-border)]">
+    <section className="border-t border-t-[0.5px] border-[var(--color-border)]">
       <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-32">
         <FadeInSection>
           <p className="text-[10px] font-medium tracking-[0.4em] text-[var(--color-muted)] uppercase">
@@ -25,7 +25,7 @@ export function ProjectsPreview() {
             <FadeInSection key={project.id ?? project.title} delay={i * 80}>
               <Link
                 href="/projects"
-                className="group block border-t border-[var(--color-border)] py-8 transition-colors last:border-b last:border-[var(--color-border)] md:py-10"
+                className="group block border-t border-t-[0.5px] border-[var(--color-border)] py-8 transition-colors last:border-b last:border-b-[0.5px] last:border-[var(--color-border)] md:py-10"
               >
                 <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
                   <h3 className="font-display text-xl tracking-[0.04em] text-[var(--color-accent)] transition-opacity group-hover:opacity-70 md:text-2xl">
