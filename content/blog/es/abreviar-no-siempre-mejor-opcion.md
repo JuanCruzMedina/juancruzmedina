@@ -10,17 +10,17 @@ _Una guía práctica para escribir código que cualquiera pueda leer_
 
 ---
 
-Hay una tensión que todo desarrollador conoce: el código tiene que ser claro, pero también queremos escribir rápido. Y en ese equilibrio, la tentación de abreviar siempre aparece.
+Todo desarrollador vive con la misma tensión. El código tiene que ser claro, pero también queremos escribir rápido. Y en ese equilibrio, la tentación de abreviar siempre aparece.
 
 ¿Escribo `usr` o `user`? ¿`btn` o `button`? ¿`calc` o `calculate`? Parecen decisiones menores, pero tienen un impacto real en la calidad del código a largo plazo.
 
-Este artículo no tiene una respuesta absoluta —porque no existe— pero sí tiene criterios concretos para tomar mejores decisiones.
+Este artículo no pretende dar una respuesta absoluta (no existe), pero sí ofrece criterios concretos para tomar mejores decisiones.
 
 ---
 
 ## El problema con abreviar sin criterio
 
-El código se escribe una vez pero se lee muchas veces. Cuando abreviamos, estamos tomando un atajo que nos beneficia a nosotros en el momento de escribir, pero que puede perjudicar a cualquiera que lo lea después — incluyendo nuestro yo del futuro.
+El código se escribe una vez pero se lee muchas veces. Cuando abreviamos, estamos tomando un atajo que nos beneficia a nosotros en el momento de escribir, pero que puede perjudicar a cualquiera que lo lea después, incluyendo nuestro yo del futuro.
 
 Miremos este ejemplo:
 
@@ -50,7 +50,7 @@ No toda abreviación es mala. Hay contextos donde es completamente válido, y fo
 
 ### 1. Convenciones ampliamente conocidas
 
-Algunas abreviaciones son tan estándar en el ecosistema que escribirlas completas sería lo raro:
+Algunas abreviaciones son tan estándar en el ecosistema que escribirlas completas sería lo raro.
 
 - `i`, `j`, `k` → variables de iteración en bucles cortos
 - `e` → error en callbacks (JavaScript, Node.js)
@@ -80,7 +80,7 @@ Si tu aplicación tiene un dominio específico y el equipo usa ciertas abreviaci
 
 ## Cuándo NO abreviar
 
-Acá es donde más errores se cometen. Estos son los casos donde el nombre completo no es negociable.
+Acá es donde más errores se cometen, y donde el nombre completo no es negociable.
 
 ### 1. Funciones y métodos
 
@@ -98,11 +98,11 @@ Un nombre de función largo y claro es casi siempre mejor que uno corto y ambigu
 
 ### 2. Variables con vida larga
 
-Cuanto más tiempo vive una variable en el código —y más lejos de donde se define— más descriptivo debe ser su nombre. Una variable que se define en la línea 10 y se usa en la 80 necesita cargarse sola.
+Cuanto más tiempo vive una variable en el código, y más lejos de donde se define, más descriptivo tiene que ser su nombre. Si se define en la línea 10 y se usa en la 80, necesita cargarse sola.
 
 ### 3. Parámetros de funciones públicas o de API
 
-Los parámetros son la interfaz de tu función. Si alguien va a llamar a tu código desde otro módulo o servicio, los nombres de los parámetros tienen que ser autoexplicativos:
+Los parámetros son la interfaz de tu función. Si alguien va a llamar a tu código desde otro módulo o servicio, los nombres tienen que hablar por sí solos.
 
 ```js
 // ❌
@@ -114,7 +114,7 @@ function sendEmail(recipient, subject, body) { ... }
 
 ### 4. Booleanos
 
-Los booleanos abreviados son una fuente clásica de bugs silenciosos. El nombre tiene que dejar en claro qué significa `true` y qué significa `false`:
+Los booleanos abreviados son una fuente clásica de bugs silenciosos. El nombre tiene que dejar en claro qué significa `true` y qué significa `false`.
 
 ```js
 // ❌ ¿Qué es 'true' acá?
@@ -128,7 +128,7 @@ bool isAccountActive = false;
 
 ### 5. Clases y tipos
 
-Los tipos definen estructuras que van a usarse en muchos lugares. Abreviarlos genera confusión a medida que el proyecto crece:
+Los tipos definen estructuras que van a usarse en muchos lugares. Abreviarlos genera confusión a medida que el proyecto crece.
 
 ```js
 // ❌
@@ -146,7 +146,7 @@ class UserManager { ... }
 
 Si la respuesta es sí, el nombre está bien. Si tenés que dudar, cambialo.
 
-También podés usar la prueba del pull request: si en una revisión de código necesitás explicar qué significa una variable o función, es señal de que el nombre no es suficientemente claro.
+También podés usar la prueba del pull request. Si en una revisión de código necesitás explicar qué significa una variable o función, es señal de que el nombre no es suficientemente claro.
 
 ---
 
@@ -166,7 +166,7 @@ También podés usar la prueba del pull request: si en una revisión de código 
 
 Abreviar en código no es bueno ni malo por defecto. Es una herramienta que tiene su lugar, y saber cuándo usarla es parte de escribir código de calidad.
 
-La regla de oro no es "nunca abrevies" ni "abreviar ahorra tiempo". Es algo más simple: el código que escribís hoy lo vas a leer vos, tu equipo, o alguien que no conocés todavía. Escribilo para ellos.
+La regla de oro no es "nunca abrevies" ni "abreviar ahorra tiempo". Es algo más simple. El código que escribís hoy lo vas a leer vos, tu equipo, o alguien que no conocés todavía. Escribilo para ellos.
 
 > “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
 >
