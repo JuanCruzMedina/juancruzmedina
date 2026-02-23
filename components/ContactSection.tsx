@@ -21,7 +21,7 @@ export function ContactSection() {
   };
 
   return (
-    <section className="border-t border-[var(--color-border)]">
+    <section id="contact" className="border-t border-[var(--color-border)]">
       <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-32">
         <FadeInSection>
           <p className="text-[10px] font-medium tracking-[0.4em] text-[var(--color-muted)] uppercase">

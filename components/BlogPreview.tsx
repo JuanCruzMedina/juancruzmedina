@@ -33,15 +33,20 @@ export function BlogPreview() {
                   <h3 className="font-display text-xl tracking-[0.04em] text-[var(--color-accent)] transition-opacity group-hover:opacity-70 md:text-2xl">
                     {post.title.toUpperCase()}
                   </h3>
-                  {post.date && (
-                    <time className="shrink-0 text-xs text-[var(--color-muted)]">
-                      {new Date(post.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </time>
-                  )}
+                  <span className="flex items-center gap-2 shrink-0">
+                    {post.date && (
+                      <time className="text-xs text-[var(--color-muted)]">
+                        {new Date(post.date).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </time>
+                    )}
+                    <span className="text-xs text-[var(--color-muted)] opacity-0 transition-opacity group-hover:opacity-100">
+                      &rarr;
+                    </span>
+                  </span>
                 </div>
                 {post.excerpt && (
                   <p className="mt-2 max-w-2xl text-sm text-[var(--color-muted)]">

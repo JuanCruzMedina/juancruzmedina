@@ -31,8 +31,11 @@ export function ProjectsPreview() {
                   <h3 className="font-display text-xl tracking-[0.04em] text-[var(--color-accent)] transition-opacity group-hover:opacity-70 md:text-2xl">
                     {project.title.toUpperCase()}
                   </h3>
-                  <span className="shrink-0 text-xs text-[var(--color-muted)]">
+                  <span className="flex items-center gap-2 shrink-0 text-xs text-[var(--color-muted)]">
                     {project.date}
+                    <span className="opacity-0 transition-opacity group-hover:opacity-100">
+                      &rarr;
+                    </span>
                   </span>
                 </div>
 

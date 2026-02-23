@@ -20,13 +20,21 @@ export function AboutSection() {
             <p className="text-base leading-[1.8] text-[var(--color-accent-muted)] md:text-lg md:leading-[1.9]">
               {siteConfig.resume.descriptionShort}
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap items-center gap-6">
               <Link
                 href="/experience"
                 className="link-underline text-[11px] font-medium tracking-[0.3em] text-[var(--color-accent)] uppercase"
               >
                 More about me &rarr;
               </Link>
+              <a
+                href="https://drive.google.com/uc?export=download&id=1ZSRUiKi03RxlbEuYkUqfOmGlqcI9ngOV"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline text-[11px] tracking-[0.25em] text-[var(--color-muted)] uppercase transition-colors hover:text-[var(--color-accent)]"
+              >
+                Download CV &darr;
+              </a>
             </div>
           </FadeInSection>
         </div>
