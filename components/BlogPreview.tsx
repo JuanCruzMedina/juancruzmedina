@@ -43,7 +43,7 @@ export function BlogPreview() {
                         })}
                       </time>
                     )}
-                    <span className="text-xs text-[var(--color-muted)] opacity-0 transition-opacity group-hover:opacity-100">
+                    <span className="text-xs text-[var(--color-muted)] transition-opacity md:opacity-0 md:group-hover:opacity-100">
                       &rarr;
                     </span>
                   </span>

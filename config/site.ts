@@ -13,12 +13,14 @@ export const siteConfig = {
     { label: "Experience", href: "/experience" },
     { label: "Learnings", href: "/blog/en" },
     { label: "Projects", href: "/projects" },
+    { label: "Contact", href: "/#contact" },
   ],
   navMenuItems: [
     { label: "Home", href: "/" },
     { label: "Experience", href: "/experience" },
     { label: "Learnings", href: "/blog/en" },
     { label: "Projects", href: "/projects" },
+    { label: "Contact", href: "/#contact" },
   ],
   links: {
     github: "https://github.com/JuanCruzMedina",

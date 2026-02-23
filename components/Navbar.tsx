@@ -62,9 +62,11 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     className={`link-underline text-[10px] font-medium tracking-[0.25em] uppercase transition-opacity hover:opacity-60 ${
-                      pathname === item.href || pathname.startsWith(item.href + "/")
-                        ? "text-[var(--color-accent)]"
-                        : "text-[var(--color-muted)]"
+                      item.href.startsWith("/#")
+                        ? "text-[var(--color-muted)]"
+                        : pathname === item.href || pathname.startsWith(item.href + "/")
+                          ? "text-[var(--color-accent)]"
+                          : "text-[var(--color-muted)]"
                     }`}
                   >
                     {item.label}

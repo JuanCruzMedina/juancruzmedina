@@ -33,7 +33,7 @@ export function ProjectsPreview() {
                   </h3>
                   <span className="flex items-center gap-2 shrink-0 text-xs text-[var(--color-muted)]">
                     {project.date}
-                    <span className="opacity-0 transition-opacity group-hover:opacity-100">
+                    <span className="transition-opacity md:opacity-0 md:group-hover:opacity-100">
                       &rarr;
                     </span>
                   </span>

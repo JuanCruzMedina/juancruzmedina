@@ -36,31 +36,33 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="mt-10 flex animate-fade-up stagger-5 flex-wrap items-center justify-center gap-6 md:mt-12 md:gap-8">
+        <div className="mt-10 flex animate-fade-up stagger-5 flex-col items-center gap-6 md:mt-12">
           <a
             href="#contact"
             className="border border-[var(--color-accent)] px-6 py-3 text-[11px] font-medium tracking-[0.3em] text-[var(--color-accent)] uppercase transition-colors hover:bg-[var(--color-accent)] hover:text-[var(--color-surface)]"
           >
             Contact
           </a>
-          <Link
-            href="/projects"
-            className="link-underline text-[11px] font-medium tracking-[0.3em] text-[var(--color-accent)] uppercase"
-          >
-            Projects
-          </Link>
-          <Link
-            href="/experience"
-            className="link-underline text-[11px] font-medium tracking-[0.3em] text-[var(--color-accent)] uppercase"
-          >
-            Experience
-          </Link>
-          <Link
-            href="/blog/en"
-            className="link-underline text-[11px] font-medium tracking-[0.3em] text-[var(--color-accent)] uppercase"
-          >
-            Learnings
-          </Link>
+          <div className="flex items-center gap-6 md:hidden">
+            <Link
+              href="/projects"
+              className="link-underline text-[11px] font-medium tracking-[0.3em] text-[var(--color-accent)] uppercase"
+            >
+              Projects
+            </Link>
+            <Link
+              href="/experience"
+              className="link-underline text-[11px] font-medium tracking-[0.3em] text-[var(--color-accent)] uppercase"
+            >
+              Experience
+            </Link>
+            <Link
+              href="/blog/en"
+              className="link-underline text-[11px] font-medium tracking-[0.3em] text-[var(--color-accent)] uppercase"
+            >
+              Learnings
+            </Link>
+          </div>
         </div>
 
         <div className="mt-8 flex animate-fade-up stagger-6 gap-6">
