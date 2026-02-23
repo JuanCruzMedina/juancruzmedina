@@ -1,37 +1,24 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Juan Cruz Medina :)",
+  name: "Juan Cruz Medina",
+  displayName: "Juan Cruz Medina",
   email: "mail@juanmedina.com.ar",
   sendEmail: "mailto:mail@juanmedina.com.ar",
-  description: "Juan Cruz Medina Software Developer Portfolio",
+  description: "Juan Cruz Medina — Backend engineer at Mercado Libre building distributed systems at scale.",
+  tagline: "Backend engineer crafting distributed systems that scale across Latin America",
+  location: "Based in C\u00f3rdoba, Argentina",
   navItems: [
-    {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Resume",
-      href: "/resume",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
+    { label: "Home", href: "/" },
+    { label: "Experience", href: "/experience" },
+    { label: "Learnings", href: "/blog/en" },
+    { label: "Projects", href: "/projects" },
   ],
   navMenuItems: [
-    {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Resume",
-      href: "/resume",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
+    { label: "Home", href: "/" },
+    { label: "Experience", href: "/experience" },
+    { label: "Learnings", href: "/blog/en" },
+    { label: "Projects", href: "/projects" },
   ],
   links: {
     github: "https://github.com/JuanCruzMedina",
@@ -40,71 +27,105 @@ export const siteConfig = {
     voxel: "https://www.voxelgroup.net/es/",
   },
   resume: {
+    descriptionShort:
+      "Backend developer building distributed microservices at scale. Currently at Mercado Libre, working with Java, Go, and Python to deliver high-impact solutions across Latin America.",
     description:
-      "I am a backend developer with experience in designing and building applications using .NET and Python, leveraging best practices, modern development techniques, and software design principles. My primary focus is collaborating with teams to create high-quality solutions in the most effective way possible. I have gained valuable experience working with teams of all sizes, from large to small. I am particularly passionate about applying my technical expertise in areas such as refactoring techniques, best practices, legacy code management, and software architecture to improve and optimize applications.",
+      "I am a backend developer with experience designing and building distributed systems at scale. Currently working at Mercado Libre — Latin America's largest e-commerce company — where I develop microservices in Java, Go, and Python that handle a critical and extremely high volume of requests. I have a strong focus on infrastructure, observability, and cross-team collaboration, and I apply modern practices such as AI-assisted development and Spec Driven Development in my day-to-day work. I also bring solid experience with .NET and Python from previous roles, and I am passionate about software architecture, refactoring, and building reliable, maintainable solutions.",
 
     workExperience: [
+      {
+        charge: "Software Developer",
+        company: "Mercado Libre",
+        location: "Remote",
+        date: "Aug 2025 - Current",
+        achievement: "Drives infrastructure sharding and cross-team initiatives at LATAM scale.",
+        techStack: ["Java", "Go", "Python", "Grafana", "New Relic", "Datadog", "Fury"],
+        descriptionItems: [
+          "Build and maintain high-throughput microservices in Java, Go, and Python at Latin America's largest e-commerce company, handling a critical and extremely high volume of requests and clients across the region.",
+          "Deploy and manage services through Fury, Mercado Libre's internal platform, handling infrastructure provisioning and full application observability using Grafana, New Relic, and Datadog.",
+          "Leverage AI-assisted development workflows such as Cursor and Spec Driven Development to accelerate delivery and improve code quality.",
+          "Led an infrastructure sharding initiative that reduced coupling between internal services by 80%, executing a safe migration strategy that also eliminated 50% of unused records.",
+          "Driving the early stages of a cross-functional configuration automation process spanning more than 3 business areas.",
+          "Contributing to a high-priority initiative coordinating more than 5 teams across the ecosystem, with hard deadlines and direct company-wide impact.",
+        ],
+        type: "Full-time",
+        companyLogo: "/resume/mercado-libre-opt.webp",
+      },
+      {
+        charge: "Co-Founder & Software Engineer",
+        company: "Prestige Rewards",
+        location: "Remote",
+        date: "Feb 2024 - Current",
+        achievement: "Co-founded the product; led a 3-engineer team from zero to functional prototype.",
+        techStack: [".NET", "React", "SQL"],
+        descriptionItems: [
+          "Co-founder and lead developer of a loyalty and rewards platform, involved from ideation through product execution.",
+          "Led a team of 3 senior developers in the design and delivery of a fully functional prototype, covering product, design, and engineering end-to-end.",
+          "Participated in all phases of the product lifecycle: UI/UX design, product strategy, architecture decisions, and hands-on development.",
+        ],
+        type: "Freelance",
+        companyLogo: "/resume/prestige-rewards-opt.jpg",
+      },
       {
         charge: "Senior Full-Stack Developer (Tech Screening Specialist)",
         company: "Wizippo",
         location: "Denver, Colorado",
-        date: "Apr 2025 - current",
+        date: "Apr 2025 - Aug 2025",
+        achievement: "Designed technical screening systems and raised hiring quality through live problem-solving sessions.",
+        techStack: [".NET", "Python", "AWS"],
         descriptionItems: [
-          "Designed and conducted technical screenings for senior back-end and full-stack engineering roles, assessing candidates on system architecture, cloud services, algorithms, and code quality.",
+          "Designed and maintained a structured suite of questions and answers covering Python, C#, web fundamentals, security, SQL, NoSQL, and software architecture, tailored for senior-level engineering roles.",
+          "Generated detailed evaluation conclusions after each session, providing hiring teams with clear, evidence-based recommendations on whether to move candidates forward.",
+          "Conducted live coding sessions with candidates who struggled on assessments, designing problems on the spot and working through them collaboratively to better assess real problem-solving ability.",
         ],
         type: "Part-time",
-        companyLogo: "/resume/wizippo.png",
+        companyLogo: "/resume/wizippo-opt.webp",
       },
       {
         charge: "Software Engineer",
         company: "Voxel Group",
         location: "Barcelona, Spain",
         date: "Apr 2022 - Feb 2025",
+        achievement: "Led technical debt reduction and a monolith-to-microservices migration initiative.",
+        techStack: [".NET", "Python", "Redis", "SQL", "Dapper"],
         descriptionItems: [
-          "Design, develop, and maintain .NET applications within the Compliance team.",
-          "Create new applications from scratch, emphasizing reliability and scalability.",
-          "Perform code reviews for team members to ensure code quality and best practices.",
-          "Manage technical debt for one of the most demanding projects, ensuring long-term maintainability.",
-          "Successfully proposed and implemented an improvement in the certificate update process, reducing manual tasks as an intermediate step before a full migration to a new application.",
-          "Work with .NET Core 3.1 and .NET Framework 4.8, utilizing Dapper for data access.",
-          "Use Redis, Postgres, and Oracle databases for different application needs.",
-          "Define metrics and implement observability improvements for better performance monitoring.",
-          "Collaborate with the team, applying best practices and agile methodologies.",
-          "Use Python for scripting and automation tasks.",
+          "Designed, developed, and maintained .NET applications within the Compliance team, creating new services from scratch with a focus on reliability and scalability.",
+          "Took ownership of technical debt across one of the team's most demanding projects, systematically identifying, prioritizing, and resolving long-standing issues to improve maintainability and reduce risk.",
+          "Led a migration initiative from monolithic architecture to microservices as a strategic effort to productize the team's core objectives, improving scalability and separation of concerns.",
+          "Proposed and implemented a significant improvement in the certificate update process, reducing manual tasks as an intermediate step before a full migration to a new application.",
+          "Performed code reviews to ensure quality and best practices, and defined observability metrics to improve performance monitoring.",
+          "Worked with .NET Core 3.1 and .NET Framework 4.8, using Dapper for data access and Redis, Postgres, and Oracle for different application needs.",
+          "Used Python for scripting and automation tasks.",
         ],
         type: "Full-time",
-        companyLogo: "/resume/voxel.png",
+        companyLogo: "/resume/voxel-opt.webp",
       },
       {
         charge: "Software Developer",
-        company: "Neumáticos Usados Córdoba",
-        location: "Córdoba, Argentina",
-        date: "2020, 2025",
+        company: "Neum\u00e1ticos Usados C\u00f3rdoba",
+        location: "C\u00f3rdoba, Argentina",
+        date: "2020 - Present",
+        achievement: "Maintained a 5-year client relationship, evolving the solution from desktop to web.",
+        techStack: [".NET", "React", "TypeScript", "Windows Forms"],
         descriptionItems: [
-          "Developed a custom application to normalize files generated by ARCA, Argentina’s tax agency.",
-          "Designed the tool to extract key financial information, streamlining accounting processes for a tire retail business.",
-          "Launched the first version in 2020 using .NET Framework with Windows Forms for a desktop-based solution.",
-          "Migrated the application to a web-based version in February 2025, enhancing accessibility and scalability.",
-          "Led the front-end development using React and HeroUI to improve user experience.",
-          "Deployed the web version successfully on Vercel, ensuring high availability and easy maintenance.",
-          "Collaborated closely with the client to adapt the application to their evolving business needs.",
-          "Implemented best practices for performance optimization and maintainability during the migration.",
+          "Developed and maintained a custom application for a long-term client since 2020, adapting the solution across multiple technology cycles to meet evolving business needs.",
+          "Built the initial version using .NET Framework with Windows Forms, automating the normalization of tax files generated by ARCA, Argentina's tax agency, and streamlining accounting workflows for a tire retail business.",
+          "Migrated the application to a modern web-based architecture in 2025 using React and HeroUI, deployed on Vercel, significantly improving accessibility and scalability without disrupting ongoing operations.",
         ],
         type: "Freelance",
-        companyLogo: "/resume/nuc-inverted.png",
+        companyLogo: "/resume/nuc-inverted-opt.webp",
       },
       {
         charge: "Team Leader",
         company: "CORACE",
-        location: "Córdoba, Argentina",
+        location: "C\u00f3rdoba, Argentina",
         date: "Jan 2024 - Mar 2024",
+        achievement: "Delivered infrastructure migration with direct stakeholder alignment.",
+        techStack: ["Google Workspace"],
         descriptionItems: [
-          "Led a three-person IT consulting team, handling email migration and infrastructure updates.",
-          "Managed requirement gathering, task planning, and direct client interactions.",
-          "Acted as the intermediary between the team and the client, ensuring smooth communication and project alignment.",
-          "Successfully migrated email services from Claro to Google, improving communication efficiency.",
-          "Upgraded the organization’s software infrastructure.",
-          "Documented processes thoroughly.",
+          "Led a three-person IT consulting team through a full infrastructure update, managing requirement gathering, task planning, and direct client interactions.",
+          "Successfully migrated email services from Claro to Google Workspace, improving communication efficiency across the organization.",
+          "Upgraded the organization's software infrastructure and documented all processes to ensure continuity and ease of future maintenance.",
         ],
         type: "Freelance",
         companyLogo: "/resume/corace.jpeg",
@@ -112,15 +133,14 @@ export const siteConfig = {
       {
         charge: "Full Stack Developer",
         company: "Fulltrace S.A.",
-        location: "Córdoba, Argentina",
+        location: "C\u00f3rdoba, Argentina",
         date: "Dec 2023 - Apr 2024",
+        achievement: "Shipped livestock platform with zero reported post-release issues.",
+        techStack: [".NET", "Windows Forms"],
         descriptionItems: [
-          "Designed and developed a .NET application from scratch to manage livestock data from the company’s proprietary devices.",
-          "Used the latest version of .NET Framework with Windows Forms for UI development.",
-          "Implemented data analysis functionality without relying on external libraries.",
-          "Regularly met with the product creator to align development efforts with the product vision.",
-          "The application had active users from its first version, and no bugs or issues have been reported since deployment.",
-          "Implemented data handling features, allowing users to download and modify information.",
+          "Designed and developed a .NET application from scratch to manage livestock data from the company's proprietary devices, using Windows Forms for UI development.",
+          "Implemented data analysis and handling functionality without relying on external libraries, allowing users to download and modify records directly.",
+          "Worked closely with the product creator in regular sessions to align development with the product vision, shipping an application that has been in active use since launch with no reported bugs or issues.",
         ],
         type: "Freelance",
         companyLogo: "/resume/fulltrace.jpeg",
@@ -130,11 +150,12 @@ export const siteConfig = {
         company: "AGI System Developments",
         location: "California, USA",
         date: "Oct 2022 - Jul 2023",
+        achievement: "Enabled Alexa-driven IoT control with stable cloud operations.",
+        techStack: ["Python", "AWS", "Alexa"],
         descriptionItems: [
-          "Developed a Python-based application on AWS Lambda.",
-          "Integrated AWS logging services for monitoring and debugging.",
-          "Enabled remote control of recreational devices (spa, chiller, sauna) via Amazon Alexa.",
-          "The application has been actively used since deployment, with no reported bugs or technical issues.",
+          "Developed a Python application on AWS Lambda to enable remote control of recreational IoT devices including spas, chillers, and saunas via Amazon Alexa, integrating a custom communication protocol designed by the client.",
+          "Implemented AWS-based logging and monitoring to ensure reliable cloud operations, maintaining zero reported bugs since deployment.",
+          "Worked closely with the client's engineering team to understand and implement a proprietary device communication protocol, ensuring stable and secure interaction between cloud infrastructure and physical hardware.",
         ],
         type: "Freelance",
         companyLogo: "/resume/agi.jpeg",
@@ -142,15 +163,16 @@ export const siteConfig = {
       {
         charge: "Backend Developer",
         company: "Juan Toselli Intl. Tours",
-        location: "Córdoba, Argentina",
+        location: "C\u00f3rdoba, Argentina",
         date: "Aug 2021 - Apr 2022",
+        achievement: "Standardized supplier data pipelines for faster travel booking operations.",
+        techStack: [".NET", "Python", "FastAPI", "SQL", "MongoDB"],
         descriptionItems: [
           "Developed and maintained .NET APIs for booking tourism services (hotels, flights, activities), with a focus on performance and reliability.",
           "Created reusable modules for multiple tourism applications, accelerating the release of new features.",
           "Developed a natural language processing module in Python (using SpaCy and NLTK) to normalize hotel room names from various providers.",
-          "Led the integration of external service providers, working directly with their development teams to ensure seamless connectivity.",
-          "Managed SQL & NoSQL databases (SQL Server, MySQL, MongoDB).",
-          "Migrated services from Flask to FastAPI.",
+          "Led the integration of external service providers, working directly with their development teams to ensure seamless connectivity across SQL Server, MySQL, and MongoDB databases.",
+          "Migrated services from Flask to FastAPI, improving API performance and developer experience.",
         ],
         type: "Full-time",
         companyLogo: "/resume/toselli.jpeg",
@@ -158,13 +180,15 @@ export const siteConfig = {
       {
         charge: "Fullstack Developer",
         company: "Procoop SRL",
-        location: "Córdoba, Argentina",
-        date: "Feb 2021 - Sept 2021",
+        location: "C\u00f3rdoba, Argentina",
+        date: "Feb 2021 - Sep 2021",
+        achievement: "Built reusable backend services for cooperative management systems.",
+        techStack: [".NET", "AWS", "SQL"],
         descriptionItems: [
           "Maintained a .NET desktop application for managing cooperatives and utilities (electricity, gas, water, internet).",
           "Implemented web services from scratch, applying design patterns and best practices.",
-          "Developed an application to handle file storage on Amazon S3.",
-          "Managed relational databases (MySQL, SQL Server).",
+          "Designed and built a file management solution on Amazon S3, enabling cooperative clients distributed across Argentina to independently handle critical documents without requiring direct support.",
+          "Managed relational databases including MySQL and SQL Server.",
         ],
         type: "Full-time",
         companyLogo: "/resume/procoop.jpeg",
@@ -174,32 +198,28 @@ export const siteConfig = {
         company: "Pentamedia",
         location: "Argentina",
         date: "Jan 2021 - Feb 2021",
+        achievement: "Contributed to e-commerce modules during digital transformation.",
+        techStack: ["JavaScript", "PHP"],
         descriptionItems: [
-          "Contributed to digital business transformation initiatives.",
-          "Maintained e-commerce modules as a full stack developer (HTML, CSS, JS, PHP, Bootstrap).",
+          "Contributed to digital transformation initiatives, maintaining and improving e-commerce modules using HTML, CSS, JavaScript, PHP, and Bootstrap.",
         ],
         type: "Freelance",
         companyLogo: "/resume/pentamedia.jpeg",
       },
     ],
     skills: [
-      // Backend Frameworks & Languages
+      "Java",
+      "Go",
       ".NET",
       "Python",
       "Node.js",
       "Express",
-
-      // .NET Ecosystem
       "Windows forms",
       "Entity Framework",
       "Dapper",
       "LINQ",
-
-      // Python Frameworks
       "Flask",
       "FastAPI",
-
-      // Frontend & Web
       "HTML",
       "CSS",
       "JavaScript",
@@ -207,14 +227,9 @@ export const siteConfig = {
       "React",
       "Redux",
       "Next.js",
-      "MERN",
-
-      // UI Libraries & Frameworks
       "TailwindCSS",
       "Bootstrap",
       "Material-UI",
-
-      // Software Design & Architecture
       "SOLID",
       "DDD",
       "Design Patterns",
@@ -222,20 +237,13 @@ export const siteConfig = {
       "Refactoring",
       "Ports & Adapters",
       "TDD",
-
-      // Project Management & Methodologies
       "Agile",
-
-      // Databases
+      "Spec Driven Development",
       "SQL",
       "MongoDB",
       "Oracle",
       "MySQL",
-
-      // APIs & Communication
       "REST",
-
-      // DevOps & Cloud
       "Git",
       "Github",
       "Jenkins",
@@ -243,24 +251,45 @@ export const siteConfig = {
       "Lambda",
       "S3",
       "Firebase",
-
-      // Monitoring & Logging
-      "Graylog",
+      "Fury",
       "Grafana",
+      "New Relic",
+      "Datadog",
+      "Graylog",
       "Canonical",
       "Logging",
-
-      // Miscellaneous
       "Alexa",
       "Figma",
+    ],
+    skillsByCategory: [
+      {
+        label: "Backend",
+        skills: ["Java", "Go", ".NET", "Python", "Node.js", "Express", "Flask", "FastAPI", "Windows forms", "Entity Framework", "Dapper", "LINQ"],
+      },
+      {
+        label: "Frontend",
+        skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Redux", "Next.js", "TailwindCSS", "Bootstrap", "Material-UI"],
+      },
+      {
+        label: "Architecture & Design",
+        skills: ["SOLID", "DDD", "Design Patterns", "Clean Code", "Refactoring", "Ports & Adapters", "TDD", "Agile", "Spec Driven Development"],
+      },
+      {
+        label: "Data & Cloud",
+        skills: ["SQL", "MongoDB", "Oracle", "MySQL", "REST", "Git", "Github", "Jenkins", "AWS", "Lambda", "S3", "Firebase", "Fury"],
+      },
+      {
+        label: "Observability",
+        skills: ["Grafana", "New Relic", "Datadog", "Graylog"],
+      },
     ],
     education: [
       {
         title: "Information Systems Engineering",
-        institution: "Universidad Tecnológica Nacional",
+        institution: "Universidad Tecnol\u00f3gica Nacional",
         date: "2018 - Present",
-        description: "Córdoba, Argentina",
-        image: "/resume/utn-azul.jpg",
+        description: "C\u00f3rdoba, Argentina",
+        image: "/resume/utn-azul-opt.jpg",
       },
     ],
     languages: [
@@ -277,7 +306,7 @@ export const siteConfig = {
       {
         title: "Code Smells",
         date: "april 2025",
-        instructor: "Raúl Villares Sánchez",
+        instructor: "Ra\u00fal Villares S\u00e1nchez",
         company: "Exeal",
         image:
           "https://import.cdn.thinkific.com/cdn-cgi/image/width=384,dpr=1,onerror=redirect/486459/custom_site_themes/358479/eGwqY7m6Tfa66CZOaxri_Logo-Exeal.png",
@@ -308,7 +337,7 @@ export const siteConfig = {
         company: "Udemy",
         image:
           "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg",
-        link: "https://platzi.com/p/juancruzfaq/curso/8781-docker-fundamentos/diploma/detalle/",
+        link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-40b17d83-9fa1-436c-b4a3-256d219fb09b.pdf",
       },
       {
         title: "Cloud Patterns in Azure",
@@ -344,22 +373,64 @@ export const siteConfig = {
     titleMark: "Achievements",
     subtitle:
       "I love building projects and practicing my engineering skills. Here's an archive of things that I've worked on.",
+    featuredIds: ["tire-shop", "livestock-data-manager", "iot-remote-manager"],
     items: [
       {
+        id: "tire-shop",
+        title: "Tire Shop Management Platform",
+        subtitle: "Full Business Digitalization for a Long-Term Client",
+        shortDescription:
+          "A web platform built from scratch to fully digitalize the operations of a tire retail business, including a 15-year data migration from legacy Excel files.",
+        fullDescription:
+          "Designed and developed a custom business management platform for a tire retail shop with 3 employees, replacing a fragmented Excel-based workflow in use for over 15 years. The project involved careful data modeling, migration strategy, and UX decisions tailored to non-technical users. Built with Next.js and Neon (serverless PostgreSQL), the platform centralizes inventory, client management, and operational data in a modern web interface.",
+        tags: ["Next.js", "TypeScript", "Neon", "PostgreSQL", "TailwindCSS"],
+        privacy: "closed",
+        image: "tire-shop.webp",
+        date: "2025",
+      },
+      {
+        id: "employee-loyalty",
+        title: "Employee Loyalty Platform",
+        subtitle: "Reward System with Integrated E-commerce",
+        shortDescription:
+          "A loyalty platform for employees featuring an integrated e-commerce experience, designed and built from the ground up.",
+        fullDescription:
+          "Co-designed and developed a loyalty and rewards platform from scratch, covering product strategy, UX design, and full-stack engineering. The platform includes an integrated e-commerce module allowing employees to redeem rewards, built with scalability and multi-tenant architecture in mind.",
+        tags: [".NET", "React", "SQL"],
+        privacy: "closed",
+        image: "prestige.jpg",
+        date: "2025",
+      },
+      {
+        id: "cooperative-file-manager",
+        title: "Cooperative File Manager",
+        subtitle: "S3-Based Document Management for Distributed Cooperatives",
+        shortDescription:
+          "A desktop application enabling cooperative organizations across Argentina to independently manage critical documents stored on Amazon S3.",
+        fullDescription:
+          "Designed and developed a desktop application to centralize and simplify the management of critical files stored on Amazon S3 for cooperative organizations. The tool was built to empower non-technical clients spread across Argentina to independently handle sensitive documents without requiring direct support, reducing operational dependency and improving data accessibility.",
+        tags: [".NET", "AWS", "S3", "Windows Forms"],
+        privacy: "closed",
+        image: "invoice.jpg",
+        date: "2021",
+      },
+      {
+        id: "arca-tax-normalizer",
         title: "ARCA Tax Normalizer",
         subtitle: "Automated Tax File Processing for ARCA",
         shortDescription:
-          "A Next.js app that automates tax file normalization for ARCA, simplifying financial data extraction for retail businesses.",
+          "A Next.js app that automates tax file normalization for ARCA, simplifying financial data extraction for retail businesses. Built for a client maintained since 2020.",
         fullDescription:
-          "Development of a custom application to normalize files generated by Argentina's tax agency (formerly AFIP, now ARCA). This tool extracts key financial information from tax files, automating data processing to improve efficiency in accounting workflows. It was specifically designed for a client in the tire retail business, reducing manual workload and ensuring accuracy.",
+          "Development of a custom application to normalize files generated by Argentina's tax agency (formerly AFIP, now ARCA). This tool extracts key financial information from tax files, automating data processing to improve efficiency in accounting workflows. Built for a long-term client in the tire retail business as part of an ongoing relationship since 2020, actively used in production with no reported issues since launch.",
         tags: ["Next.js", "TypeScript", "TailwindCSS"],
         privacy: "open",
         link: "https://afipxer-seven.vercel.app/",
         sourceLink: "https://github.com/JuanCruzMedina/afipxer",
-        image: "afipxer-project.jpg",
+        image: "arca.webp",
         date: "2025",
       },
       {
+        id: "livestock-data-manager",
         title: "Livestock Data Manager",
         subtitle: "Digital Tracking for Livestock Operations",
         shortDescription:
@@ -368,40 +439,34 @@ export const siteConfig = {
           "A desktop application developed with Windows Forms that streamlines livestock data management. It connects to a Digital Caravan Reader Stick, enabling users to download, normalize, and update animal records seamlessly. The system automates data collection and transfer, reducing manual input errors and enhancing traceability in livestock operations.",
         tags: ["C#", ".NET", "Windows Forms"],
         privacy: "closed",
-        image: "fulltrace-project.jpg",
+        image: "livestock-opt.webp",
         date: "2023",
       },
       {
+        id: "iot-remote-manager",
         title: "IoT Remote Manager",
         subtitle: "Cloud-based Control for Smart Devices",
         shortDescription:
-          "A Python-based AWS Lambda app for remotely managing spas, chillers, and saunas with a custom communication protocol.",
+          "A Python-based AWS Lambda app for remotely managing spas, chillers, and saunas via Alexa, built around a proprietary communication protocol.",
         fullDescription:
-          "Development of a Python application that enables remote control and monitoring of various IoT devices, including spas, chillers, and saunas. Hosted on AWS Lambda, the application ensures reliable and secure communication using a custom-built protocol designed by the client. This system enhances automation, allowing users to interact with their devices from anywhere via cloud infrastructure.",
-        tags: ["Python", "Alexa", "AWSLambda", "IoT"],
+          "Development of a Python application that enables remote control and monitoring of various IoT devices, including spas, chillers, and saunas. Hosted on AWS Lambda and integrated with Amazon Alexa, the application implements a proprietary communication protocol designed by the client to ensure reliable and secure interaction between cloud infrastructure and physical hardware. Actively used in production since 2023 with no reported bugs or technical issues.",
+        tags: ["Python", "Alexa", "AWS Lambda", "IoT"],
         privacy: "closed",
         link: "https://www.amazon.com/Applied-Computer-Controls-SmarTouch-Spa/dp/B0CJ9GTYXF/ref=sr_1_1?s=digital-skills&sr=1-1",
-        image: "alexa-device-manager-project.jpg",
+        image: "alexa-spa.webp",
         date: "2023",
       },
       {
+        id: "tourism-room-mapper",
         title: "Tourism Room Mapper",
         subtitle: "NLP-Powered Room Standardization API",
         shortDescription:
-          "A FastAPI-based service that normalizes hotel room data from tourism suppliers using NLP for seamless booking integration.",
+          "A FastAPI-based service that normalizes hotel room data from multiple tourism suppliers using NLP for seamless booking integration.",
         fullDescription:
-          "Development of a RESTful API that processes and standardizes hotel room availability data from multiple tourism suppliers. Each supplier uses different labels for room types, creating inconsistencies in booking systems. This application leverages NLP techniques, including NLTK and SpaCy, to intelligently map and unify data, ensuring accurate and streamlined room information. Built with FastAPI, it offers high-performance API interactions for tourism platforms.",
-        tags: [
-          "Python",
-          "NLP",
-          "FastAPI",
-          "NLTK",
-          "Spacy",
-          "TourismTech",
-          "RESTfulAPI",
-        ],
+          "Development of a RESTful API that processes and standardizes hotel room availability data from multiple tourism suppliers. Each supplier uses different labels for room types, creating inconsistencies in booking systems. This application leverages NLP techniques, including NLTK and SpaCy, to intelligently map and unify room data, ensuring accurate and streamlined information across platforms. Built with FastAPI for high-performance API interactions.",
+        tags: ["Python", "NLP", "FastAPI", "NLTK", "SpaCy"],
         privacy: "internal",
-        image: "room-mapper-project.jpg",
+        image: "nlp.webp",
         date: "2021",
       },
     ],

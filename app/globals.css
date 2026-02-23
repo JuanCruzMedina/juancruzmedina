@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --font-display: var(--font-bebas), system-ui, sans-serif;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #f7f7f7;
+  --color-border: #e8e8e8;
+  --color-muted: #999999;
+  --color-accent: #0a0a0a;
+  --color-accent-muted: #333333;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-surface: #0a0a0a;
+    --color-surface-elevated: #141414;
+    --color-border: #1f1f1f;
+    --color-muted: #666666;
+    --color-accent: #f5f5f5;
+    --color-accent-muted: #cccccc;
+  }
+}
+
+[data-theme="dark"] {
+  --color-surface: #0a0a0a;
+  --color-surface-elevated: #141414;
+  --color-border: #1f1f1f;
+  --color-muted: #666666;
+  --color-accent: #f5f5f5;
+  --color-accent-muted: #cccccc;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --color-surface: #ffffff;
+  --color-surface-elevated: #f7f7f7;
+  --color-border: #e8e8e8;
+  --color-muted: #999999;
+  --color-accent: #0a0a0a;
+  --color-accent-muted: #333333;
+  color-scheme: light;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-surface);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light dark;
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-accent);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  font-feature-settings: "kern" 1;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus visible for keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Stagger entrance animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes reveal-line {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes scroll-hint {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateY(8px);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease both;
+}
+
+.animate-reveal-line {
+  animation: reveal-line 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform-origin: left;
+}
+
+.animate-scroll-hint {
+  animation: scroll-hint 2s ease-in-out infinite;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.35s; }
+.stagger-4 { animation-delay: 0.5s; }
+.stagger-5 { animation-delay: 0.65s; }
+.stagger-6 { animation-delay: 0.8s; }
+.stagger-7 { animation-delay: 0.95s; }
+.stagger-8 { animation-delay: 1.1s; }
+
+/* Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-paused {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-reveal-line,
+  .animate-scroll-hint {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Elegant link underline */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Image reveal on hover */
+.image-zoom {
+  overflow: hidden;
+}
+
+.image-zoom img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.image-zoom:hover img {
+  transform: scale(1.04);
+}

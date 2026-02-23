@@ -1,110 +1,95 @@
-import "@/styles/globals.css";
-import { Metadata, Viewport } from "next";
-import clsx from "clsx";
-import React from "react";
-import { Link } from "@heroui/link";
-
-import { Providers } from "./providers";
-
+import type { Metadata } from "next";
+import {
+  DM_Sans,
+  JetBrains_Mono,
+  Bebas_Neue,
+} from "next/font/google";
+import "./globals.css";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { PersonJsonLd } from "@/components/JsonLd";
+import { Analytics } from "@vercel/analytics/react";
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
-import { NavBar } from "@/components/NavBar";
-import { textLink, textParagraph } from "@/components/primitives";
-import ThemeToggle from "@/components/ThemeToggle";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+});
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bebas",
+});
+
+const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://juanmedina.com.ar";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: {
     default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  icons: {
-    icon: "/favicon.ico",
+  robots: {
+    index: true,
+    follow: true,
   },
-};
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    type: "website",
+    url: baseUrl,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+  },
+  icons: {
+    icon: "/icon.svg",
+  },
+  alternates: {
+    canonical: baseUrl,
+  },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${jetbrainsMono.variable} ${bebasNeue.variable}`}
+      suppressHydrationWarning
+    >
       <head>
-        <title>{siteConfig.name}</title>
-        <meta content={siteConfig.description} name="description" />
-        <meta
-          content="juancruzmedina, software engineer, argentina, UTN-FRC"
-          name="keywords"
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title={`${siteConfig.name} - Learnings`}
+          href={`${baseUrl}/feed.xml`}
         />
-        <meta content="website" property="og:type" />
-        <meta content="https://juanmedina.com.ar" property="og:url" />
-        <meta
-          content="Juan Cruz Medina - Software Engineer"
-          property="og:title"
+        <PersonJsonLd />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem("theme");var d=window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.setAttribute("data-theme",t||(d?"dark":"light"));})();`,
+          }}
         />
-        <meta
-          content="Software Engineer based in Argentina, an undergraduate student at UTN-FRC."
-          property="og:description"
-        />
-        <meta content="/foto-con-indio.png" property="og:image" />
-        <meta content="summary_large_image" name="twitter:card" />
-        <meta content="https://juanmedina.com.ar" name="twitter:url" />
-        <meta
-          content="Juan Cruz Medina - Software Engineer"
-          name="twitter:title"
-        />
-        <meta
-          content="Software Engineer based in Argentina, an undergraduate student at UTN-FRC."
-          name="twitter:description"
-        />
-        <meta content="/foto-con-indio.png" name="twitter:image" />
       </head>
-      <body
-        className={clsx(
-          "min-h-screen bg-background flex flex-col font-sans",
-          fontSans.variable,
-        )}
-      >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
-            <NavBar />
-            <main className="flex-1 container mx-auto sm:max-w-full lg:max-w-7xl pt-16 px-6 flex-grow">
-              {children}
-              <ThemeToggle />
-            </main>
-            <footer className="w-full flex flex-col items-center justify-center py-3">
-              <span className={textParagraph()}>
-                Designed and developed by Juan Cruz Medina.
-              </span>
-              <span className={textParagraph()}>
-                Built with{" "}
-                <Link
-                  isExternal
-                  className={textLink()}
-                  href="https://heroui.dev"
-                >
-                  HeroUI
-                </Link>{" "}
-                &{" "}
-                <Link
-                  isExternal
-                  className={textLink()}
-                  href="https://nextjs.org"
-                >
-                  Next.js
-                </Link>
-              </span>
-            </footer>
-          </div>
-        </Providers>
+      <body className="min-h-screen antialiased">
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+        <Analytics />
       </body>
     </html>
   );
