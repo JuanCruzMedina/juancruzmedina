@@ -250,8 +250,9 @@ export function ExperienceClient() {
       {/* Download CV */}
       <div className="mb-10 flex justify-end">
         <a
-          href="/resume/Juan-Cruz-Medina-CV.pdf"
-          download
+          href="https://drive.google.com/uc?export=download&id=1ZSRUiKi03RxlbEuYkUqfOmGlqcI9ngOV"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-[11px] font-medium uppercase tracking-[0.15em] text-[var(--color-muted)] transition-colors hover:text-[var(--color-accent)]"
         >
           Download CV &darr;
