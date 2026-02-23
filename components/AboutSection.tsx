@@ -25,7 +25,7 @@ export function AboutSection() {
                 href="/experience"
                 className="link-underline text-[11px] font-medium tracking-[0.3em] text-[var(--color-accent)] uppercase"
               >
-                View Experience
+                More about me &rarr;
               </Link>
             </div>
           </FadeInSection>

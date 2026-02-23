@@ -1,7 +1,9 @@
 import { Hero } from "@/components/Hero";
-import { ProjectsSection } from "@/components/ProjectsSection";
 import { SkillsMarquee } from "@/components/SkillsMarquee";
 import { AboutSection } from "@/components/AboutSection";
+import { ExperiencePreview } from "@/components/ExperiencePreview";
+import { ProjectsPreview } from "@/components/ProjectsPreview";
+import { BlogPreview } from "@/components/BlogPreview";
 import { ContactSection } from "@/components/ContactSection";
 
 export default function HomePage() {
@@ -10,7 +12,9 @@ export default function HomePage() {
       <Hero />
       <SkillsMarquee />
       <AboutSection />
-      <ProjectsSection />
+      <ExperiencePreview />
+      <ProjectsPreview />
+      <BlogPreview />
       <ContactSection />
     </>
   );
