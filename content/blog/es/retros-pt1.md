@@ -1,6 +1,6 @@
 ---
 title: "Retros asíncronas"
-date: "2026-02-22"
+date: "2025-02-22"
 excerpt: "Cómo dejar de perder tiempo llenando el tablero y empezar a usarlo para lo que importa"
 ---
 

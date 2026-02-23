@@ -1,10 +1,12 @@
 ---
 title: "Por qué la abreviación no es necesariamente la mejor opción"
-date: "2026-02-22"
-excerpt: "Abreviar nombres de variables, funciones o tipos ahorra tecleo pero puede costar legibilidad y mantenibilidad. Cuándo conviene y cuándo no."
+date: "2025-06-15"
+excerpt: "Abreviar nombres de variables, funciones o tipos ahorra tecleo pero puede costar legibilidad y mantenibilidad. Cuándo conviene y cuándo no. Pensado sobre todo para perfiles junior."
 ---
 
 # Abreviar en código: ¿cuándo ayuda y cuándo arruina todo?
+
+_Este post está pensado sobre todo para perfiles junior: criterios claros para nombrar variables y funciones sin caer en abreviaciones que después nadie entiende._
 
 Hay una abreviación que me hace cerrar el PR sin revisarlo: `fl` para un booleano.
 
