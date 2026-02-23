@@ -50,7 +50,7 @@ export const siteConfig = {
           "Contributing to a high-priority initiative coordinating more than 5 teams across the ecosystem, with hard deadlines and direct company-wide impact.",
         ],
         type: "Full-time",
-        companyLogo: "/resume/mercado-libre.png",
+        companyLogo: "/resume/mercado-libre-opt.webp",
       },
       {
         charge: "Co-Founder & Software Engineer",
@@ -65,7 +65,7 @@ export const siteConfig = {
           "Participated in all phases of the product lifecycle: UI/UX design, product strategy, architecture decisions, and hands-on development.",
         ],
         type: "Freelance",
-        companyLogo: "/resume/prestige-rewards.jpeg",
+        companyLogo: "/resume/prestige-rewards-opt.jpg",
       },
       {
         charge: "Senior Full-Stack Developer (Tech Screening Specialist)",
@@ -80,7 +80,7 @@ export const siteConfig = {
           "Conducted live coding sessions with candidates who struggled on assessments, designing problems on the spot and working through them collaboratively to better assess real problem-solving ability.",
         ],
         type: "Part-time",
-        companyLogo: "/resume/wizippo.png",
+        companyLogo: "/resume/wizippo-opt.webp",
       },
       {
         charge: "Software Engineer",
@@ -99,7 +99,7 @@ export const siteConfig = {
           "Used Python for scripting and automation tasks.",
         ],
         type: "Full-time",
-        companyLogo: "/resume/voxel.png",
+        companyLogo: "/resume/voxel-opt.webp",
       },
       {
         charge: "Software Developer",
@@ -114,7 +114,7 @@ export const siteConfig = {
           "Migrated the application to a modern web-based architecture in 2025 using React and HeroUI, deployed on Vercel, significantly improving accessibility and scalability without disrupting ongoing operations.",
         ],
         type: "Freelance",
-        companyLogo: "/resume/nuc-inverted.png",
+        companyLogo: "/resume/nuc-inverted-opt.webp",
       },
       {
         charge: "Team Leader",
@@ -290,7 +290,7 @@ export const siteConfig = {
         institution: "Universidad Tecnol\u00f3gica Nacional",
         date: "2018 - Present",
         description: "C\u00f3rdoba, Argentina",
-        image: "/resume/utn-azul.jpg",
+        image: "/resume/utn-azul-opt.jpg",
       },
     ],
     languages: [
@@ -384,7 +384,7 @@ export const siteConfig = {
           "Designed and developed a custom business management platform for a tire retail shop with 3 employees, replacing a fragmented Excel-based workflow in use for over 15 years. The project involved careful data modeling, migration strategy, and UX decisions tailored to non-technical users. Built with Next.js and Neon (serverless PostgreSQL), the platform centralizes inventory, client management, and operational data in a modern web interface.",
         tags: ["Next.js", "TypeScript", "Neon", "PostgreSQL", "TailwindCSS"],
         privacy: "closed",
-        image: "nuc.png",
+        image: "tire-shop.webp",
         date: "2025",
       },
       {
@@ -396,7 +396,7 @@ export const siteConfig = {
           "Co-designed and developed a loyalty and rewards platform from scratch, covering product strategy, UX design, and full-stack engineering. The platform includes an integrated e-commerce module allowing employees to redeem rewards, built with scalability and multi-tenant architecture in mind.",
         tags: [".NET", "React", "SQL"],
         privacy: "closed",
-        image: "prestige.png",
+        image: "prestige.jpg",
         date: "2025",
       },
       {
@@ -408,7 +408,7 @@ export const siteConfig = {
           "Designed and developed a desktop application to centralize and simplify the management of critical files stored on Amazon S3 for cooperative organizations. The tool was built to empower non-technical clients spread across Argentina to independently handle sensitive documents without requiring direct support, reducing operational dependency and improving data accessibility.",
         tags: [".NET", "AWS", "S3", "Windows Forms"],
         privacy: "closed",
-        image: "procoop.png",
+        image: "invoice.jpg",
         date: "2021",
       },
       {
@@ -422,7 +422,7 @@ export const siteConfig = {
         privacy: "open",
         link: "https://afipxer-seven.vercel.app/",
         sourceLink: "https://github.com/JuanCruzMedina/afipxer",
-        image: "arca.png",
+        image: "arca.webp",
         date: "2025",
       },
       {
@@ -434,7 +434,7 @@ export const siteConfig = {
           "A desktop application developed with Windows Forms that streamlines livestock data management. It connects to a Digital Caravan Reader Stick, enabling users to download, normalize, and update animal records seamlessly. The system automates data collection and transfer, reducing manual input errors and enhancing traceability in livestock operations.",
         tags: ["C#", ".NET", "Windows Forms"],
         privacy: "closed",
-        image: "livestock.png",
+        image: "livestock-opt.webp",
         date: "2023",
       },
       {
@@ -447,7 +447,7 @@ export const siteConfig = {
         tags: ["Python", "Alexa", "AWS Lambda", "IoT"],
         privacy: "closed",
         link: "https://www.amazon.com/Applied-Computer-Controls-SmarTouch-Spa/dp/B0CJ9GTYXF/ref=sr_1_1?s=digital-skills&sr=1-1",
-        image: "alexa-spa.png",
+        image: "alexa-spa.webp",
         date: "2023",
       },
       {
@@ -459,7 +459,7 @@ export const siteConfig = {
           "Development of a RESTful API that processes and standardizes hotel room availability data from multiple tourism suppliers. Each supplier uses different labels for room types, creating inconsistencies in booking systems. This application leverages NLP techniques, including NLTK and SpaCy, to intelligently map and unify room data, ensuring accurate and streamlined information across platforms. Built with FastAPI for high-performance API interactions.",
         tags: ["Python", "NLP", "FastAPI", "NLTK", "SpaCy"],
         privacy: "internal",
-        image: "nlp.png",
+        image: "nlp.webp",
         date: "2021",
       },
     ],
