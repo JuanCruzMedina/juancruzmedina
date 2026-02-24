@@ -1,6 +1,6 @@
 ---
 title: "Documenting without losing your mind in the process"
-date: "2025-01-15"
+date: "2026-01-15"
 excerpt: "How to turn the work you're already doing into documentation others actually use."
 ---
 

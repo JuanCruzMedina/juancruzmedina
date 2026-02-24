@@ -1,6 +1,6 @@
 ---
 title: "Async retrospectives"
-date: "2025-02-22"
+date: "2026-02-22"
 excerpt: "How to stop wasting time filling the board and start using it for what matters"
 ---
 
