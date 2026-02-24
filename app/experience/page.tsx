@@ -14,14 +14,7 @@ export default function ExperiencePage() {
 
   const resolvedStats = experienceStats.map((stat) => ({
     label: stat.label,
-    value:
-      "value" in stat && stat.value !== undefined
-        ? stat.value
-        : String(
-            (stat as { getValue: (c: typeof siteConfig) => number }).getValue(
-              siteConfig,
-            ),
-          ),
+    value: stat.value,
   }));
 
   return (

@@ -151,12 +151,18 @@ button:focus-visible {
   will-change: transform;
 }
 
+.animate-marquee-slow {
+  animation: marquee 25s linear infinite;
+  will-change: transform;
+}
+
 .animate-marquee-paused {
   animation-play-state: paused;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
+  .animate-marquee,
+  .animate-marquee-slow {
     animation: none;
   }
   .animate-fade-up,

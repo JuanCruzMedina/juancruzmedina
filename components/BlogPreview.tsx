@@ -22,41 +22,58 @@ export function BlogPreview() {
           </h2>
         </FadeInSection>
 
-        <div className="mt-16 md:mt-20">
-          {posts.map((post, i) => (
-            <FadeInSection key={post.slug} delay={i * 80}>
+        <FadeInSection delay={80}>
+          <div className="mt-16 md:mt-20">
+            {/* Desktop header */}
+            <div className="hidden border-b border-border pb-3 text-[10px] font-medium tracking-[0.3em] text-muted uppercase md:grid md:grid-cols-[2.5rem_1fr_6rem]">
+              <span>#</span>
+              <span>Title</span>
+              <span className="text-right">Date</span>
+            </div>
+
+            {posts.map((post, i) => (
               <Link
+                key={post.slug}
                 href={`/blog/en/${post.slug}`}
-                className="group block border-t-[0.5px] border-border py-8 transition-colors last:border-b last:border-border md:py-10"
+                className="group grid grid-cols-[2rem_1fr] items-baseline gap-x-3 border-b border-border py-6 transition-colors md:grid-cols-[2.5rem_1fr_6rem] md:py-5"
               >
-                <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
-                  <h3 className="font-display text-xl tracking-[0.04em] text-accent transition-opacity group-hover:opacity-70 md:text-2xl">
+                <span className="font-display text-lg tabular-nums text-muted/50 md:text-xl">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+
+                <div className="min-w-0">
+                  <h3 className="font-display text-lg tracking-[0.04em] text-accent transition-opacity group-hover:opacity-70 md:text-2xl">
                     {post.title.toUpperCase()}
                   </h3>
-                  <span className="flex items-center gap-2 shrink-0">
-                    {post.date && (
-                      <time className="text-xs text-muted">
-                        {new Date(post.date).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </time>
-                    )}
-                    <span className="text-xs text-muted transition-opacity md:opacity-0 md:group-hover:opacity-100">
-                      &rarr;
-                    </span>
-                  </span>
+                  {post.excerpt && (
+                    <p className="mt-1 truncate text-xs text-muted md:text-sm">
+                      {post.excerpt}
+                    </p>
+                  )}
+                  {post.date && (
+                    <time className="mt-1 block text-[11px] text-muted md:hidden">
+                      {new Date(post.date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </time>
+                  )}
                 </div>
-                {post.excerpt && (
-                  <p className="mt-2 max-w-2xl text-sm text-muted">
-                    {post.excerpt}
-                  </p>
+
+                {post.date && (
+                  <time className="hidden text-right text-xs text-muted md:block">
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    })}
+                  </time>
                 )}
               </Link>
-            </FadeInSection>
-          ))}
-        </div>
+            ))}
+          </div>
+        </FadeInSection>
 
         <FadeInSection delay={200}>
           <div className="mt-14 text-center md:mt-20">
