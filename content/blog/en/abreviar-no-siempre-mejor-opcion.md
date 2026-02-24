@@ -1,10 +1,12 @@
 ---
 title: "Why abbreviating isn't necessarily the best option"
-date: "2026-02-22"
-excerpt: "Abbreviating variable, function, or type names saves keystrokes but can cost readability and maintainability. When it helps and when it doesn't."
+date: "2025-06-15"
+excerpt: "Abbreviating variable, function, or type names saves keystrokes but can cost readability and maintainability. When it helps and when it doesn't. Aimed especially at junior developers."
 ---
 
 # Abbreviating in code: when it helps and when it ruins everything
+
+_This post is aimed especially at junior developers: clear guidelines for naming variables and functions without falling into abbreviations that nobody understands later._
 
 There's one abbreviation that makes me close the PR without reviewing it: `fl` for a boolean.
 

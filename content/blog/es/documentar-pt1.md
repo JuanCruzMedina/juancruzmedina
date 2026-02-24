@@ -1,6 +1,6 @@
 ---
 title: "Documentar sin volverte loco en el intento"
-date: "2026-02-22"
+date: "2026-01-15"
 excerpt: "Cómo convertir el trabajo que ya hacés en documentación que otros realmente usan."
 ---
 

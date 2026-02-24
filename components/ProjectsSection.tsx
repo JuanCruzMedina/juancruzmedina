@@ -1,7 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
-import { siteConfig } from "@/config/site";
 import { FadeInSection } from "@/components/FadeInSection";
+import { siteConfig } from "@/config/site";
+import Image from "next/image";
+import Link from "next/link";
 
 export function ProjectsSection() {
   const { items, featuredIds } = siteConfig.projects;
@@ -10,13 +10,13 @@ export function ProjectsSection() {
     .filter((p): p is NonNullable<typeof p> => p != null);
 
   return (
-    <section className="border-t border-[var(--color-border)]">
+    <section className="border-t border-border">
       <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-32">
         <FadeInSection>
-          <p className="text-[10px] font-medium tracking-[0.4em] text-[var(--color-muted)] uppercase">
+          <p className="text-[10px] font-medium tracking-[0.4em] text-muted uppercase">
             Selected Work
           </p>
-          <h2 className="mt-4 font-display text-4xl tracking-[0.04em] text-[var(--color-accent)] md:text-6xl">
+          <h2 className="mt-4 font-display text-4xl tracking-[0.04em] text-accent md:text-6xl">
             PROJECTS
           </h2>
         </FadeInSection>
@@ -27,7 +27,7 @@ export function ProjectsSection() {
               <article className="group grid gap-8 md:grid-cols-2 md:gap-16">
                 <Link
                   href="/projects"
-                  className={`image-zoom relative aspect-[4/3] bg-[var(--color-surface-elevated)] ${
+                  className={`image-zoom relative aspect-4/3 bg-surface-elevated ${
                     i % 2 === 1 ? "md:order-2" : ""
                   }`}
                 >
@@ -45,23 +45,23 @@ export function ProjectsSection() {
                     i % 2 === 1 ? "md:order-1" : ""
                   }`}
                 >
-                  <span className="text-[10px] tracking-[0.3em] text-[var(--color-muted)] uppercase">
+                  <span className="text-[10px] tracking-[0.3em] text-muted uppercase">
                     {project.date}
                   </span>
-                  <h3 className="mt-3 font-display text-2xl tracking-[0.04em] text-[var(--color-accent)] md:text-3xl">
+                  <h3 className="mt-3 font-display text-2xl tracking-[0.04em] text-accent md:text-3xl">
                     {project.title.toUpperCase()}
                   </h3>
-                  <p className="mt-2 text-sm text-[var(--color-muted)]">
+                  <p className="mt-2 text-sm text-muted">
                     {project.subtitle}
                   </p>
-                  <p className="mt-4 text-sm leading-relaxed text-[var(--color-accent-muted)]">
+                  <p className="mt-4 text-sm leading-relaxed text-accent-muted">
                     {project.shortDescription}
                   </p>
                   <div className="mt-5 flex flex-wrap gap-3">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="border border-[var(--color-border)] px-3 py-1 text-[10px] tracking-[0.15em] text-[var(--color-muted)] uppercase"
+                        className="border border-border px-3 py-1 text-[10px] tracking-[0.15em] text-muted uppercase"
                       >
                         {tag}
                       </span>
@@ -73,7 +73,7 @@ export function ProjectsSection() {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="link-underline text-[11px] font-medium tracking-[0.25em] text-[var(--color-accent)] uppercase"
+                        className="link-underline text-[11px] font-medium tracking-[0.25em] text-accent uppercase"
                       >
                         View Live
                       </a>
@@ -83,7 +83,7 @@ export function ProjectsSection() {
                         href={project.sourceLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="link-underline text-[11px] tracking-[0.25em] text-[var(--color-muted)] uppercase"
+                        className="link-underline text-[11px] tracking-[0.25em] text-muted uppercase"
                       >
                         Source
                       </a>
@@ -99,7 +99,7 @@ export function ProjectsSection() {
           <div className="mt-20 text-center md:mt-28">
             <Link
               href="/projects"
-              className="link-underline text-[11px] font-medium tracking-[0.3em] text-[var(--color-accent)] uppercase"
+              className="link-underline text-[11px] font-medium tracking-[0.3em] text-accent uppercase"
             >
               View All Projects
             </Link>

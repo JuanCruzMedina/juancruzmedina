@@ -1,11 +1,22 @@
 export type SiteConfig = typeof siteConfig;
 
+type ExperienceStatsContext = {
+  resume: {
+    workExperience: unknown[];
+    languages: unknown[];
+    certifications: unknown[];
+    skills: unknown[];
+    programmingLanguages: unknown[];
+  };
+  projects: { items: unknown[] };
+};
+
 export const siteConfig = {
   name: "Juan Cruz Medina",
   displayName: "Juan Cruz Medina",
   email: "mail@juanmedina.com.ar",
   sendEmail: "mailto:mail@juanmedina.com.ar",
-  description: "Juan Cruz Medina — Backend engineer at Mercado Libre building distributed systems at scale.",
+  description: "Juan Cruz Medina - Backend engineer at Mercado Libre building distributed systems at scale.",
   tagline: "Backend engineer crafting distributed systems that scale across Latin America",
   location: "Based in C\u00f3rdoba, Argentina",
   navItems: [
@@ -13,12 +24,14 @@ export const siteConfig = {
     { label: "Experience", href: "/experience" },
     { label: "Learnings", href: "/blog/en" },
     { label: "Projects", href: "/projects" },
+    { label: "Contact", href: "/#contact" },
   ],
   navMenuItems: [
     { label: "Home", href: "/" },
     { label: "Experience", href: "/experience" },
     { label: "Learnings", href: "/blog/en" },
     { label: "Projects", href: "/projects" },
+    { label: "Contact", href: "/#contact" },
   ],
   links: {
     github: "https://github.com/JuanCruzMedina",
@@ -30,7 +43,15 @@ export const siteConfig = {
     descriptionShort:
       "Backend developer building distributed microservices at scale. Currently at Mercado Libre, working with Java, Go, and Python to deliver high-impact solutions across Latin America.",
     description:
-      "I am a backend developer with experience designing and building distributed systems at scale. Currently working at Mercado Libre — Latin America's largest e-commerce company — where I develop microservices in Java, Go, and Python that handle a critical and extremely high volume of requests. I have a strong focus on infrastructure, observability, and cross-team collaboration, and I apply modern practices such as AI-assisted development and Spec Driven Development in my day-to-day work. I also bring solid experience with .NET and Python from previous roles, and I am passionate about software architecture, refactoring, and building reliable, maintainable solutions.",
+      "I am a backend developer with experience designing and building distributed systems at scale. Currently working at Mercado Libre, Latin America's largest e-commerce company, where I develop microservices in Java, Go, and Python that handle a critical and extremely high volume of requests. I have a strong focus on infrastructure, observability, and cross-team collaboration, and I apply modern practices such as AI-assisted development and Spec Driven Development in my day-to-day work. I also bring solid experience with .NET and Python from previous roles, and I am passionate about software architecture, refactoring, and building reliable, maintainable solutions.",
+    experienceDescription:
+      "Over 6 years building backend systems across e-commerce, tourism, IoT, and fintech. From monolith migrations to high-throughput microservices, always focused on reliability and clean design.",
+    experienceStats: [
+      { value: "6+", label: "Years" },
+      { value: "4", label: "Companies" },
+      { value: "10+", label: "Clients" },
+
+    ],
 
     workExperience: [
       {
@@ -207,6 +228,7 @@ export const siteConfig = {
         companyLogo: "/resume/pentamedia.jpeg",
       },
     ],
+    programmingLanguages: ["Java", "Go", ".NET", "Python", "Node.js", "JavaScript", "TypeScript", "PHP"],
     skills: [
       "Java",
       "Go",
