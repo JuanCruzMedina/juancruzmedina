@@ -8,7 +8,7 @@ excerpt: "Cómo convertir el trabajo que ya hacés en documentación que otros r
 
 Hace poco me incorporé en Mercado Libre. Vengo de experiencias donde el orden, la documentación y la evidencia del trabajo eran parte del proceso desde el principio, así que cuando resuelvo algo tiendo a ser bastante detallado en cómo lo registro. Al principio puede parecer excesivo, incluso una pérdida de tiempo.
 
-Pero no pasó mucho tiempo antes de que un compañero con más seniority me comentara algo que me confirmó que valía la pena. Otro de los nuevos le había escrito para preguntarle sobre un procedimiento, y él, en lugar de explicarlo de cero, le había pasado directamente una tarea mía donde estaba todo documentado. Eso es exactamente lo que este hábito produce cuando funciona: el conocimiento deja de depender de que la persona indicada esté disponible.
+Pero no pasó mucho tiempo antes de que un compañero con mucho más tiempo en la empresa me comentara algo que me confirmó que valía la pena. Uno de los nuevos le había escrito preguntándole cómo resolver un procedimiento de configuración. En lugar de explicárselo desde cero, le compartió una de mis tareas donde yo había dejado documentado cada paso, los permisos que había pedido y a quién, los obstáculos que encontré, y las decisiones que tomé en el camino. El otro pudo resolverlo sin necesitar ayuda extra. Eso es exactamente lo que este hábito produce cuando funciona. El conocimiento deja de depender de que la persona indicada esté disponible.
 
 No es la primera vez que lo veo pasar. En Voxel Group, donde estuve casi tres años, documentar dentro de las tareas se volvió una práctica natural del equipo. Cuando alguien necesitaba entender cómo se había resuelto algo similar, la respuesta casi siempre era un enlace a una tarea anterior.
 
@@ -27,6 +27,8 @@ El problema no es que los equipos sean descuidados. Es que el formato exige un e
 Lo que propongo es más simple: documentar dentro de las mismas tareas, historias de usuario o issues que ya usás para trabajar.
 
 Cuando empiezo a resolver algo que implica pasos no triviales, como interactuar con distintos sistemas, recolectar información de varias fuentes o seguir un procedimiento específico, voy dejando comentarios dentro de esa misma tarea. No en un doc aparte, no en una wiki nueva. Ahí, en Jira, en Linear, en GitHub Issues, donde viva el trabajo.
+
+Y no se trata solo de registrar los pasos. Es un espacio para dejar constancia de qué obstáculos aparecieron en el camino, qué personas estuvieron involucradas o pudieron darnos respuestas, cómo nos desbloqueamos, a quién acudir en el futuro y por qué. No solamente el qué hiciste sino también por qué ese fue tu camino de decisión. Eso es lo que convierte un comentario suelto en contexto que realmente sirve.
 
 Para que no quede abstracto, así se ve en la práctica. Supongamos una tarea de "configurar el pipeline de staging":
 

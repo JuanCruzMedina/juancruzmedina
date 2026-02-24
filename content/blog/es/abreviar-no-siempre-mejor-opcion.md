@@ -6,11 +6,11 @@ excerpt: "Abreviar nombres de variables, funciones o tipos ahorra tecleo pero pu
 
 # Abreviar en código: ¿cuándo ayuda y cuándo arruina todo?
 
-_Este post está pensado sobre todo para perfiles junior: criterios claros para nombrar variables y funciones sin caer en abreviaciones que después nadie entiende._
+_Este post está pensado sobre todo para perfiles junior, con criterios claros para nombrar variables y funciones sin caer en abreviaciones que después nadie entiende._
 
-Hay una abreviación que me hace cerrar el PR sin revisarlo: `fl` para un booleano.
+Hay una abreviación que me hace cerrar el PR sin revisarlo. `fl` para un booleano.
 
-No porque sea la peor del mundo, sino porque es el síntoma más claro de un hábito que parece inocente y termina siendo caro: abreviar sin criterio, en el momento de escribir, sin pensar en quien lo va a leer después.
+No porque sea la peor del mundo, sino porque es el síntoma más claro de un hábito que parece inocente y termina siendo caro. Abreviar sin criterio, en el momento de escribir, sin pensar en quien lo va a leer después.
 
 ## El costo que no se ve
 
@@ -101,7 +101,7 @@ _"Si alguien que no conoce el dominio lee esta línea dentro de seis meses, ¿va
 
 Si la respuesta es sí, el nombre está bien. Si tenés que dudar, cambialo.
 
-También podés usar la prueba del pull request: si en una revisión necesitás explicar qué significa una variable o función, es señal de que el nombre no es suficientemente claro.
+También podés usar la prueba del pull request. Si en una revisión necesitás explicar qué significa una variable o función, es señal de que el nombre no es suficientemente claro.
 
 ## De un vistazo
 
@@ -113,6 +113,6 @@ También podés usar la prueba del pull request: si en una revisión necesitás 
 | Iteradores de bucles y comprensiones                  | Booleanos                        |
 | Abreviaciones universales (`id`, `url`, `dto`)        | Clases y tipos personalizados    |
 
-La regla de oro no es "nunca abrevies" ni "abreviar ahorra tiempo". Es algo más simple: el código que escribís hoy lo vas a leer vos, tu equipo, o alguien que todavía no conocés. Escribilo para ellos.
+La regla de oro no es "nunca abrevies" ni "abreviar ahorra tiempo". Es algo más simple. El código que escribís hoy lo vas a leer vos, tu equipo, o alguien que todavía no conocés. Escribilo para ellos.
 
 _— Juan Cruz Medina_

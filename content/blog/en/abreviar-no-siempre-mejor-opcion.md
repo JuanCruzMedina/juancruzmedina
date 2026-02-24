@@ -6,11 +6,11 @@ excerpt: "Abbreviating variable, function, or type names saves keystrokes but ca
 
 # Abbreviating in code: when it helps and when it ruins everything
 
-_This post is aimed especially at junior developers: clear guidelines for naming variables and functions without falling into abbreviations that nobody understands later._
+_This post is aimed especially at junior developers, with clear guidelines for naming variables and functions without falling into abbreviations that nobody understands later._
 
-There's one abbreviation that makes me close the PR without reviewing it: `fl` for a boolean.
+There's one abbreviation that makes me close the PR without reviewing it. `fl` for a boolean.
 
-Not because it's the worst in the world, but because it's the clearest symptom of a habit that seems harmless and ends up being costly: abbreviating without criteria, at the moment of writing, without thinking about who will read it later.
+Not because it's the worst in the world, but because it's the clearest symptom of a habit that seems harmless and ends up being costly. Abbreviating without criteria, at the moment of writing, without thinking about who will read it later.
 
 ## The cost you don't see
 
@@ -101,7 +101,7 @@ _"If someone who doesn't know the domain reads this line in six months, will the
 
 If the answer is yes, the name is fine. If you have to hesitate, change it.
 
-You can also use the pull request test: if in a review you need to explain what a variable or function means, it's a sign the name isn't clear enough.
+You can also use the pull request test. If in a review you need to explain what a variable or function means, it's a sign the name isn't clear enough.
 
 ## At a glance
 
@@ -113,6 +113,6 @@ You can also use the pull request test: if in a review you need to explain what 
 | Loop iterators and comprehensions                      | Booleans                                  |
 | Universal abbreviations (`id`, `url`, `dto`)           | Custom classes and types                   |
 
-The golden rule isn't "never abbreviate" or "abbreviating saves time". It's simpler: the code you write today will be read by you, your team, or someone you haven't met yet. Write it for them.
+The golden rule isn't "never abbreviate" or "abbreviating saves time". It's simpler. The code you write today will be read by you, your team, or someone you haven't met yet. Write it for them.
 
 _— Juan Cruz Medina_

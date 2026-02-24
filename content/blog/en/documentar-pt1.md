@@ -8,7 +8,7 @@ excerpt: "How to turn the work you're already doing into documentation others ac
 
 I recently joined Mercado Libre. I come from experiences where order, documentation, and evidence of work were part of the process from the start, so when I solve something I tend to be quite detailed in how I record it. At first it can seem excessive, even a waste of time.
 
-But it wasn't long before a more senior teammate told me something that confirmed it was worth it. Another new hire had written to him asking about a procedure, and instead of explaining it from scratch, he had sent them directly one of my tasks where everything was documented. That's exactly what this habit produces when it works: knowledge stops depending on the right person being available.
+But it wasn't long before a colleague who had been at the company much longer told me something that confirmed it was worth it. Another new hire had written to him asking how to run a specific configuration procedure. Instead of explaining it from scratch, he shared one of my tasks where I had documented every step, the permissions I'd requested and from whom, the blockers I hit, and the decisions I made along the way. The new hire was able to resolve it without any extra help. That's exactly what this habit produces when it works. Knowledge stops depending on the right person being available.
 
 It's not the first time I've seen it happen. At Voxel Group, where I spent almost three years, documenting within tasks became a natural practice for the team. When someone needed to understand how something similar had been solved, the answer was almost always a link to a previous task.
 
@@ -27,6 +27,8 @@ The problem isn't that teams are careless. It's that the format demands effort s
 What I propose is simpler: document inside the same tasks, user stories, or issues you already use to work.
 
 When I start solving something that involves non-trivial steps—interacting with different systems, gathering information from multiple sources, or following a specific procedure—I leave comments inside that same task. Not in a separate doc, not in a new wiki. Right there, in Jira, in Linear, in GitHub Issues, wherever the work lives.
+
+And it's not just about recording the steps. It's a space to capture what obstacles came up along the way, who was involved or could give you answers, how you got unblocked, who to reach out to in the future and why. Not just what you did but also why that was your decision path. That's what turns a loose comment into context that actually helps.
 
 To make it concrete, here's what it looks like in practice. Say a task to "configure the staging pipeline":
 

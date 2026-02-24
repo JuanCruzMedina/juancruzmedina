@@ -16,11 +16,11 @@ Llevábamos meses así. Y en un momento me di cuenta de que el problema no era l
 
 ## Lo que le pedimos a la memoria
 
-La retrospectiva clásica funciona así: terminás el sprint, juntás al equipo, y justo cuando todos están más cansados y con la cabeza en el siguiente ciclo, les pedís que recuerden y sinteticen dos semanas de trabajo.
+La retrospectiva clásica es predecible. Terminás el sprint, juntás al equipo, y justo cuando todos están más cansados y con la cabeza en el siguiente ciclo, les pedís que recuerden y sinteticen dos semanas de trabajo.
 
-Hay un argumento que suena razonable: _"si fue importante, lo van a recordar"_. Y hay algo de verdad en eso. Pero también es una forma de dejar valor sobre la mesa.
+Hay un argumento que suena razonable, y es que _"si fue importante, lo van a recordar"_. Y hay algo de verdad en eso. Pero también es una forma de dejar valor sobre la mesa.
 
-Porque muchas veces las cosas más útiles para mejorar no son los grandes eventos sino los pequeños roces: la comunicación que no fluyó un martes, la tarea que estuvo bloqueada dos días por una dependencia que nadie mencionó, la decisión que se tomó en un canal equivocado. Esas cosas se pierden. No porque no importen, sino porque la memoria no está diseñada para retener detalles cotidianos durante dos semanas.
+Porque muchas veces las cosas más útiles para mejorar no son los grandes eventos sino los pequeños roces del día a día. Una comunicación que no fluyó un martes, una tarea que estuvo bloqueada dos días por una dependencia que nadie mencionó, una decisión que se tomó en un canal equivocado. Esas cosas se pierden. No porque no importen, sino porque la memoria no está diseñada para retener detalles cotidianos durante dos semanas.
 
 ## La propuesta
 
@@ -30,7 +30,7 @@ Sin herramientas nuevas, sin proceso elaborado. Y sin la presión de escribir al
 
 Esa última parte importa. La idea no es forzarse a registrar una cosa por día como si fuera una tarea más del sprint. Es lo contrario: cuando algo te llama la atención, una fricción, una decisión que salió bien, algo que te hubiera gustado hacer diferente, lo anotás en ese momento, porque es cuando lo tenés fresco. Si el sprint transcurre sin roces, el tablero puede quedar con poco. Y está bien.
 
-La estructura es mínima: tres columnas.
+La estructura es mínima. Tres columnas.
 
 - **¿Qué fue bien?**
 - **¿Qué no fue tan bien?**
@@ -40,7 +40,7 @@ El día de la retro, llegás con lo que fue valioso capturar. La reunión deja d
 
 ## La variante que más nos funcionó
 
-Hay una versión de esto que es todavía más eficiente, y es la que terminamos adoptando: al terminar cada retro, compartimos el tablero de la siguiente directamente.
+Hay una versión de esto que es todavía más eficiente, y es la que terminamos adoptando. Al terminar cada retro, compartimos el tablero de la siguiente directamente.
 
 El tablero de la próxima retro queda abierto desde ese momento. Cada uno puede ir agregando notas ahí durante el sprint, en tiempo real, sin necesidad de transcribir nada el día de la reunión. Lo que ves en el tablero el día de la retro es exactamente lo que se va a discutir, sin pasos intermedios.
 
@@ -52,7 +52,7 @@ Lo bueno de esta dinámica es que se contagia.
 
 Al principio éramos ocho personas y la mitad usaba el tablero. No hubo que convencer a nadie ni hacer una reunión para explicar el proceso. Simplemente, los que lo usaban llegaban a la retro con más cosas para decir, con más contexto, y la sesión se sentía distinta. Más liviana. Poco a poco el resto se fue sumando.
 
-El número que más lo refleja es el tiempo. Completar el tablero en la retro solía llevar entre 15 y 20 minutos. Con esta dinámica ese paso dura 3 o 5 minutos, porque básicamente ya está hecho. Y eso se nota en cómo se vive la reunión: dejás de entrar con la carga de tener que recordar y ser resolutivo al mismo tiempo. Solo tenés que ser resolutivo.
+El número que más lo refleja es el tiempo. Completar el tablero en la retro solía llevar entre 15 y 20 minutos. Con esta dinámica ese paso dura 3 o 5 minutos, porque básicamente ya está hecho. Y eso se nota en cómo se vive la reunión, porque dejás de entrar con la carga de tener que recordar y ser resolutivo al mismo tiempo. Solo tenés que ser resolutivo.
 
 Eso, más que cualquier otra cosa, es la señal de que algo empezó a funcionar.
 
