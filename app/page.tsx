@@ -5,14 +5,23 @@ import { ExperiencePreview } from "@/components/ExperiencePreview";
 import { ProjectsPreview } from "@/components/ProjectsPreview";
 import { BlogPreview } from "@/components/BlogPreview";
 import { ContactSection } from "@/components/ContactSection";
+import { MobileAboutExperience } from "@/components/MobileAboutExperience";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
       <SkillsMarquee />
-      <AboutSection />
-      <ExperiencePreview />
+
+      {/* Mobile: unified sticky scroll section */}
+      <MobileAboutExperience />
+
+      {/* Desktop: original separate sections */}
+      <div className="hidden md:block">
+        <AboutSection />
+        <ExperiencePreview />
+      </div>
+
       <ProjectsPreview />
       <BlogPreview />
       <ContactSection />
