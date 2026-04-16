@@ -16,7 +16,8 @@ export const siteConfig = {
   displayName: "Juan Cruz Medina",
   email: "mail@juanmedina.com.ar",
   sendEmail: "mailto:mail@juanmedina.com.ar",
-  description: "Juan Cruz Medina - Backend engineer at Mercado Libre building distributed systems at scale.",
+  description:
+    "Juan Cruz Medina - Backend engineer at Mercado Libre building distributed systems at scale.",
   tagline: "Backend engineer crafting distributed systems that scale across Latin America",
   location: "Based in C\u00f3rdoba, Argentina",
   navItems: [
@@ -41,9 +42,9 @@ export const siteConfig = {
   },
   resume: {
     descriptionShort:
-      "Backend developer building distributed microservices at scale. Currently at Mercado Libre, working with Java, Go, and Python to deliver high-impact solutions across Latin America.",
+      "Backend developer building distributed microservices at scale. Currently at Mercado Libre on Mercado Envíos, working with Java, Go, and Python to deliver high-impact solutions across Latin America.",
     description:
-      "I am a backend developer with experience designing and building distributed systems at scale. Currently working at Mercado Libre, Latin America's largest e-commerce company, where I develop microservices in Java, Go, and Python that handle a critical and extremely high volume of requests. I have a strong focus on infrastructure, observability, and cross-team collaboration, and I apply modern practices such as AI-assisted development and Spec Driven Development in my day-to-day work. I also bring solid experience with .NET and Python from previous roles, and I am passionate about software architecture, refactoring, and building reliable, maintainable solutions.",
+      "I am a backend developer with experience designing and building distributed systems at scale. Currently at Mercado Libre in Mercado Envíos (shipping and logistics for Latin America's largest e-commerce platform), where I develop microservices in Java, Go, and Python that handle a critical and extremely high volume of requests. I have a strong focus on infrastructure, observability, and cross-team collaboration, and I apply modern practices such as AI-assisted development and Spec Driven Development in my day-to-day work. I also bring solid experience with .NET and Python from previous roles, and I am passionate about software architecture, refactoring, and building reliable, maintainable solutions.",
     experienceDescription:
       "Over 6 years building backend systems across e-commerce, tourism, IoT, and fintech. From monolith migrations to high-throughput microservices, always focused on reliability and clean design.",
     experienceStats: [
@@ -59,10 +60,12 @@ export const siteConfig = {
         company: "Mercado Libre",
         location: "Remote",
         date: "Aug 2025 - Current",
-        achievement: "Drives infrastructure sharding and cross-team initiatives at LATAM scale.",
+        achievement:
+          "Mercado Envíos: infrastructure segmentation for peak-traffic systems at LATAM scale, plus cross-team delivery.",
         techStack: ["Java", "Go", "Python", "Grafana", "New Relic", "Datadog", "Fury"],
         descriptionItems: [
-          "Build and maintain high-throughput microservices in Java, Go, and Python at Latin America's largest e-commerce company, handling a critical and extremely high volume of requests and clients across the region.",
+          "Part of Mercado Envíos, Mercado Libre's shipping and logistics experience, building backend capabilities used across Latin America.",
+          "Build and maintain high-throughput microservices in Java, Go, and Python, handling critical workloads with sustained and spiky demand.",
           "Deploy and manage services through Fury, Mercado Libre's internal platform, handling infrastructure provisioning and full application observability using Grafana, New Relic, and Datadog.",
           "Leverage AI-assisted development workflows such as Cursor and Spec Driven Development to accelerate delivery and improve code quality.",
           "Led an infrastructure sharding initiative that reduced coupling between internal services by 80%, executing a safe migration strategy that also eliminated 50% of unused records.",
