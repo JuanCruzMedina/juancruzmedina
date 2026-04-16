@@ -403,13 +403,14 @@ export const siteConfig = {
       {
         id: "tire-shop",
         title: "Tire Shop Management Platform",
-        subtitle: "Full Business Digitalization for a Long-Term Client",
+        subtitle: "From chaotic spreadsheets to a live digital storefront",
         shortDescription:
-          "A web platform built from scratch to fully digitalize the operations of a tire retail business, including a 15-year data migration from legacy Excel files.",
+          "A production web platform that replaces 15+ years of Excel for a neighborhood tire shop, with an online catalog, inventory, and always-up-to-date public pricing.",
         fullDescription:
-          "Designed and developed a custom business management platform for a tire retail shop with 3 employees, replacing a fragmented Excel-based workflow in use for over 15 years. The project involved careful data modeling, migration strategy, and UX decisions tailored to non-technical users. Built with Next.js and Neon (serverless PostgreSQL), the platform centralizes inventory, client management, and operational data in a modern web interface.",
+          "Designed and built an end-to-end management platform for Neumáticos Usados Córdoba, a small tire shop that relied on fragmented Excel files for more than 15 years. The system centralizes catalog, stock, pricing, and contact information in a simple interface for non-technical staff, and powers a public, filterable price list on the web so updates take minutes instead of manual spreadsheet edits. The work included data modeling, historical migration, and a lightweight workflow to keep availability and prices accurate without touching code.",
         tags: ["Next.js", "TypeScript", "Neon", "PostgreSQL", "TailwindCSS"],
-        privacy: "closed",
+        privacy: "open",
+        link: "https://neumaticosusadoscba.com/",
         image: "tire-shop.webp",
         date: "2025",
       },
