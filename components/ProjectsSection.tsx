@@ -1,5 +1,10 @@
 import { FadeInSection } from "@/components/FadeInSection";
 import { siteConfig } from "@/config/site";
+import {
+  getProjectPath,
+  getProjectSourceLink,
+  hasCaseStudy,
+} from "@/lib/projects";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,11 +27,15 @@ export function ProjectsSection() {
         </FadeInSection>
 
         <div className="mt-16 space-y-20 md:mt-24 md:space-y-32">
-          {featured.map((project, i) => (
+          {featured.map((project, i) => {
+            const href = getProjectPath(project.id);
+            const caseStudy = hasCaseStudy(project.id);
+
+            return (
             <FadeInSection key={project.id ?? project.title} delay={i * 100}>
               <article className="group grid gap-8 md:grid-cols-2 md:gap-16">
                 <Link
-                  href="/projects"
+                  href={href}
                   className={`image-zoom relative aspect-4/3 bg-surface-elevated ${
                     i % 2 === 1 ? "md:order-2" : ""
                   }`}
@@ -67,7 +76,15 @@ export function ProjectsSection() {
                       </span>
                     ))}
                   </div>
-                  <div className="mt-6 flex gap-6">
+                  <div className="mt-6 flex flex-wrap gap-6">
+                    {caseStudy && (
+                      <Link
+                        href={`/projects/${project.id}`}
+                        className="link-underline text-[11px] font-medium tracking-[0.25em] text-accent uppercase"
+                      >
+                        Case Study
+                      </Link>
+                    )}
                     {project.link && (
                       <a
                         href={project.link}
@@ -78,9 +95,9 @@ export function ProjectsSection() {
                         View Live
                       </a>
                     )}
-                    {project.sourceLink && (
+                    {getProjectSourceLink(project) && (
                       <a
-                        href={project.sourceLink}
+                        href={getProjectSourceLink(project)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="link-underline text-[11px] tracking-[0.25em] text-muted uppercase"
@@ -92,7 +109,8 @@ export function ProjectsSection() {
                 </div>
               </article>
             </FadeInSection>
-          ))}
+            );
+          })}
         </div>
 
         <FadeInSection delay={200}>
