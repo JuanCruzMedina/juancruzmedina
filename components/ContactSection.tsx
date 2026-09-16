@@ -24,20 +24,15 @@ export function ContactSection() {
     <section id="contact" className="border-t border-border">
       <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-32">
         <FadeInSection>
-          <p className="text-[10px] font-medium tracking-[0.4em] text-muted uppercase">
-            Let&apos;s work together
-          </p>
-          <h2 className="mt-4 font-display text-4xl tracking-[0.04em] text-accent md:text-6xl">
-            GET IN TOUCH
-          </h2>
-          <p className="mt-6 max-w-md text-sm leading-relaxed text-muted md:text-base">
+          <h2 className="sr-only">Get in touch</h2>
+          <p className="max-w-md text-sm leading-relaxed text-muted md:text-base">
             Open to new opportunities and collaborations. Reach out for
             consulting, freelance work, or just to say hi.
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-4">
+          <div className="mt-6 flex flex-wrap items-baseline gap-x-4 gap-y-2">
             <a
               href={siteConfig.sendEmail}
-              className="font-mono text-sm text-accent-muted transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="font-display text-3xl tracking-[0.02em] text-accent transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:text-5xl"
             >
               {siteConfig.email}
             </a>

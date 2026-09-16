@@ -25,7 +25,7 @@ export function AboutSection() {
                 href="/experience"
                 className="link-underline text-[11px] font-medium tracking-[0.3em] text-accent uppercase"
               >
-                More about me &rarr;
+                More about me
               </Link>
               <a
                 href="https://drive.google.com/uc?export=download&id=1ZSRUiKi03RxlbEuYkUqfOmGlqcI9ngOV"

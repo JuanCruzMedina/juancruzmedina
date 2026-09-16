@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { getPosts } from "@/lib/blog";
+import { getCaseStudySlugs } from "@/lib/projects";
 
 const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://juanmedina.com.ar";
@@ -41,6 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    ...getCaseStudySlugs().map((slug) => ({
+      url: `${baseUrl}/projects/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    })),
     {
       url: `${baseUrl}/blog/en`,
       lastModified: new Date(),

@@ -1,16 +1,22 @@
-import { siteConfig } from "@/config/site";
+import {
+  getProjectPath,
+  hasCaseStudy,
+  type ProjectItem,
+} from "@/lib/projects";
 import Image from "next/image";
 import Link from "next/link";
 
-type Project = (typeof siteConfig.projects.items)[number];
-
-export function ProjectStackedList({ projects }: { projects: Project[] }) {
+export function ProjectStackedList({ projects }: { projects: ProjectItem[] }) {
   return (
     <div className="space-y-px">
-      {projects.map((project) => (
+      {projects.map((project) => {
+        const href = getProjectPath(project.id);
+        const caseStudy = hasCaseStudy(project.id);
+
+        return (
         <Link
           key={project.id}
-          href="/projects"
+          href={href}
           className="group relative block border-t border-border py-8 md:py-10"
         >
           <div className="flex items-start justify-between gap-6">
@@ -20,6 +26,11 @@ export function ProjectStackedList({ projects }: { projects: Project[] }) {
                 {project.title.toUpperCase()}
               </h3>
               <p className="mt-1.5 text-sm text-muted">{project.subtitle}</p>
+              {caseStudy && (
+                <p className="mt-2 text-[10px] tracking-[0.2em] text-accent uppercase">
+                  Case study
+                </p>
+              )}
               <div className="mt-3 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span
@@ -49,7 +60,8 @@ export function ProjectStackedList({ projects }: { projects: Project[] }) {
             {project.date}
           </span>
         </Link>
-      ))}
+        );
+      })}
       {/* Bottom border for last item */}
       <div className="border-t border-border" />
     </div>
