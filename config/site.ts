@@ -398,21 +398,21 @@ export const siteConfig = {
     titleMark: "Achievements",
     subtitle:
       "I love building projects and practicing my engineering skills. Here's an archive of things that I've worked on.",
-    featuredIds: ["tire-shop", "livestock-data-manager", "iot-remote-manager"],
+    featuredIds: ["el-gomero", "livestock-data-manager", "iot-remote-manager"],
     items: [
       {
-        id: "tire-shop",
-        title: "Tire Shop Management Platform",
-        subtitle: "From chaotic spreadsheets to a live digital storefront",
+        id: "el-gomero",
+        title: "El Gomero",
+        subtitle: "Full business platform for a tire shop, from chaotic spreadsheets to daily production use",
         shortDescription:
-          "A production web platform that replaces 15+ years of Excel for a neighborhood tire shop—catalog, inventory, public pricing, and integrated ARCA tax file processing.",
+          "A production management platform for a neighborhood tire shop: inventory across seven catalogs, sales, reporting, and a public storefront, replacing 15+ years of fragmented Excel files.",
         fullDescription:
-          "Designed and built an end-to-end management platform for Neumáticos Usados Córdoba, a small tire shop that relied on fragmented Excel files for more than 15 years. The system centralizes catalog, stock, pricing, and contact information in a simple interface for non-technical staff, powers a public, filterable price list on the web, and includes integrated normalization of ARCA tax files (evolved from earlier standalone tooling maintained for the same client since 2020). The work included data modeling, historical migration, and a lightweight workflow to keep availability and prices accurate without touching code.",
-        tags: ["Next.js", "TypeScript", "Neon", "PostgreSQL", "TailwindCSS", "ARCA"],
-        privacy: "open",
+          "Designed and built El Gomero, a management platform for a Córdoba tire shop that ran its entire operation through fragmented Excel files for more than 15 years. The platform centralizes inventory across seven independent catalogs, tracks every sale with full audit history, and powers a public, always-current price list, with the client's separate ARCA tax-file tool (maintained since 2020) folded in as one more feature. Built solo over about seven months and in active production use since, with the owner driving new requests through an in-app ticketing system.",
+        tags: ["Next.js", "TypeScript", "Prisma", "Neon", "PostgreSQL", "TailwindCSS", "ARCA"],
+        privacy: "closed",
         link: "https://neumaticosusadoscba.com/",
         image: "tire-shop.webp",
-        date: "2025",
+        date: "2026",
       },
       {
         id: "employee-loyalty",
