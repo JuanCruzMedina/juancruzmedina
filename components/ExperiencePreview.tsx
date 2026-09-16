@@ -3,7 +3,6 @@ import { siteConfig } from "@/config/site";
 import { FadeInSection } from "@/components/FadeInSection";
 
 const PREVIEW_COUNT = 4;
-const MD = "\u00B7";
 
 export function ExperiencePreview() {
   const allRoles = siteConfig.resume.workExperience;
@@ -27,13 +26,13 @@ export function ExperiencePreview() {
             aria-hidden
           />
 
-          <div className="space-y-10">
-            {roles.map((role, i) => {
-              const isCurrent = /current|present/i.test(role.date);
+          <FadeInSection delay={80}>
+            <div className="space-y-10">
+              {roles.map((role, i) => {
+                const isCurrent = /current|present/i.test(role.date);
 
-              return (
-                <FadeInSection key={`${role.company}-${i}`} delay={i * 80}>
-                  <article className="relative pl-8 md:pl-10">
+                return (
+                  <article key={`${role.company}-${i}`} className="relative pl-8 md:pl-10">
                     <div
                       className={`absolute left-0 top-[3px] h-[9px] w-[9px] -translate-x-1/2 rounded-full border-2 ${
                         isCurrent
@@ -45,11 +44,6 @@ export function ExperiencePreview() {
 
                     <p className="text-[11px] leading-none text-muted">
                       {role.date}
-                      {isCurrent && (
-                        <span className="ml-1.5 font-medium text-emerald-600 uppercase tracking-wider dark:text-emerald-400">
-                          {MD} Present
-                        </span>
-                      )}
                     </p>
 
                     <h3 className="mt-1.5 text-base font-bold uppercase tracking-[0.03em] text-accent md:text-lg">
@@ -57,7 +51,7 @@ export function ExperiencePreview() {
                     </h3>
 
                     <p className="mt-0.5 text-sm text-muted">
-                      {role.company} {MD} {role.location}
+                      {role.company}, {role.location}
                     </p>
 
                     {role.achievement && (
@@ -66,22 +60,20 @@ export function ExperiencePreview() {
                       </p>
                     )}
                   </article>
-                </FadeInSection>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          </FadeInSection>
         </div>
 
-        <FadeInSection delay={200}>
-          <div className="mt-14 text-center md:mt-20">
-            <Link
-              href="/experience"
-              className="link-underline text-[11px] font-medium tracking-[0.3em] text-accent uppercase"
-            >
-              View all {allRoles.length} roles &rarr;
-            </Link>
-          </div>
-        </FadeInSection>
+        <div className="mt-14 text-center md:mt-20">
+          <Link
+            href="/experience"
+            className="link-underline text-[11px] font-medium tracking-[0.3em] text-accent uppercase"
+          >
+            View all {allRoles.length} roles
+          </Link>
+        </div>
       </div>
     </section>
   );
